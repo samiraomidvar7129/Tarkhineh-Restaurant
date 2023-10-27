@@ -1,0 +1,719 @@
+//Variables-------------------------------------------->
+$color-white: #fff;
+$bg-orange: #f94c10;
+$bg-black: #0e1317;
+$dark-blue: #151b20;
+$color-gray: gray;
+$color-gold: #f9b572;
+$font-12: 12px;
+$font-14: 14px;
+$font-16: 16px;
+$font-family: "yekan";
+$line-height: 32px;
+$text-right: right;
+$text-center: center;
+
+//mixin------------------------------------------------>
+
+@mixin margin-padding($top, $right, $bottom, $left, $padding: true) {
+  @if (margin) {
+    margin: $top $right $bottom $left;
+  } @else {
+    padding: $top $right $bottom $left;
+  }
+}
+@mixin flex($flex: flex, $position-x: center, $position-y: center) {
+  display: $flex;
+  justify-content: $position-x;
+  align-items: $position-y;
+}
+@mixin column-row($column: column, $row: row) {
+  @if (column) {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+}
+@mixin border-radius($top-left, $top-right, $bottom-right, $bottom-left) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+// css reset------------------------------------------->
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+// Genaral Styles----------------------------------------------------------------------------------------------------->
+
+// ----------header-content---------------------------->
+
+#header-content {
+  height: 90vh;
+  background-image: url("../Imgs/Foods/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include flex(flex, center,center);
+  @include column-row(column);
+  position: relative;
+
+  .navbar-wrapper {
+    background-color: $color-white;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    @include border-radius(10px,10px,10px, 10px);
+
+    .navbar-item {
+      width: 100%;
+      height: auto;
+      ul {
+        width: 100%;
+        height: 50px;
+        @include flex(flex ,space-around, center);
+        direction: rtl;
+
+        li{
+            a{
+                color: $bg-orange;
+                font-size: $font-12;
+                font-weight: bold;
+                &:hover{
+                    color: red
+                }
+            }
+        }
+      }
+    }
+    .buy-basket{
+    @include flex(flex, space-around,center);
+    width: 100%;
+    height: 50px;
+        span{
+            .icon{
+                color: $bg-orange
+        }
+    }
+  }
+  .navbar-logo{
+    width:60px;
+    height:50px;
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+  }
+}
+.content-wrapper {
+    @include flex(flex, center, center);
+    .content-item {
+      width: 50%;
+      color: $color-white;
+
+      .content-item_BoxRight {
+        @include flex(flex, flex-start ,end);
+        @include column-row(column);
+        @include margin-padding(10px, 40px, 10px, 10px, false);
+        @include margin-padding(100px, 10px, 30px, 10px, true);
+
+        h2 {
+          font-size: 24px;
+          text-wrap: nowrap;
+          @include margin-padding(10px, 10px, 30px, 10px, true);
+        }
+        p {
+          @include margin-padding(20px, 0px, 0px, 0px, false);
+          @include margin-padding(10px, 10px, 30px, 10px, true);
+        text-align:$text-right;
+        }
+       .online-order{
+        width: 100px;
+        height: 50px;
+        @include margin-padding(30px, 10px, 0px, 0px, false);
+        @include margin-padding(10px, 10px, 10px, 10px, true);
+        .online-order_btn {
+            width: 100%;
+            height: 100%;
+            background-color: $bg-orange;
+            border: none;
+            outline: none;
+            @include border-radius(5px,5px,5px, 5px);
+            a{
+                color: $color-white;
+                font-size: $font-14;
+            }
+          }
+       }
+      }
+    }
+    .food-item {
+      .content-item_BoxLeft {
+        width: 100%;
+        height: 400px;
+        @include margin-padding(80px, 0px, 0px, 0px, false);
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+// ----------Services-Section ---------------------------------->
+#services-wrapper {
+  background-color: $bg-black;
+  width: 100%;
+  height: 400px;
+  .services-wrapper {
+    @include flex(flex, center,center);
+    @include column-row(column);
+    color: $color-white;
+    padding-top: 20px;
+
+    .services-wrapper_title {
+      text-align: $text-center;
+      h3 {
+        font-size: $font-16;
+        @include margin-padding(20px,0 , 0,0 , false);
+      }
+    }
+
+    .services-items {
+      @include flex(flex, center,center);
+      @include margin-padding(100px, 10px, 10px, 10px, false);
+
+      .services-inner {
+        @include flex(flex,center,center);
+        @include column-row(column);
+        @include margin-padding(0px, 20px, 0px, 0px, false);
+
+        h5{
+            font-size: $font-14;
+        }
+
+        p {
+          text-align: $text-center;
+          font-size: $font-14;
+
+          @include margin-padding(20px, 0px, 20px, 0px, false);
+        }
+        span {
+          a {
+            color: $bg-orange;
+            font-size: $font-14;
+            // text-decoration: overline ;
+            padding: 10px;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 50px;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              width: 0;
+              height: 2px;
+              background-color: $bg-orange;
+              transition: width 0.5s ease;
+            }
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----------AboutUs-Section------------------------------------>
+
+#about-us {
+  width: 100%;
+  height: 500px;
+  background-color: $dark-blue;
+  #About-boxRight {
+    @include margin-padding(60px, 0, 0, 0, false);
+    @include flex(flex, space-between, center);
+    #About-boxRight_item {
+      @include flex(flex, flex-end, start);
+      .img-box {
+        width: 300px;
+        height: 300px;
+        @include flex(flex, center, center);
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    #About-boxLeft_item {
+      @include flex(flex, center, center);
+      @include column-row(column);
+
+      .About-boxLeft_item--content {
+        @include flex(flex, flex-start, end);
+        @include column-row(column, null);
+        h6 {
+          color: $color-gold;
+          font-size: $font-14;
+        }
+        h4 {
+          color: $color-white;
+          @include margin-padding(10px, 0, 0, 0, false);
+          text-align: $text-right;
+          line-height: $line-height;
+        }
+        p {
+          color: $color-gray;
+          @include margin-padding(10px, 0, 0, 0, false);
+          text-align: $text-right;
+          line-height: $line-height;
+        }
+      }
+      .spacial-boxes {
+        @include flex(flex, space-between, center);
+        @include margin-padding(20px, 0, 0, 0, false);
+
+        .spacial-boxes_itemRight {
+          background-color: $bg-black;
+          width: 100%;
+          height: 150px;
+          @include margin-padding(10px, 10px, 10px, 10px, true);
+          @include border-radius(5px, 5px, 5px, 5px);
+          @include flex(flex, space-around, center);
+          @include column-row(column);
+
+          .spacial-boxes_itemRight--title {
+            @include flex(flex, center, center);
+          }
+          p {
+            color: $color-white;
+            @include margin-padding(12px, 0, 0, 0, false);
+            @include margin-padding(10px, 20px, 10px, 10px, true);
+            font-size: $font-12;
+            text-align: $text-right;
+          }
+        }
+        .spacial-boxes_itemLeft {
+          background-color: $bg-black;
+          width: 100%;
+          height: 150px;
+          @include border-radius(5px, 5px, 5px, 5px);
+          @include flex(flex, space-around, center);
+          @include column-row(column);
+          @include margin-padding(10px, 10px, 10px, 10px, true);
+
+          .spacial-boxes_itemLeft--title {
+            @include flex(flex, center, center);
+          }
+          p {
+            color: $color-white;
+            @include margin-padding(12px, 0, 0, 0, false);
+            @include margin-padding(10px, 20px, 10px, 10px, true);
+            font-size: $font-12;
+            text-align: $text-right;
+          }
+        }
+      }
+      .rezerv-btn {
+        width: 50%;
+        height: 40px;
+        @include margin-padding(10px, auto, 0, auto, false);
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background-color: $bg-orange;
+          color: $color-white;
+          font-size: $font-14;
+          @include flex(flex, center, center);
+          @include border-radius(4px, 4px, 4px, 4px);
+          &:hover {
+            background-color: $color-gold;
+            transition: 0.5s ease-in;
+            color: $bg-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+//-----------Suggested-Section---------------------------------->
+
+#Suggested-wrapper {
+  width: 100%;
+  height: 400px;
+  background-color: $bg-black;
+
+  #Suggested-content {
+    @include flex(flex, center, center);
+    @include column-row(column);
+
+    .Suggested-title {
+      @include margin-padding(30px, 0, 0, 0, false);
+      @include flex(flex, center, center);
+      @include column-row(column);
+    }
+  }
+}
+
+// --------------Comments-Section ------------------------------->
+#user-comments {
+  width: 100%;
+  height: 400px;
+  background-color: $dark-blue;
+}
+
+// --------------Delivery-Section-------------------------------->
+#delivery-wrapper {
+  width: 100%;
+  height: 400px;
+
+  .delivery-content {
+    @include flex(flex, space-between, center);
+    @include margin-padding(60px, 0, 0, 0, true);
+
+    .deliver-img {
+      width: 300px;
+      height: 300px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .delivery-text {
+      @include flex(flex, flex-start, end);
+      @include column-row(column);
+      h5 {
+        color: $color-gold;
+        font-size: $font-14;
+        @include margin-padding(0, 0, 20px, 0, false);
+      }
+      p {
+        text-align: $text-right;
+        @include margin-padding(20px, 0, 20px, 0, false);
+      }
+      h6{
+        .tel-link {
+            color: $dark-blue;
+          }
+          .icon{
+            color: $color-gold;
+        }
+      }
+      h6 {
+        color: $dark-blue;
+        span{
+            .icon{
+                color: $color-gold;
+            }
+        }
+      }
+    }
+  }
+}
+
+// --------------ContactUs-Section------------------------------->
+#contact-us {
+  width: 100%;
+  height: 300px;
+  background-image: url("../Imgs/Foods/orange-slice.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .contactUs-content {
+    @include flex(flex, space-between, center);
+    @include column-row(column);
+    @include margin-padding(60px, 0, 0, 0, false);
+
+    .contactUs-content--text {
+      @include flex(flex, space-between, center);
+      @include column-row(column);
+      text-align: $text-right;
+      h6 {
+        color: $color-gold;
+      }
+      p {
+        color: $color-white;
+        @include margin-padding(15px, 0, 20px, 0, false);
+      }
+    }
+
+    .contactUs-content--items {
+      @include flex(flex, space-between, center);
+
+      .content--items_boxRight {
+        width: 200px;
+        height: 100px;
+        @include flex(flex, space-around, center);
+        @include margin-padding(10px, 10px, 10px, 10px, true);
+        @include column-row(column);
+        background-color: $color-white;
+        h6 {
+          color: $dark-blue;
+        }
+        h5 {
+          color: $bg-orange;
+        }
+      }
+      .content--items_boxLeft {
+        width: 200px;
+        height: 100px;
+        @include flex(flex, space-around, center);
+        @include margin-padding(10px, 10px, 10px, 10px, true);
+        @include column-row(column);
+        background-color: $color-white;
+        h6 {
+          color: $dark-blue;
+        }
+        h5 {
+          color: $bg-orange;
+        }
+      }
+    }
+  }
+}
+
+// --------------News-Section------------------------------------>
+#news-wrapper {
+  width: 100%;
+  height: 350px;
+  background-image: url("../Imgs/Foods/leafs.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .news-content {
+    @include margin-padding(100px, 0, 0, 0, false);
+    @include flex(flex, space-around, center);
+    @include column-row(column);
+
+    p {
+      @include margin-padding(20px, 0, 20px, 0, false);
+    }
+    .news-content_form {
+      width: 70%;
+      height: 50px;
+      @include margin-padding(30px, auto, 0, auto, false);
+      @include flex(flex, center, center);
+      border: 1px solid $bg-orange;
+      @include border-radius(5px, 5px, 5px, 5px);
+
+      input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        &::placeholder {
+          text-align: $text-right;
+          font-size: $font-12;
+          @include margin-padding(0, 20px, 0, 0, true);
+          caret-color: blue;
+        }
+      }
+      button {
+        width: 50px;
+        height: 100%;
+        outline: none;
+        border: none;
+        background-color: $bg-orange;
+      }
+    }
+  }
+}
+
+// --------------Footer-Section---------------------------------->
+#footer-wrapper {
+  width: 100%;
+  height: 400px;
+  background-color:$dark-blue;
+
+  .footer-content {
+    @include flex(flex, space-around, center);
+    flex-direction: row-reverse;
+    @include margin-padding(100px, 20px, 0, 20px, true);
+
+    .footer-content-item {
+      width: 35%;
+      height: 100%;
+
+      .footer-content-item_text {
+        @include flex(flex, flex-start, end);
+        @include column-row(column);
+
+        .footer-content-item_logo {
+          width: 100px;
+          height: 70px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p {
+          text-align: $text-right;
+          @include margin-padding(20px, 0, 20px, 0, false);
+          color: $color-white;
+        }
+        .phone{
+          @include flex(flex,center, center);
+
+            h6 {
+                color: $color-white;
+              }
+              .icon{
+                color: $color-gold;
+    @include margin-padding(0,0, 0, 10px, true);
+
+              }
+        }
+        .email{
+            @include flex(flex,center, center);
+
+            h6 {
+                color: $color-white;
+              }
+              .icon{
+                color: $color-gold;
+    @include margin-padding(0,0, 0, 10px, true);
+
+              }
+        }
+       
+
+        .footer-content-item_socials{
+            ul{
+          @include margin-padding(10px, 0,0, 0, false);
+          @include flex(flex,center, center);
+                li{
+          @include margin-padding(0, 0,0, 20px, false);
+          a{
+            .icon{
+                color: $color-gold
+            }
+          }
+
+                }
+            }
+        }
+      }
+
+      .footer-content-item_title {
+        @include flex(flex, space-around, center);
+        @include column-row(column);
+        text-align: $text-right;
+
+        h6{
+            color: $color-white;
+          @include margin-padding(20px, 0, 20px, 0, false);
+
+        }
+        ul{
+            text-align: $text-center;
+
+            li{
+          @include margin-padding(10px,10px, 10px, 10px, false);
+          background-color: $bg-orange;
+          display: inline-block;
+          width: 100px;
+          height: 30px;
+
+          a{
+            font-size: $font-12;
+            color:$color-white;
+            &:hover{
+                color: $dark-blue;
+                transition: .5s linear;
+            }
+          }
+
+            }
+        }
+      }
+      .footer-content-item_imgGallery{
+    @include flex(flex, space-around, center);
+    @include column-row(column);
+
+    .imgGallery-title{
+        h6{
+            color: $color-white;
+            @include margin-padding(10px,0 ,10px ,0 ,false )
+        }
+    }
+
+    .imgGallery-items{
+        width: 100%;
+        height:auto;
+        @include margin-padding(30px,0, 0, 0, false);
+    @include flex(flex, center, center);
+    flex-wrap: wrap;
+
+        .imgGallery-items_img{
+            width: 80px;
+            height: 60px;
+        @include margin-padding(10px,0, 0, 10px, false);
+
+            a{
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%
+                }
+            }
+        }
+    }
+      }
+    }
+  }
+}
+
+// ---------------SubFooter-Section------------------------------>
+#subFooter-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: $bg-black;
+
+    .subFooter-content{
+    @include flex(flex,center, center);
+    @include margin-padding(20px,0 ,0 , 0, true);
+    
+    h6{
+        color: $color-gray;
+        font-size: $font-14;
+      
+        a{
+            color: $bg-orange;
+    @include margin-padding(10px,10px ,10px , 10px, true);
+
+        }
+    }
+    }
+}
