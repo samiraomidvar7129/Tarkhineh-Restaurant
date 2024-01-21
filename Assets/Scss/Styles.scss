@@ -61,135 +61,137 @@ a:visited {
 
 // ----------header-content---------------------------->
 
-#header-content {
-  height: 90vh;
-  background-image: url("../Imgs/Foods/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  @include flex(flex, center,center);
-  @include column-row(column);
-  position: relative;
+// #header-content {
+//   height: 90vh;
+//   background-image: url("../Imgs/Foods/header-bg.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center center;
+//   @include flex(flex, center,center);
+//   @include column-row(column);
+//   position: relative;
 
-  .navbar-wrapper {
-    background-color: $color-white;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 50px;
-    @include border-radius(10px,10px,10px, 10px);
+//   .navbar-wrapper {
+//     background-color: $color-white;
+//     position: absolute;
+//     top: 20px;
+//     left: 0;
+//     right: 0;
+//     width: 100%;
+//     height: 50px;
+//     @include border-radius(10px,10px,10px, 10px);
 
-    .navbar-item {
-      width: 100%;
-      height: auto;
-      ul {
-        width: 100%;
-        height: 50px;
-        @include flex(flex ,space-around, center);
-        direction: rtl;
+//     .navbar-item {
+//       width: 100%;
+//       height: auto;
+//       ul {
+//         width: 100%;
+//         height: 50px;
+//         @include flex(flex ,space-around, center);
+//         direction: rtl;
 
-        li{
-            a{
-                color: $bg-orange;
-                font-size: $font-12;
-                font-weight: bold;
-                &:hover{
-                    color: red
-                }
-            }
-        }
-      }
-    }
-    .buy-basket{
-    @include flex(flex, space-around,center);
-    width: 100%;
-    height: 50px;
-        span{
-            .icon{
-                color: $bg-orange
-        }
-    }
-  }
-  .navbar-logo{
-    width:60px;
-    height:50px;
-    img{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-  }
-}
-.content-wrapper {
-    @include flex(flex, center, center);
-    .content-item {
-      width: 50%;
-      color: $color-white;
+//         li{
+//             a{
+//                 color: $bg-orange;
+//                 font-size: $font-12;
+//                 font-weight: bold;
+//                 &:hover{
+//                     color: red
+//                 }
+//             }
+//         }
+//       }
+//     }
+//     .buy-basket{
+//     @include flex(flex, space-around,center);
+//     width: 100%;
+//     height: 50px;
+//         span{
+//             .icon{
+//                 color: $bg-orange
+//         }
+//     }
+//   }
+//   .navbar-logo{
+//     width:60px;
+//     height:50px;
+//     img{
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//     }
+//   }
+// }
+// .content-wrapper {
+//     @include flex(flex, center, center);
+//     .content-item {
+//       width: 50%;
+//       color: $color-white;
 
-      .content-item_BoxRight {
-        @include flex(flex, flex-start ,end);
-        @include column-row(column);
-        @include margin-padding(10px, 40px, 10px, 10px, false);
-        @include margin-padding(100px, 10px, 30px, 10px, true);
+//       .content-item_BoxRight {
+//         @include flex(flex, flex-start ,end);
+//         @include column-row(column);
+//         @include margin-padding(10px, 40px, 10px, 10px, false);
+//         @include margin-padding(100px, 10px, 30px, 10px, true);
 
-        h2 {
-          font-size: 24px;
-          text-wrap: nowrap;
-          @include margin-padding(10px, 10px, 30px, 10px, true);
-        }
-        p {
-          @include margin-padding(20px, 0px, 0px, 0px, false);
-          @include margin-padding(10px, 10px, 30px, 10px, true);
-        text-align:$text-right;
-        }
-       .online-order{
-        width: 100px;
-        height: 50px;
-        @include margin-padding(30px, 10px, 0px, 0px, false);
-        @include margin-padding(10px, 10px, 10px, 10px, true);
-        .online-order_btn {
-            width: 100%;
-            height: 100%;
-            background-color: $bg-orange;
-            border: none;
-            outline: none;
-            @include border-radius(5px,5px,5px, 5px);
-            a{
-                color: $color-white;
-                font-size: $font-14;
-            }
-          }
-       }
-      }
-    }
-    .food-item {
-      .content-item_BoxLeft {
-        width: 100%;
-        height: 400px;
-        @include margin-padding(80px, 0px, 0px, 0px, false);
+//         h2 {
+//           font-size: 24px;
+//           text-wrap: nowrap;
+//           @include margin-padding(10px, 10px, 30px, 10px, true);
+//         }
+//         p {
+//           @include margin-padding(20px, 0px, 0px, 0px, false);
+//           @include margin-padding(10px, 10px, 30px, 10px, true);
+//         text-align:$text-right;
+//         }
+//        .online-order{
+//         width: 100px;
+//         height: 50px;
+//         @include margin-padding(30px, 10px, 0px, 0px, false);
+//         @include margin-padding(10px, 10px, 10px, 10px, true);
+//         .online-order_btn {
+//             width: 100%;
+//             height: 100%;
+//             background-color: $bg-orange;
+//             border: none;
+//             outline: none;
+//             @include border-radius(5px,5px,5px, 5px);
+//             a{
+//                 color: $color-white;
+//                 font-size: $font-14;
+//             }
+//           }
+//        }
+//       }
+//     }
+//     .food-item {
+//       .content-item_BoxLeft {
+//         width: 100%;
+//         height: 400px;
+//         @include margin-padding(80px, 0px, 0px, 0px, false);
 
-        img {
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-  }
-}
+//         img {
+//           display: block;
+//           width: 100%;
+//           height: 100%;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // ----------Services-Section ---------------------------------->
 #services-wrapper {
   background-color: $bg-black;
   width: 100%;
-  height: 400px;
+  height: auto;
+
   .services-wrapper {
     @include flex(flex, center,center);
     @include column-row(column);
     color: $color-white;
     padding-top: 20px;
+  
 
     .services-wrapper_title {
       text-align: $text-center;
@@ -203,10 +205,19 @@ a:visited {
       @include flex(flex, center,center);
       @include margin-padding(100px, 10px, 10px, 10px, false);
 
+
       .services-inner {
+        width: 300px;
+        height: 100px;
         @include flex(flex,center,center);
         @include column-row(column);
         @include margin-padding(0px, 20px, 0px, 0px, false);
+         
+        img{
+          width: 100px;
+          height: 100px;
+        }
+   
 
         h5{
             font-size: $font-14;
@@ -257,6 +268,7 @@ a:visited {
   #About-boxRight {
     @include margin-padding(60px, 0, 0, 0, false);
     @include flex(flex, space-between, center);
+    background-color: green;
     #About-boxRight_item {
       @include flex(flex, flex-end, start);
       .img-box {
@@ -365,14 +377,18 @@ a:visited {
 
 //-----------Suggested-Section---------------------------------->
 
-#Suggested-wrapper {
-  width: 100%;
-  height: 400px;
-  background-color: $bg-black;
+#Suggested-wrapper{
+
+  // background-color: $bg-black;
+
 
   #Suggested-content {
+    width: 100%;
+    height: 400px;
     @include flex(flex, center, center);
     @include column-row(column);
+    background-color: red !important;
+   
 
     .Suggested-title {
       @include margin-padding(30px, 0, 0, 0, false);
@@ -381,28 +397,34 @@ a:visited {
     }
     #Suggested-slider{
       width: 100%;
-      height: 400px;
-      background-color: red;
+      height: 300px;
+      background-color: green;
+      
 
       .swiper {
         width: 100%;
         height: 100%;
-        @include margin-padding(0, auto, 0, auto, false);
 
         .swiper-wrapper{
           .swiper-slide {
+            width: 300px !important;
+            height: 100%;
             text-align: center;
             font-size: 18px;
             background: #fff;
-            height: calc((100% - 30px) / 2) !important;
-      
-            /* Center slide text vertically */
             @include flex(flex, center, center);
-          }
+
+            .swiper-slide img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
         }
       }
     }
   }
+}
 }
 
 // --------------Comments-Section ------------------------------->
@@ -609,24 +631,24 @@ a:visited {
         .phone{
           @include flex(flex,center, center);
 
-            h6 {
+            .phone-link {
                 color: $color-white;
               }
               .icon{
                 color: $color-gold;
-    @include margin-padding(0,0, 0, 10px, true);
+                @include margin-padding(0,0, 0, 10px, true);
 
               }
         }
         .email{
             @include flex(flex,center, center);
 
-            h6 {
+            .email-link {
                 color: $color-white;
               }
               .icon{
                 color: $color-gold;
-    @include margin-padding(0,0, 0, 10px, true);
+                @include margin-padding(0,0, 0, 10px, true);
 
               }
         }
