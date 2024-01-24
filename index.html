@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رستوران کابان</title>
-    <link rel="icon" href="./Assets/Imgs/Logo/favicon.jpeg"/>
+    <link rel="icon" href="/Assets/Imgs/Logo/favicon.jpeg"/>
 
     <!-- Import Bootsrap Files -->
-    <link rel="stylesheet" href="./Assets/Libs/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Assets/Libs/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 
     <!-- Import FontAwesome File -->
-    <link rel="stylesheet" href="./Assets/Libs/fontawesome-pro-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/Libs/fontawesome-pro-5.15.3-web/css/all.min.css">
      <!-- Link Swiper's CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -23,7 +23,7 @@
       <section class="container-fluid " id="header-content">
         <div class="row">
             <div class="col">
-                <div class="container navbar-wrapper">
+                <div class="container navbar-wrapper" id="navbar-wrapper">
                     <div class="row">
                         <div class="col-2">
                             <div class="buy-basket">
@@ -52,7 +52,6 @@
                                 <img src="./Assets/Imgs/Logo/logo (1).png" alt="chef-logo">
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -100,24 +99,26 @@
                     <div class=" col  ">
                       <div class="services-items">
                         <div class="col-xl-3 col-lg-3 col-md-3 col services-inner">
-                            <img src="./Assets/Imgs/Post/Cook.png" alt="">
+                            <img src="./Assets/Imgs/Post/Fresh.png" alt="">
                             <h5>محصولات تازه</h5>
                             <p>رستوران کابان با بیش از ۲۵ سال تجربه در  تهیه و توزیع بهترین غذاهای ایرانی با کیفیت و بهترین قیمت پذیرای مشتریان ارجمند میباشد.</p>
                             <span><a href="#">کاوش بیشتر</a></span>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col services-inner">
-                            <img src="./Assets/Imgs/Post/Cook.png" alt="">
+                            <img src="./Assets/Imgs/Post/MasterChef.png" alt="">
 
                             <h5>سرآشپزهای ماهر</h5>
                             <p>رستوران کابان با بیش از ۲۵ سال تجربه در  تهیه و توزیع بهترین غذاهای ایرانی با کیفیت و بهترین قیمت پذیرای مشتریان ارجمند میباشد.</p>
                             <span><a href="#">کاوش بیشتر</a></span>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col services-inner">
+                            <img src="./Assets/Imgs/Post/Cook.png" alt="">
                             <h5>بهترین پخت</h5>
                             <p>رستوران کابان با بیش از ۲۵ سال تجربه در  تهیه و توزیع بهترین غذاهای ایرانی با کیفیت و بهترین قیمت پذیرای مشتریان ارجمند میباشد.</p>
                             <span><a href="#">کاوش بیشتر</a></span>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-3 col services-inner">
+                            <img src="./Assets/Imgs/Post/Quality.png" alt="">
                             <h5>بهترین کیفیت</h5>
                             <p>رستوران کابان با بیش از ۲۵ سال تجربه در  تهیه و توزیع بهترین غذاهای ایرانی با کیفیت و بهترین قیمت پذیرای مشتریان ارجمند میباشد.</p>
                             <span><a href="#">کاوش بیشتر</a></span>
@@ -189,16 +190,10 @@
                         <div class="col">
                           <section id="Suggested-content">
                                <div class="Suggested-title">
-                                <h6>از منوی ما</h6>
-                                <h3>پیشنهادات ویژه ما را امتحان کنید</h3>
+                                <h6 class="text-white"> منوی ما</h6>
+                                <h3 class="text-white">پیشنهادات ویژه ما را امتحان کنید</h3>
                                </div>
-                               <section id="Suggested-items">
-                                <div class="Suggested-item">
-                                    <div class="Suggested-item_img">
-                                        <img src="" alt="">
-                                    </div>
-                                </div>
-
+                               <section class="Suggested-items" id="main-foods">
                                </section>
                           </section>
                         </div>
@@ -208,22 +203,6 @@
         </div>
     </section>
     <!-- EDN Suggested-Section -->
-
-    <!-- Start Comments-Section -->
-    <section class="container-fluid" id="user-comments">
-        <div class="row">
-            <div class="col">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <h5>کامنتها</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END Comments-Section -->
     <!-- Start Delivery-Section -->
     <section class="container-fluid" id="delivery-wrapper">
         <div class="row">
@@ -433,44 +412,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Import Bootsrap JsFile -->
-    <script src="./Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-    <script src="./Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="/Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Import FontAwesome JsFile -->
-    <script src="./Assets/Libs/fontawesome-pro-5.15.3-web/js/all.min.js"></script>
+    <script src="/Assets/Libs/fontawesome-pro-5.15.3-web/js/all.min.js"></script>
   
 
     <!-- Import MyScript.js File -->
-    <script src="./Assets/Js/MyScripts.js"></script>
+    <script src="/Assets/Js/foodsFetch.js"></script>
+    <script src="/Assets/Js/MyScripts.js"></script>
 
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 1,
-          spaceBetween: 10,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          breakpoints: {
-            "@0.00": {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            "@0.75": {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            "@1.00": {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            "@1.50": {
-              slidesPerView: 4,
-              spaceBetween: 50,
-            },
-          },
-        });
-      </script>
 
 </body>
 </html>

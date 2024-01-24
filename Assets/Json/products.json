@@ -1,0 +1,377 @@
+{
+    "foods_group": [
+      {
+        "id": "1",
+        "name": " کباب",
+        "ImageUrl":"Assets/Imgs/Barbecue/kabab.jpg",
+        "group-products":[
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": " ساندویچ",
+        "ImageUrl":"Assets/Imgs/Sandwich/burger-06.png",
+        "group-products":[
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": " پیتزا",
+        "ImageUrl":"Assets/Imgs/pizza/pizza-post.png",
+        "group-products":[
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": " سوشی",
+        "ImageUrl":"Assets/Imgs/Sushi/Sushi.png",
+        "group-products":[
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": " دمنوش",
+        "ImageUrl":"Assets/Imgs/HerbalTea/tea.png",
+        "group-products":[
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "name": "یخ نوش",
+        "ImageUrl":"Assets/Imgs/IceDrink/IceDrink.png",
+        "group-products":[
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          },
+          {
+            "product-name":"یخنوش طالبی",
+            "price":30000,
+            "product-img":"",
+            "product-content":[
+              "نکتار طالبی",
+              "لیمو",
+              "شیر",
+              "یخ"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,10 +1,11 @@
 //Variables-------------------------------------------->
 $color-white: #fff;
 $bg-orange: #f94c10;
-$bg-black: #0e1317;
+$bg-black:#010101;
 $dark-blue: #151b20;
 $color-gray: gray;
 $color-gold: #f9b572;
+$bg-green:rgb(8, 170, 8);
 $font-12: 12px;
 $font-14: 14px;
 $font-16: 16px;
@@ -57,134 +58,135 @@ a:visited {
   text-decoration: none;
 }
 
-// Genaral Styles----------------------------------------------------------------------------------------------------->
+// ------------------------------------index.html Styles----------------------------------------------------------------->
 
 // ----------header-content---------------------------->
 
-// #header-content {
-//   height: 90vh;
-//   background-image: url("../Imgs/Foods/header-bg.jpg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   @include flex(flex, center,center);
-//   @include column-row(column);
-//   position: relative;
 
-//   .navbar-wrapper {
-//     background-color: $color-white;
-//     position: absolute;
-//     top: 20px;
-//     left: 0;
-//     right: 0;
-//     width: 100%;
-//     height: 50px;
-//     @include border-radius(10px,10px,10px, 10px);
+#header-content {
+  height: 90vh;
+  background-image: url("../Imgs/Foods/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include flex(flex, center,center);
+  @include column-row(column);
+  position: relative;
 
-//     .navbar-item {
-//       width: 100%;
-//       height: auto;
-//       ul {
-//         width: 100%;
-//         height: 50px;
-//         @include flex(flex ,space-around, center);
-//         direction: rtl;
+  .navbar-wrapper {
+    background-color: $color-white;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    @include border-radius(10px,10px,10px, 10px);
 
-//         li{
-//             a{
-//                 color: $bg-orange;
-//                 font-size: $font-12;
-//                 font-weight: bold;
-//                 &:hover{
-//                     color: red
-//                 }
-//             }
-//         }
-//       }
-//     }
-//     .buy-basket{
-//     @include flex(flex, space-around,center);
-//     width: 100%;
-//     height: 50px;
-//         span{
-//             .icon{
-//                 color: $bg-orange
-//         }
-//     }
-//   }
-//   .navbar-logo{
-//     width:60px;
-//     height:50px;
-//     img{
-//         display: block;
-//         width: 100%;
-//         height: 100%;
-//     }
-//   }
-// }
-// .content-wrapper {
-//     @include flex(flex, center, center);
-//     .content-item {
-//       width: 50%;
-//       color: $color-white;
+    .navbar-item {
+      width: 100%;
+      height: auto;
+      ul {
+        width: 100%;
+        height: 50px;
+        @include flex(flex ,space-around, center);
+        direction: rtl;
 
-//       .content-item_BoxRight {
-//         @include flex(flex, flex-start ,end);
-//         @include column-row(column);
-//         @include margin-padding(10px, 40px, 10px, 10px, false);
-//         @include margin-padding(100px, 10px, 30px, 10px, true);
+        li{
+            a{
+                color: $bg-orange;
+                font-size: $font-12;
+                font-weight: bold;
+                &:hover{
+                    color: red
+                }
+            }
+        }
+      }
+    }
+    .buy-basket{
+    @include flex(flex, space-around,center);
+    width: 100%;
+    height: 50px;
+        span{
+            .icon{
+                color: $bg-orange
+        }
+    }
+  }
+  .navbar-logo{
+    width:60px;
+    height:50px;
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+  }
+}
+.content-wrapper {
+    @include flex(flex, center, center);
+    .content-item {
+      width: 50%;
+      color: $color-white;
 
-//         h2 {
-//           font-size: 24px;
-//           text-wrap: nowrap;
-//           @include margin-padding(10px, 10px, 30px, 10px, true);
-//         }
-//         p {
-//           @include margin-padding(20px, 0px, 0px, 0px, false);
-//           @include margin-padding(10px, 10px, 30px, 10px, true);
-//         text-align:$text-right;
-//         }
-//        .online-order{
-//         width: 100px;
-//         height: 50px;
-//         @include margin-padding(30px, 10px, 0px, 0px, false);
-//         @include margin-padding(10px, 10px, 10px, 10px, true);
-//         .online-order_btn {
-//             width: 100%;
-//             height: 100%;
-//             background-color: $bg-orange;
-//             border: none;
-//             outline: none;
-//             @include border-radius(5px,5px,5px, 5px);
-//             a{
-//                 color: $color-white;
-//                 font-size: $font-14;
-//             }
-//           }
-//        }
-//       }
-//     }
-//     .food-item {
-//       .content-item_BoxLeft {
-//         width: 100%;
-//         height: 400px;
-//         @include margin-padding(80px, 0px, 0px, 0px, false);
+      .content-item_BoxRight {
+        @include flex(flex, flex-start ,end);
+        @include column-row(column);
+        @include margin-padding(10px, 40px, 10px, 10px, false);
+        @include margin-padding(100px, 10px, 30px, 10px, true);
 
-//         img {
-//           display: block;
-//           width: 100%;
-//           height: 100%;
-//         }
-//       }
-//     }
-//   }
-// }
+        h2 {
+          font-size: 24px;
+          text-wrap: nowrap;
+          @include margin-padding(10px, 10px, 30px, 10px, true);
+        }
+        p {
+          @include margin-padding(20px, 0px, 0px, 0px, false);
+          @include margin-padding(10px, 10px, 30px, 10px, true);
+        text-align:$text-right;
+        }
+       .online-order{
+        width: 100px;
+        height: 50px;
+        @include margin-padding(30px, 10px, 0px, 0px, false);
+        @include margin-padding(10px, 10px, 10px, 10px, true);
+        .online-order_btn {
+            width: 100%;
+            height: 100%;
+            background-color: $bg-orange;
+            border: none;
+            outline: none;
+            @include border-radius(5px,5px,5px, 5px);
+            a{
+                color: $color-white;
+                font-size: $font-14;
+            }
+          }
+       }
+      }
+    }
+    .food-item {
+      .content-item_BoxLeft {
+        width: 100%;
+        height: 400px;
+        @include margin-padding(80px, 0px, 0px, 0px, false);
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
 
 // ----------Services-Section ---------------------------------->
 #services-wrapper {
   background-color: $bg-black;
   width: 100%;
-  height: auto;
+  height: 450px;
 
   .services-wrapper {
     @include flex(flex, center,center);
@@ -203,7 +205,7 @@ a:visited {
 
     .services-items {
       @include flex(flex, center,center);
-      @include margin-padding(100px, 10px, 10px, 10px, false);
+      @include margin-padding(50px, 10px, 10px, 10px, false);
 
 
       .services-inner {
@@ -263,11 +265,12 @@ a:visited {
 #about-us {
   width: 100%;
   height: 500px;
-  background-color: $dark-blue;
+  background-color:$dark-blue;
+
   #About-boxRight {
     @include margin-padding(60px, 0, 0, 0, false);
     @include flex(flex, space-between, center);
-    background-color: green;
+
     #About-boxRight_item {
       @include flex(flex, flex-end, start);
       .img-box {
@@ -377,60 +380,84 @@ a:visited {
 //-----------Suggested-Section---------------------------------->
 
 #Suggested-wrapper{
-
-  // background-color: $bg-black;
+  background-color: $bg-black;
 
 
   #Suggested-content {
     width: 100%;
-    height: 400px;
+    height: 100%;
     @include flex(flex, center, center);
     @include column-row(column);
-    background-color: red !important;
-   
 
     .Suggested-title {
       @include margin-padding(30px, 0, 0, 0, false);
       @include flex(flex, center, center);
       @include column-row(column);
     }
-    #Suggested-slider{
+    .Suggested-items{
       width: 100%;
-      height: 300px;
-      background-color: green;
-      
+      height: auto;
+      @include flex(flex, space-between, center);
+      flex-wrap: wrap;
+      @include margin-padding(20px, 0, 20px, 0, true);
 
-      .swiper {
-        width: 100%;
-        height: 100%;
 
-        .swiper-wrapper{
-          .swiper-slide {
-            width: 300px !important;
-            height: 100%;
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            @include flex(flex, center, center);
+      .Suggested-item{
+        width: 200px;
+        height: 250px;
+        border: 1px solid rgba(171, 161, 161, 0.496);
+        @include margin-padding(10px, 0, 0, 0, false);
+        border-radius: 6px;
+        @include flex(flex, center, center);
+        @include column-row(column);
+        text-align:$text-center;
+        overflow: hidden;
+        
+        .Suggested-item_img{
+          width: 100%;
+          height: 70%;
+          display: flex;
+          justify-content: center;
+          background-color:$color-white ;
 
-            .swiper-slide img {
-              display: block;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
+          img{
+            display: block;
+            width: 100%;
+            height: 100%
+          }
         }
+         
+        .caption{
+          width: 100%;
+          height: 30%;
+          @include flex(flex, center, center);
+          @include column-row(column);
+          background-color: $bg-green;
+          color:$color-white ;
+          position: relative;
+          text-align: $text-right;
+          transition: all 0.5s;
+          transform: rotate(-7deg) scale(1.1);
+          transform-origin: top right;
+          &:hover{
+            transform: rotate(0deg) scale(1.1);
+          }
+
+          .caption-title{
+            position: absolute;
+             
+            a{
+              color: $color-white;
+            }
+          }
+        }
+        
+
       }
-    }
+
+  
   }
 }
-}
-
-// --------------Comments-Section ------------------------------->
-#user-comments {
-  width: 100%;
-  height: 400px;
-  background-color: $dark-blue;
 }
 
 // --------------Delivery-Section-------------------------------->
@@ -761,3 +788,7 @@ a:visited {
     }
     }
 }
+
+
+//  ---------------------FoodsMenu.html Styles------------------------------------------------------------------------------------------>
+
