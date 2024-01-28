@@ -4,12 +4,56 @@
         "id": "1",
         "name": " کباب",
         "ImageUrl":"Assets/Imgs/Barbecue/kabab.jpg",
-        "group-products":[
+        "group_products":[
           {
-            "product-name":"یخنوش طالبی",
-            "price":30000,
-            "product-img":"",
-            "product-content":[
+            "product_name":" کباب چنجه",
+            "product_price":"۳۰,۰۰۰",
+            "product_content":[
+              " گوشت",
+              "زعفران",
+              "پاپریکا",
+              "پیاز",
+              "روغن زیتون"
+            ]
+          },
+          {
+            "product_name":" کباب کوبیده",
+            "product_price":"۸۰,۰۰۰",
+            "product_content":[
+              "گوشت چرخکرده ",
+              "سماق",
+              "پیاز",
+              "زعفران",
+              "کره"
+            ]
+          },
+          {
+           
+            "product_name":" کباب سلطانی",
+            "product_price":"۱..,...",
+            "product_content":[
+              " گوشت قرمز",
+              "فیله مرغ",
+              "زعفران",
+              "لیموترش"
+            ]
+          },
+          {
+         
+            "product_name":" کباب بختیاری",
+            "product_price":"80,000",
+            "product_content":[
+              " گوشت گوسفندی",
+              " فیله مرغ",
+              "زعفران",
+              "فلفل "
+            ]
+          },
+          {
+         
+            "product_name":" کباب برگ",
+            "product_price":"80,000",
+            "product_content":[
               "نکتار طالبی",
               "لیمو",
               "شیر",
@@ -17,43 +61,10 @@
             ]
           },
           {
-            "product-name":"یخنوش طالبی",
-            "price":30000,
-            "product-img":"",
-            "product-content":[
-              "نکتار طالبی",
-              "لیمو",
-              "شیر",
-              "یخ"
-            ]
-          },
-          {
-            "product-name":"یخنوش طالبی",
-            "price":30000,
-            "product-img":"",
-            "product-content":[
-              "نکتار طالبی",
-              "لیمو",
-              "شیر",
-              "یخ"
-            ]
-          },
-          {
-            "product-name":"یخنوش طالبی",
-            "price":30000,
-            "product-img":"",
-            "product-content":[
-              "نکتار طالبی",
-              "لیمو",
-              "شیر",
-              "یخ"
-            ]
-          },
-          {
-            "product-name":"یخنوش طالبی",
-            "price":30000,
-            "product-img":"",
-            "product-content":[
+         
+            "product_name":" کباب شیشلیک",
+            "product_price":"80,000",
+            "product_content":[
               "نکتار طالبی",
               "لیمو",
               "شیر",
@@ -66,9 +77,9 @@
         "id": "2",
         "name": " ساندویچ",
         "ImageUrl":"Assets/Imgs/Sandwich/burger-06.png",
-        "group-products":[
+        "group_products":[
           {
-            "product-name":"یخنوش طالبی",
+            "productـname":"یخنوش طالبی",
             "price":30000,
             "product-img":"",
             "product-content":[

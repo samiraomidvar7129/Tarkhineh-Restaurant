@@ -1,4 +1,4 @@
-//Variables-------------------------------------------->
+//*TODO: Variables-------------------------------------------->
 $color-white: #fff;
 $bg-orange: #f94c10;
 $bg-black:#010101;
@@ -14,7 +14,7 @@ $line-height: 32px;
 $text-right: right;
 $text-center: center;
 
-//mixin------------------------------------------------>
+// *TODO:  Mixins---------------------------------------------->
 
 @mixin margin-padding($top, $right, $bottom, $left, $padding: true) {
   @if (margin) {
@@ -39,7 +39,7 @@ $text-center: center;
   border-radius: $top-left $top-right $bottom-right $bottom-left;
 }
 
-// css reset------------------------------------------->
+//  *TODO: CssResets------------------------------------------->
 *,
 ::after,
 ::before {
@@ -58,14 +58,14 @@ a:visited {
   text-decoration: none;
 }
 
-// ------------------------------------index.html Styles----------------------------------------------------------------->
+// ?------------------------------------index.html Styles----------------------------------------------------------------->
 
-// ----------header-content---------------------------->
+//  * ----------header-content---------------------------->
 
 
 #header-content {
   height: 90vh;
-  background-image: url("../Imgs/Foods/header-bg.jpg");
+  background-image: url("/Assets/Imgs/Banners/heroBanner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -182,7 +182,7 @@ a:visited {
   }
 }
 
-// ----------Services-Section ---------------------------------->
+//  * ----------Services-Section ---------------------------------->
 #services-wrapper {
   background-color: $bg-black;
   width: 100%;
@@ -260,7 +260,7 @@ a:visited {
   }
 }
 
-// ----------AboutUs-Section------------------------------------>
+//  * ----------AboutUs-Section------------------------------------>
 
 #about-us {
   width: 100%;
@@ -377,7 +377,7 @@ a:visited {
   }
 }
 
-//-----------Suggested-Section---------------------------------->
+// * -----------Suggested-Section---------------------------------->
 
 #Suggested-wrapper{
   background-color: $bg-black;
@@ -460,7 +460,7 @@ a:visited {
 }
 }
 
-// --------------Delivery-Section-------------------------------->
+// * --------------Delivery-Section-------------------------------->
 #delivery-wrapper {
   width: 100%;
   height: 400px;
@@ -510,8 +510,8 @@ a:visited {
     }
   }
 }
-
-// --------------ContactUs-Section------------------------------->
+ 
+// * --------------ContactUs-Section------------------------------->
 #contact-us {
   width: 100%;
   height: 300px;
@@ -573,7 +573,7 @@ a:visited {
   }
 }
 
-// --------------News-Section------------------------------------>
+//  * --------------News-Section------------------------------------>
 #news-wrapper {
   width: 100%;
   height: 350px;
@@ -620,7 +620,7 @@ a:visited {
   }
 }
 
-// --------------Footer-Section---------------------------------->
+// * --------------Footer-Section---------------------------------->
 #footer-wrapper {
   width: 100%;
   height: 400px;
@@ -766,7 +766,7 @@ a:visited {
   }
 }
 
-// ---------------SubFooter-Section------------------------------>
+//  * ---------------SubFooter-Section------------------------------>
 #subFooter-wrapper{
     width: 100%;
     height: 100%;
@@ -790,5 +790,65 @@ a:visited {
 }
 
 
-//  ---------------------FoodsMenu.html Styles------------------------------------------------------------------------------------------>
+// ? ---------------------FoodsMenu.html Styles------------------------------------------------------------------------------------------>
 
+//* ------------------foods-breadCrumb-box--------------------------->
+#foods-breadCrumb-box{
+width: 700px;
+height: 40vh;
+background-color: $color-white;
+@include margin-padding(100px,0 ,0 , 0, true);
+@include flex(flex, space-around, center);
+@include column-row(column);
+
+.breadCrumbs{
+  @include flex(flex, space-around, center);
+  background-color: red;
+
+}
+
+}
+
+// *--------------------FoodsInfo-Section------------------------------>
+
+#mainBox-foods_info{
+  width: 80%;
+  height: 70vh;
+  border: 1px solid rgba(176, 172, 172, 0.415);
+  @include margin-padding(20px,auto ,20px , auto, true);
+  background-image: url("/Assets/Imgs/Banners/infoBanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  #menu-info{
+  
+    #food-list{
+      width:100%;
+      height:70vh;
+      @include margin-padding(0,auto ,0 , auto, false);
+      @include flex(flex,center, center);
+      flex-wrap: wrap;
+      
+
+      li{
+        display: block;
+        width: 30%;
+        height:20%;
+        font-size: $font-12;
+        background-color:transparent;
+        border: 1px solid rgba(142, 130, 130, 0.587);
+        @include flex(flex, center, center);
+        @include column-row(column);
+        @include margin-padding(10px,auto ,0 , auto, true);
+        color: $color-white;
+
+
+        .food-info{
+          @include flex(flex, center, center);
+          @include column-row(column);
+        }
+      }
+    }
+  }
+
+}
