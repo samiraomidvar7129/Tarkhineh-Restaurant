@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
 
 // ----------createProductBox---------------->
 
- const createProductBox=(product_name,product_price,product_content)=>{
+ const createProductBox=(product_name,product_price,product_content,id,product_id)=>{
 var li =document.createElement('li')
 
 var infoDivision=document.createElement("div")
@@ -52,6 +52,10 @@ infoDivision.classList.add('food-info');
 var infoTitle=document.createElement('span')
 infoTitle.classList.add('food-info_title')
 infoTitle.appendChild(document.createTextNode(product_name));
+
+var food_link=document.createElement("a")
+food_link.setAttribute("href", "foodDetails.html?group=" + id + "&product=" + product_id)
+food_link.appendChild(infoTitle)
 
 var foodPrice=document.createElement('span')
 foodPrice.classList.add('food-price')

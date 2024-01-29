@@ -801,7 +801,7 @@ background-color: $color-white;
 @include flex(flex, space-around, center);
 @include column-row(column);
 
-.breadCrumbs{
+#breadCrumbs{
   @include flex(flex, space-around, center);
   background-color: red;
 
