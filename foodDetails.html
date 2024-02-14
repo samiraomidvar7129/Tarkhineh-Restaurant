@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> منوی غذاها</title>
+    <title>  جزئیات غذا</title>
     <link rel="icon" href="/Assets/Imgs/Logo/favicon.jpeg"/>
 
-    <!-- Import Bootsrap Files -->
+    <!-- *Import Bootsrap Files -->
     <link rel="stylesheet" href="/Assets/Libs/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 
-    <!-- Import FontAwesome File -->
+    <!-- *Import FontAwesome File -->
     <link rel="stylesheet" href="/Assets/Libs/fontawesome-pro-5.15.3-web/css/all.min.css">
-     <!-- Link Swiper's CSS -->
+     <!-- *Link Swiper's CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Import main.Css File -->
+    <!-- *Import main.Css File -->
     <link rel="stylesheet" href="/Assets/Css/Styles.min.css">
 
-     <body class="rtl">
+<!-- !----------------------------------------------------------------------------------------------------------- -->
 
-    <!-- Start Header-Content -->
-      <section class="container-fluid " id="header-content">
+     <body class="rtl">
+    <!-- *Start Header-Content -->
+    <section class="container-fluid " id="header-content">
         <div class="row">
             <div class="col">
                 <div class="container navbar-wrapper" id="navbar-wrapper">
@@ -59,42 +60,104 @@
         <div class="row">
             <div class="col">
                 <section id="foods-breadCrumb-box">
-                    <h3  id="food-title-1">عنوان گروه غذا</h3> 
-                    <ul id="breadCrumbs">
+                    <h3  id="food-title-4"></h3> 
+                    <ul class="breadCrumbs">
+                        <li> <a href="#">خانه</a></li>
+                        <
                         <li>
-                            <a href="">خانه</a>
+                            <a href="#">منو</a>
                         </li>
-                        >
-                        <li>
-                            <a href="">منو</a>
-                        </li>
-                        >
-                        <li id="food-title-2">
-                            عنوان غذا
+                        <
+                        <li id="food-title-5">
+                            
                         </li>
 
                     </ul>
                  </section>
             </div>
         </div>
-        </section>
- <!-- END Header-Content -->
+    </section>
+ <!-- *END Header-Content -->
+
+ <!-- *Start Foods -->
+
+ <section class="container-fluid"id="foodBox-detail">
+    <div class="row w-100 ">
+        <div class="col-sm-12 col-md-6">
+            <div class="foodBox_content  w-100  h-100">
+               <div class="title">
+                   <h4 id="food-title-6">نام غذا</h4>
+                   <div class="badge">
+                       <span>خوشمزه</span>
+                   </div>
+               </div>
+               <p id="foodBox_content_info"></p>
+               <div class="foodBox_content_detail">
+                   <ul class="price-list" id="price-list"></ul>
+               </div>
+
+               <!-- * Start ProgressBar -->
+               <div class="progress">
+                <div class="proggress-box">
+                    <div class="progress-header">
+                        <div class="text-right">
+                            <p>ارزش انرژی</p>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill">
+                            <div class="progress-value" id="energy" ></div>
+                            <div class="progress-text">۵۰۰کیلوکالری</div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="proggress-box">
+                    <div class="progress-header">
+                        <div class="text-right">
+                            <p> پروتئین ها</p>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill">
+                            <div class="progress-value protein" id="protein" ></div>
+                            <div class="progress-text">۲۰۰ گرم</div>
+        
+                        </div>
+                    </div>
+                </div>
+                <!-- * END ProgressBar -->
+        
+                <!-- * Start ShopCart -->
+                <div class="add-shopCart">
+                    <div class="number">
+                        <label for="number">  :  تعداد </label>
+                        <span id="plus">+</span>
+                        <input type="number" id="number" data-zeros="true" value="1" min="1" max="20" readonly="">
+                        <span id="minus">-</span>
+                    </div>
+                    <div class="addToCart">افزودن به سبد خرید</div>
+                </div>
+            </div>
+            </div>
+       </div>
+       <!-- *  END ShopCart -->
+
+        <div class=" col-sm-12 col-md-6 ">
+             <div class="foodBox-detail_gallery">
+                <div class="large-img " id="large-img"> </div>
+                <div class="small-img" id="small-img"></div>
+             </div>
+        </div>
+    </div>
+ </section>
+
+ <!-- *END Foods -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-     <!-- Start Footer-Section -->
+     <!-- *Start Footer-Section -->
      <section class="container-fluid" id="footer-wrapper">
         <div class="row">
             <div class="col">
@@ -139,53 +202,7 @@
                             <div class="imgGallery-title">
                                 <h6>گالری تصاویر</h6>
                             </div>
-                            <!-- <div class="imgGallery-items">
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/promo.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/pizza-italy.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/pizza.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/chiken.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/hamburger.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/leafs.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/burger-06.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/tomato.png" alt="promo.png">
-                                    </a>
-                                </div>
-                                <div class="imgGallery-items_img">
-                                    <a href="#">
-                                        <img src="./Assets/Imgs/Foods/promo.png" alt="promo.png">
-                                    </a>
-                                </div>
-                            </div> -->
+                         
                           
                         </div>
                     </div>
@@ -193,8 +210,8 @@
             </div>
         </div>
     </section>
-    <!-- END Footer-Section -->
-    <!-- Strt SubFooter-Section -->
+    <!-- *END Footer-Section -->
+    <!-- *Strt SubFooter-Section -->
     <section class="container-fluid" id="subFooter-wrapper">
         <div class="row">
             <div class="col">
@@ -212,24 +229,28 @@
             </div>
         </div>
     </section>
-    <!-- Strt SubFooter-Section -->
+    <!-- *Strt SubFooter-Section -->
 
 
 
 
+<!-- !---------------------------------------------------------------------------------------------------------------------------->
 
-    <!-- Swiper JS -->
+
+    <!-- *Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Import Bootsrap JsFile -->
+    <!-- *Import Bootsrap JsFile -->
     <script src="/Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script src="/Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Import FontAwesome JsFile -->
+    <!-- *Import FontAwesome JsFile -->
     <script src="/Assets/Libs/fontawesome-pro-5.15.3-web/js/all.min.js"></script>
   
 
-    <!-- Import MyScript.js File -->
+    <!-- *Import MyScript.js File -->
+    
+    <script src="/Assets/Js/foodDetails.js"></script>
     <script src="/Assets/Js/detailes.js"></script>
     <script src="/Assets/Js/foodsFetch.js"></script>
     <script src="/Assets/Js/MyScripts.js"></script>

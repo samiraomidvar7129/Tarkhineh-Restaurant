@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 // ----------------createMainFoods--------------------->
 
-const createMainFoods =(myData)=>{
+const createMainFoods=(myData)=>{
 
     var main_foods=document.getElementById("main-foods");
 
@@ -28,7 +28,7 @@ const createMainFoods =(myData)=>{
         myData.foods_group[group_index].ImageUrl
        )
 
-       main_foods.appendChild(food_box_element) 
+       main_foods.appendChild(food_box_element)
     }
 }
 

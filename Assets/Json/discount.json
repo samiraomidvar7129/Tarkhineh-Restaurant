@@ -1,0 +1,16 @@
+{
+    "discount_data":{
+        "Discounts":[
+            {"id":"0" , "name":"کباب", "discount":"20"},
+            {"id":"1" , "name":"ساندویچ", "discount":"35"},
+            {"id":"2" , "name":"پیتزا", "discount":"50"},
+            {"id":"3" , "name":"سوشی", "discount":"65"},
+            {"id":"4" , "name":"دمنوش", "discount":"80"},
+            {"id":"0" , "name":"قهوه", "discount":"40"},
+            {"id":"6" , "name":"یخنوش", "discount":"25"}
+        ]
+    }
+}
+
+
+  
