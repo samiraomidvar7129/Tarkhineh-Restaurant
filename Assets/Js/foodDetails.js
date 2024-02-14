@@ -155,7 +155,7 @@ document.getElementById("minus").addEventListener('click', ()=>{
 
 // *----------------changeProgressBar---------------------------------------------------------------------------->
 
- function changeProgressBar(element,value_element,value){
+  changeProgressBar=(element,value_element,value)=>{
 var i=0;
 
 
