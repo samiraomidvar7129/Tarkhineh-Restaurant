@@ -37,6 +37,29 @@ document.addEventListener("DOMContentLoaded", ()=>{
 // ?--------------------------------------------------------------------------------------------------------->
 
 // *  Fetch all memory information----------------------->
+
 getFoodsFromLocalStorage=()=>{
-    
+
+
+}
+
+// * Return current food information--------------------->
+
+getCurrentFood=(index)=>{
+    var currentFood;
+
+
+if(index == -1){
+    const urlParams=new URLSearchParams(window.location.search);
+    const group=urlParams.get("group");
+    const product_id=urlParams.get("product")
+    currentFood= myData.foods_group[group].group_products[product_id]
+    return currentFood;
+
+}else{
+    const foods=getFoodsFromLocalStorage();
+    currentFood=foods[index]
+}
+ return currentFood;
+
 }
