@@ -1,4 +1,4 @@
-// Foods Fetch----------------------------------------->
+// *Foods Fetch----------------------------------------->
 
 document.addEventListener('DOMContentLoaded',()=>{
     var xhttp = new XMLHttpRequest();
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     xhttp.send();
 })
 
-// --------------------------------------------------------------------->
+// ?------------------------- createMenuBox -------------------------------------------->
 
 document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
     }
 })
 
-// ----------createProductBox---------------->
+// * ----------createProductBox------------------------------------------->
 
  const createProductBox=(product_name,product_price,product_content,t1,t2)=>{
 var li =document.createElement('li')

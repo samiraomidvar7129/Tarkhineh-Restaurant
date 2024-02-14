@@ -1,4 +1,4 @@
-// Foods Fetch----------------------------------------->
+// * Foods Fetch----------------------------------------->
 
 document.addEventListener('DOMContentLoaded',()=>{
     var xhttp = new XMLHttpRequest();
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       if (this.readyState == 4 && this.status == 200) {
        let result=this.responseText;
        let myData=JSON.parse(result)
-       createMainFoods(myData)
+       valueCallBack(myData)
       }
     };
     

@@ -1,4 +1,4 @@
-// Foods Fetch----------------------------------------->
+// *Foods Fetch----------------------------------------->
 
 document.addEventListener('DOMContentLoaded',()=>{
     var xhttp = new XMLHttpRequest();
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 })
 
 
-// ----------------createMainFoods--------------------->
+// *----------------createMainFoods--------------------->
 
 const createMainFoods=(myData)=>{
 
@@ -32,7 +32,7 @@ const createMainFoods=(myData)=>{
     }
 }
 
-// -------------------createGroupBox------------------->
+// *-------------------createGroupBox------------------->
 
 const createGroupBox=(id,name,ImageUrl)=>{
 

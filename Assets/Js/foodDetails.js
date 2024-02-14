@@ -1,4 +1,4 @@
-// *Foods Fetch----------------------------------------->
+// *Foods Fetch------------------------------------------------------->
 
 document.addEventListener('DOMContentLoaded',()=>{
   var xhttp = new XMLHttpRequest();
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 })
 
 
-// * Product Discounts--------------------------------------->
+// * Product Discounts------------------------------------------------->
 
 
 discount_data=`{
@@ -29,7 +29,7 @@ discount_data=`{
   ]
 }`
 
-//* Food Object------------------------------------------------------>
+//  * Food Object------------------------------------------------------>
 
 const food={
 
@@ -108,7 +108,7 @@ const food={
 }
 
 
-// ?-------------------------------------------------------------------------------------------->
+// ?-----------------------------  detaileFoodBox --------------------------------------------------------------->
 
 document.addEventListener("DOMContentLoaded", detaileFoodBox=(myData)=>{
 
