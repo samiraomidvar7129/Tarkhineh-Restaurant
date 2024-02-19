@@ -67,7 +67,7 @@ const food={
 
     var price_list=document.getElementById('price-list')
 
-    for(let i=0; i< this.product_price.length; i++){
+    for(let i = 0; i < this.product_price.length; i++){
 
      const price=this.product_price[i];
 
@@ -96,6 +96,8 @@ const food={
      var size_span=document.createElement('span')
      size_span.classList.add('size')
      size_span.appendChild(document.createTextNode(type))
+     size_span.setAttribute('onclick', 'addToShopCart(' + i + ')');
+     size_span.setAttribute('style', 'cursor:pointer;')
 
       price_li.appendChild(price_span)
       price_li.appendChild(size_span)
@@ -156,9 +158,8 @@ document.getElementById("minus").addEventListener('click', ()=>{
 // *----------------changeProgressBar---------------------------------------------------------------------------->
 
   changeProgressBar=(element,value_element,value)=>{
+
 var i=0;
-
-
 var interval=setInterval(
   function() {
   if(i >= Number(value)){
@@ -176,6 +177,11 @@ var interval=setInterval(
 var flag=true;
 
 window.onscroll=(e)=>{
+//   if (window.scrollY >= 100) {
+//     document.getElementById("navbar-wrapper").classList.add('navbar-fixed')
+// } else if (window.scrollY < 100) {
+//     document.getElementById("navbar-wrapper").classList.remove('navbar-fixed');
+// }
 
 if(flag){
 
@@ -194,6 +200,5 @@ if(flag){
 }
 };
 
-// ?-------------------------------------------------------------------------------------------------------------->
 
 

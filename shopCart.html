@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> سبد خرید</title>
-    <link rel="icon" href="/Assets/Imgs/Logo/favicon.jpeg"/>
+    <link rel="icon" href="Assets/Imgs/Logo/favicon.jpeg"/>
 
     <!-- Import Bootsrap Files -->
-    <link rel="stylesheet" href="/Assets/Libs/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/Libs/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 
     <!-- Import FontAwesome File -->
-    <link rel="stylesheet" href="/Assets/Libs/fontawesome-pro-5.15.3-web/css/all.min.css">
-     <!-- Link Swiper's CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Assets/Libs/fontawesome-pro-5.15.3-web/css/all.min.css">
 
     <!-- Import main.Css File -->
-    <link rel="stylesheet" href="/Assets/Css/Styles.min.css">
+    <link rel="stylesheet" href="Assets/Css/Styles.min.css">
 
      <body class="rtl">
 
@@ -27,9 +25,10 @@
                     <div class="row">
                         <div class="col-2">
                             <div class="buy-basket">
-                                <span>4
-                                     <i class="fa fa-shopping-basket icon" aria-hidden="true"></i>
-                                </span>
+                                <span >
+                                    <a href="shopCart.html" >سبد خرید</a>
+                                    <span id="shopCart-count-1"></span>
+                               </span>
                                 <span>
                                     <i class="fa fa-search icon"></i>
                                 </span>
@@ -60,27 +59,34 @@
             <div class="col">
                 <section id="foods-breadCrumb-box">
                    <div class="userBasket_box">
-                    <div class="userBasket_title">سبد خرید</div>
-                    <div class="back">برگشت</div>
+                    <div class="userBasket_title"> 
+                        <span id="shopCart-count-2">2</span>
+                        <span> مورد در سبد خرید </span>
+                    </div>
+                    <div class="back"><span href="" id="back">برگشت</span></div>
                    </div>
-                    
                  </section>
             </div>
         </div>
       </section>
     <!-- END Header-Content -->
 
+    <!-- Start UserBasket -->
 
-
-
-
-
-
-
-
-
-
-
+    <div class="container" id="shopCart-section">
+        <div class="row">
+            <div class="col-12">
+<section class="shopCartTable_wrapper">
+    <table id="shopCartTable"></table>
+</section>
+                <div class="total-price" >
+                    <span>قیمت کل : </span>
+                    <span id="total-price"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END UserBasket -->
 
     <!-- Start Footer-Section -->
     <section class="container-fluid" id="footer-wrapper">
@@ -204,26 +210,21 @@
 
 
 
-
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Import Bootsrap JsFile -->
-    <script src="/Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-    <script src="/Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="Assets/Libs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Import FontAwesome JsFile -->
-    <script src="/Assets/Libs/fontawesome-pro-5.15.3-web/js/all.min.js"></script>
+    <script src="Assets/Libs/fontawesome-pro-5.15.3-web/js/all.min.js"></script>
   
 
     <!-- Import MyScript.js File -->
 
-    <script src="/Assets/Js/shopCart.js"></script>
-    <script src="/Assets/Js/foodDetails.js"></script>
-    <script src="/Assets/Js/detailes.js"></script>
-    <script src="/Assets/Js/foodsFetch.js"></script>
-    <script src="/Assets/Js/MyScripts.js"></script>
+    <script src="Assets/Js/shopCart.js"></script>
+    <script src="Assets/Js/foodDetails.js"></script>
+    <script src="Assets/Js/detailes.js"></script>
+    <script src="Assets/Js/foodsFetch.js"></script>
+    <script src="Assets/Js/MyScripts.js"></script>
 
 
 </body>
