@@ -87,7 +87,7 @@ input::-webkit-inner-spin-button {
       @include flex(flex, center, center);
       text-align: $text-center;
       direction: rtl;
-      background-color: $bg-lightGreen;
+      // background-color: $bg-lightGreen;
     
       li {
         @include margin-padding(0, 0, 0, 20px, false);
