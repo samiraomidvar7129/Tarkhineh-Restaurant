@@ -90,7 +90,7 @@ input::-webkit-inner-spin-button {
       // background-color: $bg-lightGreen;
     
       li {
-        @include margin-padding(0, 0, 0, 20px, false);
+        @include margin-padding(0, 0, 0, 25px, false);
 
         a {
           color: $color-white;
