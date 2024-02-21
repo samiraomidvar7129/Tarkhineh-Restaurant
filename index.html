@@ -68,10 +68,18 @@
                   <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">
+        <img src="Assets/Imgs/Banners/slider-1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="Assets/Imgs/Banners/slider-2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="Assets/Imgs/Banners/slider-3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="Assets/Imgs/Banners/slider-4.jpg" alt="">
+      </div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -449,17 +457,19 @@
 
 
 
-     <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
-
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            speed: 300,
+            loop:true,
+            autoplay:true,
+           spaceBetween: 100,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>
 
 </body>
 </html>
