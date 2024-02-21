@@ -11,9 +11,9 @@
           "product_type":["normal"],
           "product_price":[3000],
           "product_imgs":[
-            "Assets/Imgs/Barbecue/kabab.jpg",
-            "Assets/Imgs/Barbecue/kabab.jpg",
-            "Assets/Imgs/Barbecue/kabab.jpg"
+            "Assets/Imgs/Barbecue/thumb-1.jpg",
+            "Assets/Imgs/Barbecue/thumb-2.png",
+            "Assets/Imgs/Barbecue/thumb-3.jpg"
           ],
           "product_content":[
             " گوشت",

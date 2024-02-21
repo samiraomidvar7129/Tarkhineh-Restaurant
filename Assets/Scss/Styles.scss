@@ -61,6 +61,12 @@ a:visited {
   text-decoration: none;
 }
 
+.active{
+color: $bg-lightGreen;
+text-decoration: underline;
+}
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
@@ -70,12 +76,11 @@ input::-webkit-inner-spin-button {
 
 // ?---------------------------index.html Styles---------------------------------------------------------------------------->
 
-//  * ----------navbar-wrapper---------------------------->
+//  * ----------navbar-wrapper------------------------------>
 #navbar-wrapper {
   background-color: $color-white;
   width: 100%;
   height:15vh;
-  background-color: silver;
 
   .navbar-item {
     width: 100%;
@@ -84,32 +89,38 @@ input::-webkit-inner-spin-button {
 
     ul {
       width: 100%;
-      height:10vh;
+      height:15vh;
       @include flex(flex, center, center);
       text-align: $text-center;
       direction: rtl;
-      // background-color: $bg-lightGreen;
     
       li {
-        @include margin-padding(0, 0, 0, 25px, false);
+        display: inline-block;
+        width: 100%;
+        // @include margin-padding(0, 0, 0, 5px, false);
 
         a {
-          color: $color-white;
+          color: $color-gray;
           font-size: $font-12;
-          font-weight: bold;
-          
         }
       }
     }
   }
   .buy-basket {
-    @include flex(flex, space-around, center);
+    @include flex(flex, center, center);
     width: 100%;
     height: 50px;
-    span {
+    div {
+      @include margin-padding(0, 20px, 0, 0, false);
+
       a{
         font-size: $font-12;
-        color: $bg-orange;
+        svg
+        {
+          color: $bg-lightGreen;
+          font-size: $font-16;
+        }
+
       }
       #shopCart-count-1{
         width: 10px;
@@ -130,17 +141,18 @@ input::-webkit-inner-spin-button {
 }
 
 
-// * ---------header-content------------------------------>
+// * ------------header-content------------------------------>
 
 #header-content {
   width: 100%;
   height: 50vh;
+
   .swiper {
     width: 100%;
     height: 100%;
 
     .swiper-wrapper{
-
+ 
       .swiper-slide {
         width: 100%;
         text-align: center;
@@ -161,208 +173,27 @@ input::-webkit-inner-spin-button {
       }
 
     }
+
+    .swiper-pagination{
+      background-color: $color-white;
+      width: 100px;
+      left: 45%;
+      bottom: 0;
+      border-top-left-radius: 70px;
+      border-top-right-radius: 70px;
+
+
+    }
   }
 
 
 
 }
 
-//  * ----------Services-Section ------------------------->
 
-#services-wrapper {
-  background-color: $bg-black;
-  width: 100%;
-  height: 450px;
-
-  .services-wrapper {
-    @include flex(flex, center, center);
-    @include column-row(column);
-    color: $color-white;
-    padding-top: 20px;
-
-    .services-wrapper_title {
-      text-align: $text-center;
-      h3 {
-        font-size: $font-16;
-        @include margin-padding(20px, 0, 0, 0, false);
-      }
-    }
-
-    .services-items {
-      @include flex(flex, center, center);
-      @include margin-padding(50px, 10px, 10px, 10px, false);
-
-      .services-inner {
-        @include flex(flex, center, center);
-        @include column-row(column);
-        @include margin-padding(0px, 20px, 0px, 0px, false);
-
-        img {
-          width: 100px;
-          height: 100px;
-        }
-
-        h5 {
-          font-size: $font-14;
-        }
-
-        p {
-          text-align: $text-center;
-          font-size: $font-14;
-
-          @include margin-padding(20px, 0px, 20px, 0px, false);
-        }
-        span {
-          a {
-            color: $bg-orange;
-            font-size: $font-14;
-            // text-decoration: overline ;
-            padding: 10px;
-            position: relative;
-
-            &::after {
-              content: "";
-              position: absolute;
-              top: 50px;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              width: 0;
-              height: 2px;
-              background-color: $bg-orange;
-              transition: width 0.5s ease;
-            }
-            &:hover::after {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-//  * ----------AboutUs-Section--------------------------->
-
-#about-us {
-  width: 100%;
-  height: 500px;
-  background-color: $dark-blue;
-
-  #About-boxRight {
-    @include margin-padding(60px, 0, 0, 0, false);
-    @include flex(flex, space-between, center);
-
-    #About-boxRight_item {
-      @include flex(flex, flex-end, start);
-      .img-box {
-        width: 300px;
-        height: 300px;
-        @include flex(flex, center, center);
-        img {
-          display: block;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    #About-boxLeft_item {
-      @include flex(flex, center, center);
-      @include column-row(column);
-
-      .About-boxLeft_item--content {
-        @include flex(flex, flex-start, end);
-        @include column-row(column, null);
-        h6 {
-          color: $color-gold;
-          font-size: $font-14;
-        }
-        h4 {
-          color: $color-white;
-          @include margin-padding(10px, 0, 0, 0, false);
-          text-align: $text-right;
-          line-height: $line-height;
-        }
-        p {
-          color: $color-gray;
-          @include margin-padding(10px, 0, 0, 0, false);
-          text-align: $text-right;
-          line-height: $line-height;
-        }
-      }
-      .spacial-boxes {
-        @include flex(flex, space-between, center);
-        @include margin-padding(20px, 0, 0, 0, false);
-
-        .spacial-boxes_itemRight {
-          background-color: $bg-black;
-          width: 100%;
-          height: 150px;
-          @include margin-padding(10px, 10px, 10px, 10px, true);
-          @include border-radius(5px, 5px, 5px, 5px);
-          @include flex(flex, space-around, center);
-          @include column-row(column);
-
-          .spacial-boxes_itemRight--title {
-            @include flex(flex, center, center);
-          }
-          p {
-            color: $color-white;
-            @include margin-padding(12px, 0, 0, 0, false);
-            @include margin-padding(10px, 20px, 10px, 10px, true);
-            font-size: $font-12;
-            text-align: $text-right;
-          }
-        }
-        .spacial-boxes_itemLeft {
-          background-color: $bg-black;
-          width: 100%;
-          height: 150px;
-          @include border-radius(5px, 5px, 5px, 5px);
-          @include flex(flex, space-around, center);
-          @include column-row(column);
-          @include margin-padding(10px, 10px, 10px, 10px, true);
-
-          .spacial-boxes_itemLeft--title {
-            @include flex(flex, center, center);
-          }
-          p {
-            color: $color-white;
-            @include margin-padding(12px, 0, 0, 0, false);
-            @include margin-padding(10px, 20px, 10px, 10px, true);
-            font-size: $font-12;
-            text-align: $text-right;
-          }
-        }
-      }
-      .rezerv-btn {
-        width: 50%;
-        height: 40px;
-        @include margin-padding(10px, auto, 0, auto, false);
-        a {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          background-color: $bg-orange;
-          color: $color-white;
-          font-size: $font-14;
-          @include flex(flex, center, center);
-          @include border-radius(4px, 4px, 4px, 4px);
-          &:hover {
-            background-color: $color-gold;
-            transition: 0.5s ease-in;
-            color: $bg-orange;
-          }
-        }
-      }
-    }
-  }
-}
-
-// * -----------Suggested-Section---------------------------------->
+// * -----------Suggested-Section---------------------------->
 
 #Suggested-wrapper {
-  background-color: $bg-black;
 
   #Suggested-content {
     width: 100%;
@@ -412,7 +243,7 @@ input::-webkit-inner-spin-button {
           height: 30%;
           @include flex(flex, center, center);
           @include column-row(column);
-          background-color: $bg-green;
+          background-color: $bg-lightGreen;
           color: $color-white;
           position: relative;
           text-align: $text-right;
@@ -436,167 +267,77 @@ input::-webkit-inner-spin-button {
   }
 }
 
-// * --------------Delivery-Section-------------------------------->
-#delivery-wrapper {
-  width: 100%;
-  height: 400px;
+// * -----------AboutUs-Section------------------------------>
 
-  .delivery-content {
-    @include flex(flex, space-between, center);
-    @include margin-padding(60px, 0, 0, 0, true);
-
-    .deliver-img {
-      width: 300px;
-      height: 300px;
-
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .delivery-text {
-      @include flex(flex, flex-start, end);
-      @include column-row(column);
-      h5 {
-        color: $color-gold;
-        font-size: $font-14;
-        @include margin-padding(0, 0, 20px, 0, false);
-      }
-      p {
-        text-align: $text-right;
-        @include margin-padding(20px, 0, 20px, 0, false);
-      }
-      h6 {
-        .tel-link {
-          color: $dark-blue;
-        }
-        .icon {
-          color: $color-gold;
-        }
-      }
-      h6 {
-        color: $dark-blue;
-        span {
-          .icon {
-            color: $color-gold;
-          }
-        }
-      }
-    }
-  }
-}
-
-// * --------------ContactUs-Section------------------------------->
-#contact-us {
-  width: 100%;
-  height: 300px;
-  background-image: url("../Imgs/Foods/orange-slice.jpg");
+#About-Us{
+  background-image: url("../Imgs/Banners/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
 
-  .contactUs-content {
-    @include flex(flex, space-between, center);
-    @include column-row(column);
-    @include margin-padding(60px, 0, 0, 0, false);
+  #aboutUs-content{
+    width: 100%;
+    height: 50vh;
+    @include flex(flex, space-around, end);
+    flex-direction: column;
+    padding-right: 10px;
 
-    .contactUs-content--text {
-      @include flex(flex, space-between, center);
-      @include column-row(column);
+
+    .aboutUs-title{
+      color: $color-white;
+    }
+    .aboutUs-txt{
+      color: $color-white;
+      font-size: $font-12;
       text-align: $text-right;
-      h6 {
-        color: $color-gold;
-      }
-      p {
+    }
+    .more-link{
+      width: 100px;
+      height: 40px;
+      border: 1px solid silver;
+      padding: 6px 6px 6px 10px;
+
+      a{
+        font-size: $font-12;
+        text-align: $text-center;
         color: $color-white;
-        @include margin-padding(15px, 0, 20px, 0, false);
+
       }
     }
 
-    .contactUs-content--items {
-      @include flex(flex, space-between, center);
-
-      .content--items_boxRight {
-        width: 200px;
-        height: 100px;
-        @include flex(flex, space-around, center);
-        @include margin-padding(10px, 10px, 10px, 10px, true);
-        @include column-row(column);
-        background-color: $color-white;
-        h6 {
-          color: $dark-blue;
-        }
-        h5 {
-          color: $bg-orange;
-        }
-      }
-      .content--items_boxLeft {
-        width: 200px;
-        height: 100px;
-        @include flex(flex, space-around, center);
-        @include margin-padding(10px, 10px, 10px, 10px, true);
-        @include column-row(column);
-        background-color: $color-white;
-        h6 {
-          color: $dark-blue;
-        }
-        h5 {
-          color: $bg-orange;
-        }
-      }
-    }
   }
-}
 
-//  * --------------News-Section------------------------------------>
-#news-wrapper {
-  width: 100%;
-  height: 350px;
-  background-image: url("../Imgs/Foods/leafs.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  .aboutUs-items{
+    width: 100%;
+    height:auto;
 
-  .news-content {
-    @include margin-padding(100px, 0, 0, 0, false);
-    @include flex(flex, space-around, center);
-    @include column-row(column);
-
-    p {
-      @include margin-padding(20px, 0, 20px, 0, false);
-    }
-    .news-content_form {
-      width: 70%;
-      height: 50px;
-      @include margin-padding(30px, auto, 0, auto, false);
+    .aboutUs-item{
+      width: 100%;
+      height: auto;
       @include flex(flex, center, center);
-      border: 1px solid $bg-orange;
-      @include border-radius(5px, 5px, 5px, 5px);
+    flex-direction: column;
+    text-align: $text-center;
 
-      input {
-        width: 100%;
-        height: 100%;
-        outline: none;
-        border: none;
-        &::placeholder {
-          text-align: $text-right;
-          font-size: $font-12;
-          @include margin-padding(0, 20px, 0, 0, true);
-          caret-color: blue;
-        }
-      }
-      button {
-        width: 50px;
-        height: 100%;
-        outline: none;
-        border: none;
-        background-color: $bg-orange;
+    .div-icon{
+      padding-top: 10px;
+      svg{
+        color: $color-white;
       }
     }
+ h6{
+  padding-top: 20px;
+  color: $color-white;
+  font-size: $font-12;
+ }
+
+    
+    }
   }
+  
 }
 
-// * --------------Footer-Section---------------------------------->
+
+// * --------------Footer-Section---------------------------->
+
 #footer-wrapper {
   width: 100%;
   height: 400px;
@@ -736,7 +477,8 @@ input::-webkit-inner-spin-button {
   }
 }
 
-//  * ---------------SubFooter-Section------------------------------>
+//  * ---------------SubFooter-Section----------------------->
+
 #subFooter-wrapper {
   width: 100%;
   height: 100%;
