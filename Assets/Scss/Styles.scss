@@ -336,6 +336,55 @@ input::-webkit-inner-spin-button {
 }
 
 
+// *------------ Post-Section--------------------------------->
+
+#post{
+  width:100%;
+  height: auto;
+  @include flex(flex, center, center);
+  @include margin-padding(10px, 0, 10px, 0, false);
+
+  
+
+
+  .post-item{
+    width: 100%;
+    height: auto;
+    @include margin-padding(0, 0, 0, 6px, false);
+    border: 1px solid silver;
+    @include flex(flex, center, center);
+    flex-direction: column;
+    text-align: $text-center;
+    overflow: hidden;
+    border-radius: 6px;
+
+    .post_item_img{
+      width: 100%;
+      height: 100%;
+
+
+      .post_item_img img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+      }
+    }
+
+    .post-item_title{
+      @include margin-padding(10px, 0, 10px, 0, false);
+      font-size: $font-14;
+
+    }
+
+    .post-item_txt{
+      font-size: $font-12;
+    }
+  }
+}
+
+
 // * --------------Footer-Section---------------------------->
 
 #footer-wrapper {
