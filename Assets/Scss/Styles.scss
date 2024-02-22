@@ -7,6 +7,7 @@ $dark-blue: #151b20;
 $color-gray: rgba(128, 128, 128, 0.782);
 $color-gold: #f9b572;
 $bg-green: rgb(8, 170, 8);
+$font-10: 10px;
 $font-12: 12px;
 $font-14: 14px;
 $font-16: 16px;
@@ -14,7 +15,6 @@ $font-family: "yekan";
 $line-height: 32px;
 $text-right: right;
 $text-center: center;
-
 
 // *TODO:  Mixins---------------------------------------------->
 
@@ -66,12 +66,17 @@ color: $bg-lightGreen;
 text-decoration: underline;
 }
 
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+::placeholder{
+  font-size: $font-10 !important;
+  text-align: $text-right;
+  color: $color-white ;
+  padding: 5px 5px 0 0;
 }
 
 // ?---------------------------index.html Styles---------------------------------------------------------------------------->
@@ -273,6 +278,10 @@ input::-webkit-inner-spin-button {
   background-image: url("../Imgs/Banners/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 
   #aboutUs-content{
     width: 100%;
@@ -343,10 +352,6 @@ input::-webkit-inner-spin-button {
   height: auto;
   @include flex(flex, center, center);
   @include margin-padding(10px, 0, 10px, 0, false);
-
-  
-
-
   .post-item{
     width: 100%;
     height: auto;
@@ -357,19 +362,21 @@ input::-webkit-inner-spin-button {
     text-align: $text-center;
     overflow: hidden;
     border-radius: 6px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 
     .post_item_img{
       width: 100%;
       height: 100%;
-
 
       .post_item_img img{
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        
-      }
+        }
     }
 
     .post-item_title{
@@ -384,175 +391,159 @@ input::-webkit-inner-spin-button {
   }
 }
 
-
 // * --------------Footer-Section---------------------------->
 
-#footer-wrapper {
+#footer-content {
   width: 100%;
-  height: 400px;
-  background-color: $dark-blue;
+  height: 250px;
+  background-image: url("../Imgs/Banners/footer-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 15px;
 
-  .footer-content {
+
+
+  .footer-content-items{
     @include flex(flex, space-around, center);
-    flex-direction: row-reverse;
-    @include margin-padding(100px, 20px, 0, 20px, true);
 
-    .footer-content-item {
-      width: 35%;
-      height: 100%;
+    .footer-content-item{
 
-      .footer-content-item_text {
-        @include flex(flex, flex-start, end);
-        @include column-row(column);
-
-        .footer-content-item_logo {
-          width: 100px;
-          height: 70px;
-
-          img {
-            display: block;
-            width: 100%;
-            height: 100%;
-          }
-        }
-        p {
-          text-align: $text-right;
-          @include margin-padding(20px, 0, 20px, 0, false);
-          color: $color-white;
-        }
-        .phone {
-          @include flex(flex, center, center);
-
-          .phone-link {
-            color: $color-white;
-          }
-          .icon {
-            color: $color-gold;
-            @include margin-padding(0, 0, 0, 10px, true);
-          }
-        }
-        .email {
-          @include flex(flex, center, center);
-
-          .email-link {
-            color: $color-white;
-          }
-          .icon {
-            color: $color-gold;
-            @include margin-padding(0, 0, 0, 10px, true);
-          }
-        }
-
-        .footer-content-item_socials {
-          ul {
-            @include margin-padding(10px, 0, 0, 0, false);
-            @include flex(flex, center, center);
-            li {
-              @include margin-padding(0, 0, 0, 20px, false);
-              a {
-                .icon {
-                  color: $color-gold;
-                }
-              }
+      .easy-success_item{
+        @include flex(flex, flex-end, start);
+        flex-direction:column;
+    
+    .easy-success_title{
+      color: $color-white
+    }
+        .easy-success_ul{
+          @include margin-padding(15px, 0, 0, 0, false);
+          @include flex(flex, center, end);
+          flex-direction:column; 
+    
+          li{
+    
+            a{
+    font-size: $font-12;
+    color: $color-white;
             }
           }
+    
         }
+    
       }
-
-      .footer-content-item_title {
-        @include flex(flex, space-around, center);
-        @include column-row(column);
-        text-align: $text-right;
-
-        h6 {
+      .branches_item{
+        @include flex(flex, flex-end, start);
+        flex-direction:column;
+    
+        .branches_title{
           color: $color-white;
-          @include margin-padding(20px, 0, 20px, 0, false);
         }
-        ul {
-          text-align: $text-center;
-
-          li {
-            @include margin-padding(10px, 10px, 10px, 10px, false);
-            background-color: $bg-orange;
-            display: inline-block;
-            width: 100px;
-            height: 30px;
-
-            a {
+    
+        .branches_ul{
+          @include margin-padding(15px, 0, 0, 0, false);
+          @include flex(flex, center, end);
+          flex-direction:column; 
+    
+          li{
+            a{
               font-size: $font-12;
               color: $color-white;
-              &:hover {
-                color: $dark-blue;
-                transition: 0.5s linear;
-              }
             }
           }
         }
       }
-      .footer-content-item_imgGallery {
-        @include flex(flex, space-around, center);
-        @include column-row(column);
+    
+    .contact-us{
+      @include flex(flex, center, end);
+      flex-direction:column;
+    
+      .contact-us_title{
+        color: $color-white
+      }
 
-        .imgGallery-title {
-          h6 {
-            color: $color-white;
-            @include margin-padding(10px, 0, 10px, 0, false);
-          }
-        }
-
-        .imgGallery-items {
-          width: 100%;
-          height: auto;
-          @include margin-padding(30px, 0, 0, 0, false);
+      .contact-us_form{
+        @include margin-padding(15px, 0, 0, 0, false);
+        
+      form{
+        width: 100%;
+        height: 100%;
+        @include flex(flex, center, end);
+         flex-direction: row-reverse;
+         
+        .form-inputs{
           @include flex(flex, center, center);
-          flex-wrap: wrap;
+          flex-direction:column;
+    
+          input{
+            width: 100%;
+            height: 32px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border: 1px solid rgba(192, 192, 192, 0.594);
+            @include margin-padding(0, 0, 10px, 0, true);
+            margin-left: 10px;
+            text-align: $text-right;
+            color: $color-white;
 
-          .imgGallery-items_img {
-            width: 80px;
-            height: 60px;
-            @include margin-padding(10px, 0, 0, 10px, false);
 
-            a {
-              img {
-                display: block;
-                width: 100%;
-                height: 100%;
-              }
+            #userName{
+              padding-top: 0;
             }
           }
         }
+
+        .form-textArea{
+           
+          textarea{
+          resize: none;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          border: 1px solid rgba(192, 192, 192, 0.594);
+          text-align: $text-right;
+          color: $color-white;
+          padding: 5px 5px 0 0 ;
+
+          }
+        }
       }
+    
+      }
+    
+    }
+    
     }
   }
-}
 
-//  * ---------------SubFooter-Section----------------------->
-
-#subFooter-wrapper {
-  width: 100%;
-  height: 100%;
-  background-color: $bg-black;
-
-  .subFooter-content {
+  .subFooter-content{
     @include flex(flex, center, center);
-    @include margin-padding(20px, 0, 0, 0, true);
+    @include margin-padding(20px, 0, 0, 0, false);
 
-    h6 {
-      color: $color-gray;
-      font-size: $font-14;
+    h6{
+      font-size: $font-10;
+      color: $color-white;
 
-      a {
-        color: $bg-orange;
-        @include margin-padding(10px, 10px, 10px, 10px, true);
+      a{
+        display: inline-block;
+        @include margin-padding(0, 5px, 0, 5px, false);
+        padding: 10px;
+        font-size: $font-12;
+        color: $color-white;
+        border: 1px solid $bg-lightGreen;
+        background-color: $bg-lightGreen;
+
       }
     }
+
   }
 }
 
 
 
 
-// ? ---------------------FoodsMenu.html Styles----------------------------------------------------------------------------------------->
+
+// ! ---------------------FoodsMenu.html Styles----------------------------------------------------------------------------------------->
 
 
 //* ------------------foods-breadCrumb-box--------------------------->
@@ -628,7 +619,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-//? -----------------------foodDetails.html Styles-------------------------------------------------------------------------------------->
+//! -----------------------foodDetails.html Styles-------------------------------------------------------------------------------------->
 
 // *--------------------foodBox-detail--------------------------------->
 
@@ -836,7 +827,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-// ?------------------------ShopCart.html Styles---------------------------------------------------------------------------------------->
+// !------------------------ShopCart.html Styles---------------------------------------------------------------------------------------->
 
 
 .userBasket_box{
