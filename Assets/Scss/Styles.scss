@@ -84,7 +84,7 @@ input::-webkit-inner-spin-button {
 
 //  * ----------navbar-wrapper------------------------------>
 #navbar-wrapper {
-  background-color: $color-white;
+  background-color: green;
   width: 100%;
   height:15vh;
 
@@ -161,12 +161,14 @@ input::-webkit-inner-spin-button {
  
       .swiper-slide {
         width: 100%;
+        height: 100%;
         text-align: center;
         font-size: 18px;
         background: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
+        
 
 
         .swiper-slide img {
@@ -348,15 +350,10 @@ input::-webkit-inner-spin-button {
 
 // *------------ Post-Section--------------------------------->
 
-#post{
-  width:100%;
-  height: auto;
-  @include flex(flex, center, center);
-  @include margin-padding(10px, 0, 10px, 0, false);
+
   .post-item{
     width: 100%;
     height: auto;
-    @include margin-padding(0, 0, 0, 6px, false);
     border: 1px solid silver;
     @include flex(flex, center, center);
     flex-direction: column;
@@ -369,8 +366,7 @@ input::-webkit-inner-spin-button {
     user-select:none;
 
     .post_item_img{
-      width: 100%;
-      height: 100%;
+      padding: 0;
 
       .post_item_img img{
         display: block;
@@ -390,141 +386,144 @@ input::-webkit-inner-spin-button {
       font-size: $font-12;
     }
   }
-}
+
 
 // * --------------Footer-Section---------------------------->
 
-#footer-content {
+
+#footer{
   width: 100%;
-  height: 250px;
+  height: auto;
   background-image: url("../Imgs/Banners/footer-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 15px;
 
+  
 
+  .footer-content-item{
+    @include flex(flex, flex-start, end);
+    flex-direction:column;
 
-  .footer-content-items{
-    @include flex(flex, space-around, center);
+    .easy-success_item{
+      @include flex(flex, center, center);
+      flex-direction:column;
 
-    .footer-content-item{
-
-      .easy-success_item{
-        @include flex(flex, flex-end, start);
+  .easy-success_title{
+    font-size: $font-14;
+    color: $color-white
+  }
+      .easy-success_ul{
+        @include margin-padding(15px, 0, 0, 0, true);
+        @include flex(flex, flex-start, end);
+        flex-direction:column; 
+  
+        li{
+  
+          a{
+  font-size: $font-10;
+  color: $color-white;
+          }
+        }
+  
+      }
+  
+    }
+    .branches_item{
+      @include flex(flex,center, center);
+      flex-direction:column;
+  
+      .branches_title{
+        font-size: $font-14;
+        color: $color-white;
+        
+      }
+  
+      .branches_ul{
+        @include margin-padding(15px, 0, 0, 0, true);
+        @include flex(flex, flex-start, end);
         flex-direction:column;
-    
-    .easy-success_title{
+        padding-right: 0; 
+  
+        li{
+          a{
+            font-size: $font-10;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  
+  .contact-us{
+    @include flex(flex, center, end);
+    flex-direction:column;
+  
+    .contact-us_title{
       color: $color-white
     }
-        .easy-success_ul{
-          @include margin-padding(15px, 0, 0, 0, false);
-          @include flex(flex, center, end);
-          flex-direction:column; 
-    
-          li{
-    
-            a{
-    font-size: $font-12;
-    color: $color-white;
-            }
-          }
-    
-        }
-    
-      }
-      .branches_item{
-        @include flex(flex, flex-end, start);
-        flex-direction:column;
-    
-        .branches_title{
-          color: $color-white;
-        }
-    
-        .branches_ul{
-          @include margin-padding(15px, 0, 0, 0, false);
-          @include flex(flex, center, end);
-          flex-direction:column; 
-    
-          li{
-            a{
-              font-size: $font-12;
-              color: $color-white;
-            }
-          }
-        }
-      }
-    
-    .contact-us{
+  
+    .contact-us_form{
+      @include margin-padding(15px, 0, 0, 0, false);
+      
+    form{
+      width: 100%;
+      height: 100%;
       @include flex(flex, center, end);
-      flex-direction:column;
-    
-      .contact-us_title{
-        color: $color-white
-      }
-
-      .contact-us_form{
-        @include margin-padding(15px, 0, 0, 0, false);
-        
-      form{
-        width: 100%;
-        height: 100%;
-        @include flex(flex, center, end);
-         flex-direction: row-reverse;
-         
-        .form-inputs{
-          @include flex(flex, center, center);
-          flex-direction:column;
-    
-          input{
-            width: 100%;
-            height: 32px;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            border: 1px solid rgba(192, 192, 192, 0.594);
-            @include margin-padding(0, 0, 10px, 0, true);
-            margin-left: 10px;
-            text-align: $text-right;
-            color: $color-white;
-
-
-            #userName{
-              padding-top: 0;
-            }
-          }
-        }
-
-        .form-textArea{
-           
-          textarea{
-          resize: none;
+       flex-direction: row-reverse;
+       
+      .form-inputs{
+        @include flex(flex, center, center);
+        flex-direction:column;
+  
+        input{
+          width: 100%;
+          height: 32px;
           background-color: transparent;
           border: none;
           outline: none;
           border: 1px solid rgba(192, 192, 192, 0.594);
+          @include margin-padding(0, 0, 10px, 0, true);
+          margin-left: 10px;
           text-align: $text-right;
           color: $color-white;
-          padding: 5px 5px 0 0 ;
-
+  
+  
+          #userName{
+            padding-top: 0;
           }
         }
       }
-    
+  
+      .form-textArea{
+         
+        textarea{
+        resize: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border: 1px solid rgba(192, 192, 192, 0.594);
+        text-align: $text-right;
+        color: $color-white;
+        padding: 5px 5px 0 0 ;
+  
+        }
       }
-    
     }
-    
+  
     }
+  
   }
-
+  
+  }
+  
   .subFooter-content{
     @include flex(flex, center, center);
     @include margin-padding(20px, 0, 0, 0, false);
-
+  
     h6{
       font-size: $font-10;
       color: $color-white;
-
+  
       a{
         display: inline-block;
         @include margin-padding(0, 5px, 0, 5px, false);
@@ -533,13 +532,12 @@ input::-webkit-inner-spin-button {
         color: $color-white;
         border: 1px solid $bg-lightGreen;
         background-color: $bg-lightGreen;
-
+  
       }
     }
-
+  
   }
 }
-
 
 
 
