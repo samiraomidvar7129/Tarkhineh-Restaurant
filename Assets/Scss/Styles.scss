@@ -399,7 +399,7 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   padding-top: 15px;
 
-  
+ .row{
 
   .footer-content-item{
     @include flex(flex, flex-start, end);
@@ -417,6 +417,7 @@ input::-webkit-inner-spin-button {
         @include margin-padding(15px, 0, 0, 0, true);
         @include flex(flex, flex-start, end);
         flex-direction:column; 
+        padding-right: 0;
   
         li{
   
@@ -537,6 +538,7 @@ input::-webkit-inner-spin-button {
     }
   
   }
+ }
 }
 
 
