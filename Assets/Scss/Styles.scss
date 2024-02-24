@@ -517,6 +517,7 @@ input::-webkit-inner-spin-button {
   
   }
   
+ .row{
   .subFooter-content{
     @include flex(flex, center, center);
     @include margin-padding(20px, 0, 0, 0, false);
@@ -529,7 +530,7 @@ input::-webkit-inner-spin-button {
         display: inline-block;
         @include margin-padding(0, 5px, 0, 5px, false);
         padding: 10px;
-        font-size: $font-12;
+        font-size: $font-10;
         color: $color-white;
         border: 1px solid $bg-lightGreen;
         background-color: $bg-lightGreen;
@@ -538,6 +539,7 @@ input::-webkit-inner-spin-button {
     }
   
   }
+ }
  }
 }
 
