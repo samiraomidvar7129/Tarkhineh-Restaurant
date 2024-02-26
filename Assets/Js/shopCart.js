@@ -1,8 +1,8 @@
 // * Back btn---------------------------------------->
 
-document.getElementById('back').addEventListener('click',()=>{
-    history.back();
-})
+// document.getElementById('back').addEventListener('click',()=>{
+//     history.back();
+// })
 
 
 // * LoadData----------------------------------------->
@@ -77,7 +77,7 @@ addToShopCart=(type_index)=>{
     var product=getCurrentFood(-1);
 
     var select_food={
-        id:product.product_id,
+        id:product.id,
         name:product.product_name,
         image:product.product_imgs[0],
         typt:product.product_type[type_index],
@@ -88,6 +88,9 @@ addToShopCart=(type_index)=>{
     addToMemory(select_food, 1)
 
 }
+
+
+
 
 // *  Store products in memory----------------------------->
 
@@ -112,7 +115,7 @@ addToMemory=(select_food, count)=>{
         foods[index].qty +=count;
     }
 
-    jsonStrFoods =json.stringify(foods);
+    jsonStrFoods =JSON.stringify(foods);
     localStorage.setItem('foods', jsonStrFoods);
     update_shopCart_number();
     update_shopCart_Total();
@@ -155,6 +158,7 @@ update_shopCart_number=()=>{
 // * Update the total price of the shopping cart-------->
 
 update_shopCart_Total=()=>{
+
     foods=getFoodsFromLocalStorage();
     var sum=0;
     for(let i=0; i < foods.length; i++){
