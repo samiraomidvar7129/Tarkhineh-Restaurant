@@ -496,7 +496,7 @@ input::-webkit-inner-spin-button {
  .row{
 
   .footer-content-item{
-    @include flex(flex, flex-start, end);
+    @include flex(flex,center, center);
     flex-direction:column;
 
     .easy-success_item{
@@ -504,9 +504,12 @@ input::-webkit-inner-spin-button {
       @include flex(flex, center, center);
       flex-direction:column;
 
-  .easy-success_title{
+    .easy-success_title{
+    width: 100%;
     font-size: $font-14;
-    color: $color-white
+    color: $color-white;
+    background-color: $bg-lightGreen;
+    text-align: $text-center
   }
       .easy-success_ul{
         @include margin-padding(15px, 0, 0, 0, true);
@@ -515,6 +518,9 @@ input::-webkit-inner-spin-button {
         padding-right: 0;
   
         li{
+          display: block;
+          width: 100%;
+          text-align: $text-center;
   
           a{
   font-size: $font-10;
@@ -531,9 +537,11 @@ input::-webkit-inner-spin-button {
       flex-direction:column;
   
       .branches_title{
+        width: 100%;
+        text-align: $text-center;
         font-size: $font-14;
         color: $color-white;
-        
+        background-color: $bg-lightGreen
       }
   
       .branches_ul{
@@ -543,6 +551,10 @@ input::-webkit-inner-spin-button {
         padding-right: 0; 
   
         li{
+          display: block;
+          width: 100%;
+          text-align: $text-center;
+
           a{
             font-size: $font-10;
             color: $color-white;
