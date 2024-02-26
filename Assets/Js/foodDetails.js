@@ -41,8 +41,6 @@ const food={
   createProductDetails:function(){
 
     document.getElementById('food-title-4').innerText=this.product_name;
-    document.getElementById('food-title-5').innerText=this.product_name;
-    document.getElementById('food-title-6').innerText=this.product_name;
 
     document.getElementById('foodBox_content_info').innerText=this.product_content;
 

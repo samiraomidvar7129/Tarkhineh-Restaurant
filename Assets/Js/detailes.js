@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
             for (const product_key in group_products) {
                 createProductBox(
                     group_products[product_key].product_name,
+                    group_products[product_key].product_imgs[0],
                     group_products[product_key].product_price + "تومان",
                     group_products[product_key].product_content,
                     group_index,
@@ -49,8 +50,21 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
 
 // * ----------createProductBox------------------------------------------->
 
- const createProductBox=(product_name,product_price,product_content,t1,t2)=>{
+ const createProductBox=(product_name,product_imgs,product_price,product_content,t1,t2)=>{
+
 var li =document.createElement('li')
+
+var product_img_div=document.createElement('div')
+product_img_div.classList.add('product_img_div')
+
+var product_img=document.createElement('img')
+product_img.setAttribute("src",product_imgs)
+
+product_img_div.appendChild(product_img)
+
+var food_information=document.createElement('div')
+food_information.classList.add('food_information')
+
 
 var infoDivision=document.createElement("div")
 infoDivision.classList.add('food-info');
@@ -74,8 +88,12 @@ var contentDivision=document.createElement('div')
 contentDivision.classList.add('food-info_content')
 contentDivision.appendChild(document.createTextNode(product_content));
 
-li.appendChild(infoDivision);
-li.appendChild(contentDivision);
+
+li.appendChild(product_img_div)
+food_information.appendChild(infoDivision)
+food_information.appendChild(contentDivision)
+li.appendChild(food_information)
+
 
 document.getElementById('food-list').appendChild(li);
 
