@@ -1,19 +1,4 @@
-// // *Foods Fetch----------------------------------------->
-
-// document.addEventListener('DOMContentLoaded',()=>{
-//     var xhttp = new XMLHttpRequest();
-//     xhttp.open("GET", "/assets/Json/products.json", true);
-//     xhttp.onreadystatechange = function() {
-//       if (this.readyState == 4 && this.status == 200) {
-//        let result=this.responseText;
-//        let myData=JSON.parse(result)
-//        createMenuBox(myData)
-//       }
-//     };
-    
-//     xhttp.send();
-// })
-
+// *Foods Fetch----------------------------------------->
 
 var myData;
 
@@ -75,8 +60,6 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
 })
 
 
-
-
 // * ----------createProductBox-------------------------->
 
  const createProductBox=(product_name,product_imgs,product_price,product_content,t1,t2)=>{
@@ -128,11 +111,8 @@ document.getElementById('food-list').appendChild(li);
 
 }
 
+
 // *-----------foodsSearch------------------------------->
-
-
-
-
 
 
 let search=document.getElementById('search');
@@ -140,7 +120,7 @@ let search=document.getElementById('search');
 search.addEventListener('keypress', (event)=>{
     if(event.key === 'Enter'){
         var searchValue=event.target.value;
-        console.log(searchValue)
+        event.preventDefault();
         Search(searchValue);
         search.value="";
     }
@@ -173,13 +153,10 @@ search.addEventListener('keypress', (event)=>{
         })
     }else{
         let resultText=document.createElement('h1');
-        resultText.appendChild(document.createTextNode('نتیجه ای یافت نشد ! '));
+        resultText.appendChild(document.createTextNode(' ! نتیجه ای یافت نشد '));
         resultText.classList.add('searchBox-title');
         searchResultBox.appendChild(resultText);
-    }
-
-    
-    }
+    }}
 
 const createFoodBox=(food)=>{
 
@@ -200,27 +177,26 @@ h3.appendChild(document.createTextNode(food.product_name))
 div2.appendChild(img)
 div2.appendChild(h3)
 
-let strong1=document.createElement('strong')
+let strong1=document.createElement('div')
 strong1.appendChild(document.createTextNode(food.product_type[0]))
 
-let strong2=document.createElement('strong')
-strong2.appendChild(document.createTextNode(food.product_type[0] + "تومان"))
+let strong2=document.createElement('div')
+strong2.classList.add('price-strong')
+strong2.appendChild(document.createTextNode(food.product_price[0] + "تومان"))
+
 
 div1.appendChild(div2)
-div1.appendChild(strong1)
-div1.appendChild(strong2)
+div2.appendChild(strong1)
+div2.appendChild(strong2)
 
 return div1;
 
-
-
 }
 
-
+// ?----------------------------------------------------------------------------------------------------------->
 
 document.addEventListener("DOMContentLoaded", ()=>{
     loadData();
-    
 })
 
 

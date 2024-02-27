@@ -810,7 +810,41 @@ input::-webkit-inner-spin-button {
   }
   
 }
+.searchBox_food{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 
+  .searchBox_img-title{
+    width: 100%;
+    height: 100%;
+    @include flex(flex, space-around, center);
+    flex-direction: row-reverse;
+    @include margin-padding(25px, 0, 0, 0, false);
+    
+
+    .searchBox-img{
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
+
+    h3{
+      font-size: $font-16;
+    }
+
+
+  .price-strong{
+    width: 200px;
+    background-color: pink;
+    color: $bg-lightGreen;
+    @include flex(flex, center, center);
+   }
+    
+  }
+}
 
 .searchBox-title{
   padding: 10px;
@@ -818,6 +852,8 @@ input::-webkit-inner-spin-button {
   font-size: $font-14;
   text-align: $text-right;
   background-color: $bg-lightGreen;
+
+
   
 }
 
