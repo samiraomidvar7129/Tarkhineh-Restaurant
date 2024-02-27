@@ -1,23 +1,49 @@
-// *Foods Fetch----------------------------------------->
+// // *Foods Fetch----------------------------------------->
 
-document.addEventListener('DOMContentLoaded',()=>{
+// document.addEventListener('DOMContentLoaded',()=>{
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.open("GET", "/assets/Json/products.json", true);
+//     xhttp.onreadystatechange = function() {
+//       if (this.readyState == 4 && this.status == 200) {
+//        let result=this.responseText;
+//        let myData=JSON.parse(result)
+//        createMenuBox(myData)
+//       }
+//     };
+    
+//     xhttp.send();
+// })
+
+
+var myData;
+
+loadData=()=>{
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", "/assets/Json/products.json", true);
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-       let result=this.responseText;
-       let myData=JSON.parse(result)
-       createMenuBox(myData)
+       let jsObject=JSON.parse(this.responseText)
+       valueCallBack(jsObject)
       }
     };
     
     xhttp.send();
-})
+}
+
+
+// ?--------------------------------------------------------------------------------------------------------->
+
+// * variable fill myData-------------------------------->
+
+valueCallBack =(jsObject)=>{
+myData=jsObject;
+createMenuBox(myData)
+}
 
 // ?------------------------- createMenuBox -------------------------------------------->
 
 document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
-
+ 
     const urlParams=new URLSearchParams(window.location.search);
     const group=urlParams.get("group");
     
@@ -48,7 +74,10 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
     }
 })
 
-// * ----------createProductBox------------------------------------------->
+
+
+
+// * ----------createProductBox-------------------------->
 
  const createProductBox=(product_name,product_imgs,product_price,product_content,t1,t2)=>{
 
@@ -98,3 +127,101 @@ li.appendChild(food_information)
 document.getElementById('food-list').appendChild(li);
 
 }
+
+// *-----------foodsSearch------------------------------->
+
+
+
+
+
+
+let search=document.getElementById('search');
+
+search.addEventListener('keypress', (event)=>{
+    if(event.key === 'Enter'){
+        var searchValue=event.target.value;
+        console.log(searchValue)
+        Search(searchValue);
+        search.value="";
+    }
+})
+
+ const Search =(searchValue)=>{
+
+    var searchResultBox=document.getElementById('mainBox-foods_info')
+    
+    searchResultBox.innerHTML=""
+    searchResult= [];
+    myData.foods_group.forEach(group => {
+       group.group_products.forEach(food=>{
+        if(food.product_name === searchValue || food.product_name.includes(searchValue)){
+            searchResult.push(food)
+           }
+       })
+    });
+
+
+    if(searchResult.length > 0){
+        let resultText=document.createElement('h1')
+        resultText.appendChild(document.createTextNode(' :  نتیجه جستجوی شما  '));
+        resultText.classList.add('searchBox-title');
+
+        searchResultBox.appendChild(resultText);
+
+        searchResult.forEach(food=>{
+            searchResultBox.appendChild(createFoodBox(food))
+        })
+    }else{
+        let resultText=document.createElement('h1');
+        resultText.appendChild(document.createTextNode('نتیجه ای یافت نشد ! '));
+        resultText.classList.add('searchBox-title');
+        searchResultBox.appendChild(resultText);
+    }
+
+    
+    }
+
+const createFoodBox=(food)=>{
+
+let div1=document.createElement('div');
+div1.classList.add('searchBox_food');
+
+    
+let div2=document.createElement('div');
+div2.classList.add('searchBox_img-title');
+
+let img= document.createElement('img')
+img.classList.add('searchBox-img');
+img.setAttribute('src', food.product_imgs[0])
+
+let h3=document.createElement('h3')
+h3.appendChild(document.createTextNode(food.product_name))
+
+div2.appendChild(img)
+div2.appendChild(h3)
+
+let strong1=document.createElement('strong')
+strong1.appendChild(document.createTextNode(food.product_type[0]))
+
+let strong2=document.createElement('strong')
+strong2.appendChild(document.createTextNode(food.product_type[0] + "تومان"))
+
+div1.appendChild(div2)
+div1.appendChild(strong1)
+div1.appendChild(strong2)
+
+return div1;
+
+
+
+}
+
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    loadData();
+    
+})
+
+
+

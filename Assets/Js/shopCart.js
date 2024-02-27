@@ -29,7 +29,6 @@ loadData=()=>{
 
 valueCallBack =(jsObject)=>{
 myData=jsObject;
-// console.log(myData)
 }
 
 // ?--------------------------------------------------------------------------------------------------------->
@@ -205,9 +204,12 @@ minusNumber=(index)=>{
 // * Build a line -------------------------------------->
 
 create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
+
     var tr=document.createElement('tr');
+    
     var td1=document.createElement('td');
     td1.classList.add('td1');
+  
 
     var div1=document.createElement('div')
     div1.classList.add('number')
@@ -227,6 +229,8 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     span2.setAttribute('id', 'minus-' + rowIndex)
     span2.setAttribute('onclick', 'minusNumber('+ rowIndex +')');
 
+
+
     div1.appendChild(span1);
     div1.appendChild(input1);
     div1.appendChild(span2);
@@ -240,7 +244,10 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     img1.setAttribute('src', image)
     img1.setAttribute('width', '130');
     img1.setAttribute('height', '110');
+
+
     td2.appendChild(img1);
+
     tr.appendChild(td2);
 
 
@@ -249,14 +256,18 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     td3.appendChild(document.createTextNode(name + '('+ type +')'));
     tr.appendChild(td3);
 
-    var td4=document.createElement('td')
+    var td4=document.createElement('td') 
     td4.classList.add('td4')
     td4.appendChild(document.createTextNode(price + "تومان"));
     tr.appendChild(td4);
 
+    
+    
+   
+
     var td5=document.createElement('td')
     td5.classList.add('td5')
-    td5.appendChild(document.createTextNode(qty + "عدد"));
+    td5.appendChild(document.createTextNode("عدد"+ qty));
     tr.appendChild(td5);
 
     var td6=document.createElement('td')
@@ -265,19 +276,31 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     tr.appendChild(td6);
 
     var td7=document.createElement('td')
+    td7.classList.add("td7")
+
     var aLink=document.createElement('a')
+
     var icon=document.createElement('i')
+    icon.setAttribute('style', 'cursor:pointer;')
 
     icon.classList.add('fa')
-    icon.classList.add('fa-times')
+    icon.classList.add('fa-trash')
+
+
     aLink.setAttribute('onclick', 'removeFromMemory('+ rowIndex +')');
     aLink.appendChild(icon);
     td7.appendChild(aLink);
+
+
     tr.appendChild(td7);
+    
 
     return tr;
 
 }
+
+
+
 
 // * Creating a shopping cart table -------------------->
 
@@ -285,7 +308,7 @@ create_ShopCart_table=()=>{
 
     var shopCartTable=document.getElementById('shopCartTable');
 
-    shopCartTable.innerHTML='jggj';
+    shopCartTable.innerHTML='';
 
     const foods=getFoodsFromLocalStorage();
     for(let i=0; i < foods.length; i++){
@@ -295,9 +318,90 @@ create_ShopCart_table=()=>{
     }
 }
 
+// ?---------------------------------------------->
+
+let search=document.getElementById('search');
+
+search.addEventListener('keypress', (event)=>{
+    if(event.key === 'Enter'){
+        var searchValue=event.target.value;
+        console.log(searchValue)
+        Search(searchValue);
+        search.value="";
+    }
+})
+
+ const Search =(searchValue)=>{
+
+    var searchResultBox=document.getElementById('shopCart-section')
+    
+    searchResultBox.innerHTML=""
+    searchResult= [];
+    myData.foods_group.forEach(group => {
+       group.group_products.forEach(food=>{
+        if(food.product_name === searchValue || food.product_name.includes(searchValue)){
+            searchResult.push(food)
+           }
+       })
+    });
 
 
-// ?----------------------------
+    if(searchResult.length > 0){
+        let resultText=document.createElement('h1')
+        resultText.appendChild(document.createTextNode('نتیجه جستجوی شما : '));
+        resultText.classList.add('searchBox-title');
+
+        searchResultBox.appendChild(resultText);
+
+        searchResult.forEach(food=>{
+            searchResultBox.appendChild(createFoodBox(food))
+        })
+    }else{
+        let resultText=document.createElement('h1');
+        resultText.appendChild(document.createTextNode('نتیجه ای یافت نشد ! '));
+        resultText.classList.add('searchBox-title');
+        searchResultBox.appendChild(resultText);
+    }
+
+    
+    }
+
+const createFoodBox=(food)=>{
+
+let div1=document.createElement('div');
+div1.classList.add('searchBox_food');
+
+    
+let div2=document.createElement('div');
+div2.classList.add('searchBox_img-title');
+
+let img= document.createElement('img')
+img.classList.add('searchBox-img');
+img.setAttribute('src', food.product_imgs[0])
+
+let h3=document.createElement('h3')
+h3.appendChild(document.createTextNode(food.product_name))
+
+div2.appendChild(img)
+div2.appendChild(h3)
+
+let strong1=document.createElement('strong')
+strong1.appendChild(document.createTextNode(food.product_type[0]))
+
+let strong2=document.createElement('strong')
+strong2.appendChild(document.createTextNode(food.product_type[0] + "تومان"))
+
+div1.appendChild(div2)
+div1.appendChild(strong1)
+div1.appendChild(strong2)
+
+return div1;
+
+
+
+}
+
+// ?--------------------------------------------------------------------------------------------------
 
 
 

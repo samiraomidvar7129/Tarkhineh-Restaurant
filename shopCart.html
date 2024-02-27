@@ -63,21 +63,65 @@
     </div>
 </header>
 <!-- *END Navbar Wrapper -->
+  
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="foods-search  ">
+            <div class="foods-search_form ">
+             <form action="#" method="post">
+                 <input type="search"  name="search" id="search" placeholder=" ...جستجو">
+                 <span class="search-form_icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path fill="#353535" d="M7.666 14.5C3.9 14.5.833 11.433.833 7.667.833 3.9 3.9.833 7.666.833 11.433.833 14.5 3.9 14.5 7.667c0 3.766-3.067 6.833-6.834 6.833Zm0-12.667a5.84 5.84 0 0 0-5.833 5.834A5.84 5.84 0 0 0 7.666 13.5 5.84 5.84 0 0 0 13.5 7.667a5.84 5.84 0 0 0-5.834-5.834ZM14.667 15.167a.495.495 0 0 1-.354-.147l-1.333-1.333a.503.503 0 0 1 0-.707.503.503 0 0 1 .707 0l1.333 1.333a.503.503 0 0 1 0 .707c-.1.1-.227.147-.353.147Z"></path></svg>
+                 </span>
+             </form>
+            </div>
+         </div>
+    </div>
+</div> -->
 
     <!-- *Start UserBasket -->
 
-    <div class="container" id="shopCart-section">
-        <div class="row">
-            <div class="col-12">
-<section class="shopCartTable_wrapper">
-    <table id="shopCartTable"></table>
-</section>
-                <div class="total-price" >
-                    <span>قیمت کل : </span>
-                    <span id="total-price"></span>
+    <div class="container mt-5" id="shopCart-section">
+        <div class="row ">
+            <div class="col-4 border border-2 p-0 ">
+                <div class="container-fluid  p-2">
+                    <div class="row my-2 pb-4 border-bottom ">
+                        <div class="col-3 shopCart-trash"><i class="fa fa-trash"></i></div>
+                        <div class="col-9 shopCart-count-2"><span id="shopCart-count-2"></span>سبد خرید</div>
+                    </div>
+                    <div class="row my-4  border-bottom">
+                        <div class="col-3">0</div>
+                        <div class="col-9"><div class="product-count" > :تخفیف محصولات </div> </div>
+                    </div>
+                    <div class="row my-4  border-bottom">
+                        <div class="col-3">0</div>
+                        <div class="col-9"><div class="shoping-cost" > : هزینه ارسال </div> </div>
+                        <div class="row p-0">
+                            <div class="col p-0">
+                                <p class="shoping-cost_txt">هزینه ارسال در ادامه بر اساس آدرس،
+                                     زمان و نحوه ارسال انتخابی شما محاسبه و به این مبلغ اضافه خواهد شد</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="total-price" >
+                            <span > : جمع کل  </span>
+                            <span class=" span2">
+                                <span>تومان</span>
+                                <span id="total-price"></span>
+                        </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+               </div>
+           <div class="col-8 p-0 border border-2">
+            <section class="shopCartTable_wrapper">
+                <table id="shopCartTable"> </table>
+            </section>
+           </div>
         </div>
+       
     </div>
     <!-- *END UserBasket -->
 

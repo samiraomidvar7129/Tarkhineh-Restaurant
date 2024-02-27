@@ -4,8 +4,9 @@ $color-white: #fff;
 $bg-orange: #f94c10;
 $bg-black: #010101;
 $dark-blue: #151b20;
-$color-gray: rgba(128, 128, 128, 0.782);
+$color-gray: #808080c7;
 $color-gold: #f9b572;
+$color-brown:#B99470;
 $bg-green: rgb(8, 170, 8);
 $font-10: 10px;
 $font-12: 12px;
@@ -807,6 +808,17 @@ input::-webkit-inner-spin-button {
       }
     }
   }
+  
+}
+
+
+.searchBox-title{
+  padding: 10px;
+  color: $color-white;
+  font-size: $font-14;
+  text-align: $text-right;
+  background-color: $bg-lightGreen;
+  
 }
 
 
@@ -1031,39 +1043,93 @@ input::-webkit-inner-spin-button {
 // !------------------------ShopCart.html Styles---------------------------------------------------------------------------------------->
 
 
-.userBasket_box{
-  width: 100%;
-  height: 300px;
-  @include flex(flex, space-around, center);
-  flex-direction: row-reverse;
-
-
-  .userBasket_title{
-    @include flex(flex, center, center);
-    flex-direction: row-reverse;
-  }
-  .back {
-    span{
-      color: $bg-orange;
-      cursor: pointer;
-    }
-  }
-}
 
 #shopCart-section{
   width: 100%;
-  height: auto;
-  border: 1px solid silver;
+  height:auto;
   @include margin-padding(20px, auto, 20px, auto, false);
 
   .shopCartTable_wrapper{
     width: 100%;
-    height: 350px;
+    height: 100%;
     background-color: rgba(180, 177, 177, 0.462);
 
     #shopCartTable{
       width: 100%;
       height: 100%;
+
+      tr{
+        @include flex(flex, space-around, center);
+          flex-direction: row-reverse;
+          margin-top: 10px;
+
+          
+
+        td{
+          font-size: $font-12;
+          img{
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+          }
+
+         
+        }
+      }
+
+      .td4{
+       color: $bg-lightGreen;
+      }
+      .td7{
+        color: $bg-orange;
+      }
     }
+  }
+
+.shopCart-count-2{
+  font-size: $font-12;
+  text-align: $text-right;
+}
+.shopCart-trash{
+  font-size: $font-12;
+  color: $bg-orange;
+}
+  .product-count{
+    width: 100%;
+    font-size: $font-12;
+    text-align: $text-right;
+  }
+  .shoping-cost{
+    font-size: $font-12;
+    text-align: $text-right;
+  }
+  .shoping-cost_txt{
+    width: 100%;
+    font-size: $font-10;
+    text-align: $text-right;
+    color: $color-brown;
+  }
+  .total-price{
+   
+    font-size: $font-12;
+    color: $bg-lightGreen;
+    @include flex(flex,space-between, center);
+    flex-direction: row-reverse;
+
+    .span2{
+      display: block;
+      width: 50%;
+      @include flex(flex, center, color);
+      flex-direction: row;
+
+      #total-price{
+        @include margin-padding(0, 0, 0, 5px, false);
+      }
+    }
+
+  }
+
+  .shipping-cost{
+    font-size: $font-10;
   }
 }
