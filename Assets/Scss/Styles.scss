@@ -81,7 +81,7 @@ input::-webkit-inner-spin-button {
   padding: 5px 5px 0 0;
 }
 
-// ?---------------------------index.html Styles---------------------------------------------------------------------------->
+// !---------------------------index.html Styles---------------------------------------------------------------------------->
 
 //  * ----------navbar-wrapper------------------------------>
 #navbar-wrapper {
@@ -728,8 +728,6 @@ input::-webkit-inner-spin-button {
   }
 
 
-
-
 // *--------------------FoodsInfo-Section------------------------------>
 
 #mainBox-foods_info {
@@ -774,7 +772,7 @@ input::-webkit-inner-spin-button {
   
             a {
               display: inline-block;
-              width: 100px;
+              width: 50%;
               background-color: $bg-lightGreen;
                color:$color-white;
               font-size: $font-14;
@@ -834,27 +832,20 @@ input::-webkit-inner-spin-button {
     h3{
       font-size: $font-16;
     }
-
-
   .price-strong{
     width: 200px;
-    background-color: pink;
     color: $bg-lightGreen;
     @include flex(flex, center, center);
    }
     
   }
 }
-
 .searchBox-title{
   padding: 10px;
   color: $color-white;
   font-size: $font-14;
   text-align: $text-right;
   background-color: $bg-lightGreen;
-
-
-  
 }
 
 
@@ -1079,7 +1070,6 @@ input::-webkit-inner-spin-button {
 // !------------------------ShopCart.html Styles---------------------------------------------------------------------------------------->
 
 
-
 #shopCart-section{
   width: 100%;
   height:auto;
@@ -1088,11 +1078,12 @@ input::-webkit-inner-spin-button {
   .shopCartTable_wrapper{
     width: 100%;
     height: 100%;
-    background-color: rgba(180, 177, 177, 0.462);
+    background-color:lightgray;
 
     #shopCartTable{
       width: 100%;
       height: 100%;
+  
 
       tr{
         @include flex(flex, space-around, center);

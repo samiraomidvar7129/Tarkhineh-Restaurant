@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
                 createProductBox(
                     group_products[product_key].product_name,
                     group_products[product_key].product_imgs[0],
-                    group_products[product_key].product_price + "تومان",
                     group_products[product_key].product_content,
                     group_index,
                     product_key
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
 
 // * ----------createProductBox-------------------------->
 
- const createProductBox=(product_name,product_imgs,product_price,product_content,t1,t2)=>{
+ const createProductBox=(product_name,product_imgs,product_content,t1,t2)=>{
 
 var li =document.createElement('li')
 
@@ -89,12 +88,9 @@ var food_link=document.createElement("a")
 food_link.setAttribute("href", "foodDetails.html?group=" + t1 + "&product=" + t2)
 food_link.appendChild(infoTitle)
 
-var foodPrice=document.createElement('span')
-foodPrice.classList.add('food-price')
-foodPrice.appendChild(document.createTextNode(product_price));
+
 
 infoDivision.appendChild(food_link)
-infoDivision.appendChild(foodPrice)
 
 var contentDivision=document.createElement('div')
 contentDivision.classList.add('food-info_content')
