@@ -86,32 +86,94 @@ input::-webkit-inner-spin-button {
 //  * ----------navbar-wrapper------------------------------>
 #navbar-wrapper {
   width: 100%;
-  height:15vh;
+
 
   .navbar-item {
     width: 100%;
     height: 100%;
     @include flex(flex, center, center);
 
-    ul {
+    .navbar-list {
       width: 100%;
-      height:15vh;
+      height:100%;
       @include flex(flex, center, center);
       text-align: $text-center;
       direction: rtl;
+      position: relative;
+
+      .open-menu{
+        position: absolute;
+        top: 35%;
+        right: 20px;transform: translateX(-50%);
+        color: pink;
+        cursor: pointer;
+        font-size: $font-14;
+        display: none;
+        z-index: 99999999999;
+
+
+       svg{
+        display: inline-block;
+        width: 20px;
+        height: 30px;
+       }
+      }
     
+    .menuBar{
+      width: 100%;
+      @include flex(flex, space-around, center);
+
       li {
         display: inline-block;
         width: 100%;
-        // @include margin-padding(0, 0, 0, 5px, false);
+        @include margin-padding(0, 0, 0, 5px, false);
 
         a {
           color: $color-gray;
           font-size: $font-12;
+          position: relative;
+          transition: 0.15s ease-in-out;
+
+          &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            width: 0;
+            height: 2px;
+            background-color: $bg-lightGreen;
+            transition: 0.15s ease-in-out;
+          }
+
+          &:hover::after{
+            width: 100%;
+          }
         }
       }
+
+      .close-menu{
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        color: pink;
+        cursor: pointer;
+        font-size: $font-14;
+        display: none;
+      }
+
+      svg{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+       }
+    }
+
+    #check{
+      display: none
+    }
     }
   }
+
   .buy-basket {
     @include flex(flex, center, center);
     width: 100%;
@@ -146,11 +208,49 @@ input::-webkit-inner-spin-button {
   }
 }
 
+// @media screen and (max-width:768px) {
+//   .menuBar{
+//     @include flex(flex, center, center);
+//     flex-direction: column;
+//     width:70% !important;
+//     height: 100vh;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     z-index: 2;
+//     background-color: #A9B388;
+//     transition: all 0.2s ease-in-out;
+
+//     li {
+//       display: inline-block;
+//       width: 50% !important;
+//       margin: 0 !important;
+//       background-color: $color-white;
+//       padding: 10px;
+//     }
+
+//   }
+//   .close-menu{
+//     display: block;
+//   }
+//   .open-menu{
+//     display: block;
+//   }
+
+//   // .navbar-list{
+
+
+//   //   #check:checked ~ .menuBar{
+//   //     right: 0;
+//   //   }
+//   // }
+// }
+
 // * ------------header-content------------------------------>
 
 #header-content {
   width: 100%;
-  height: 50vh;
+  height: 100%;
 
   .swiper {
     width: 100%;
@@ -167,7 +267,7 @@ input::-webkit-inner-spin-button {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        position: relative;
 
 
         .swiper-slide img {
@@ -175,6 +275,17 @@ input::-webkit-inner-spin-button {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: center;
+          
+        }
+        p{
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          font-size: 25px;
+          color: $color-white;
           
         }
       }
@@ -185,11 +296,9 @@ input::-webkit-inner-spin-button {
       background-color: $color-white;
       width: 100px;
       left: 45%;
-      bottom: 0;
-      border-top-left-radius: 70px;
-      border-top-right-radius: 70px;
-
-
+      bottom:0;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
     }
   }
 
@@ -462,6 +571,7 @@ input::-webkit-inner-spin-button {
 
     .post_item_img{
       padding: 0;
+
 
       .post_item_img img{
         display: block;
