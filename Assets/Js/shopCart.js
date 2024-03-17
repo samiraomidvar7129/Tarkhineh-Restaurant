@@ -161,46 +161,15 @@ update_shopCart_Total=()=>{
     foods=getFoodsFromLocalStorage();
     var sum=0;
     for(let i=0; i < foods.length; i++){
+        
         const element=foods[i];
-        sum+=element.price * element.qty;
+        sum +=element.price * element.qty;
     }
 
     document.getElementById('total-price').innerText=sum;
 }
 
 // * Add product to memory--------------------------------->
-
-plusNumber=(index)=>{
-var select_food=getCurrentFood(index);
-
-var number=Number(document.getElementById("number_" + index).value);
-
-number++;
-
-document.getElementById("number_" + index).value=number;
-
-addToMemory(select_food, 1);
-create_ShopCart_table();
-
-}
-
-// * Subtract product from memory ------------------------->
-
-minusNumber=(index)=>{
-
-    select_food=getCurrentFood(index);
-    var number=Number(document.getElementById("number_" + index).value);
-    if(number > 1){
-        number--;
-        document.getElementById("number_" + index).value=number;
-
-        addToMemory(select_food, -1);
-        create_ShopCart_table();
-    }
-
-
-}
-
 // * Build a line -------------------------------------->
 
 create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
@@ -209,24 +178,33 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     
     var td1=document.createElement('td');
     td1.classList.add('td1');
+
   
 
     var div1=document.createElement('div')
-    div1.classList.add('number')
+    div1.classList.add('number');
 
     var span1=document.createElement('span')
     span1.setAttribute('id', 'plus-' +rowIndex);
+    span1.setAttribute('class', 'plus');
+    span1.setAttribute('style', 'cursor:pointer')
+
+    span1.innerHTML="+";
     span1.setAttribute('onclick', 'plusNumber('+ rowIndex +')');
 
     var input1=document.createElement('input')
     input1.setAttribute('type', 'number')
-    input1.setAttribute('id', 'number-' + rowIndex)
+    input1.setAttribute('id', 'number_' + rowIndex)
     input1.setAttribute('readonly', '')
     input1.setAttribute('value', qty)
 
 
+
     var span2=document.createElement('span')
     span2.setAttribute('id', 'minus-' + rowIndex)
+    span2.setAttribute('class', 'minus')
+    span2.setAttribute('style', 'cursor:pointer')
+    span2.innerHTML="-";
     span2.setAttribute('onclick', 'minusNumber('+ rowIndex +')');
 
 
@@ -261,10 +239,6 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     td4.appendChild(document.createTextNode(price + "تومان"));
     tr.appendChild(td4);
 
-    
-    
-   
-
     var td5=document.createElement('td')
     td5.classList.add('td5')
     td5.appendChild(document.createTextNode("عدد"+ qty));
@@ -296,6 +270,39 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     
 
     return tr;
+
+}
+
+
+
+plusNumber=(index)=>{
+var select_food = getCurrentFood(index);
+
+var number=Number(document.getElementById("number_" + index).value);
+
+number++;
+
+document.getElementById("number_" + index).value = number;
+
+addToMemory(select_food, 1);
+create_ShopCart_table();
+
+}
+
+// * Subtract product from memory ------------------------->
+
+minusNumber=(index)=>{
+
+    select_food=getCurrentFood(index);
+    var number=Number(document.getElementById("number_" + index).value);
+    if(number > 1){
+        number--;
+        document.getElementById("number_" + index).value=number;
+
+        addToMemory(select_food, -1);
+        create_ShopCart_table();
+    }
+
 
 }
 
