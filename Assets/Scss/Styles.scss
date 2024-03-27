@@ -1302,7 +1302,7 @@ input::-webkit-inner-spin-button {
   
   .registration{
     width: 400px;
-    height: 550px;
+    height: 500px;
     margin: 2rem auto;
     overflow: hidden;
     background-color: $color-white;
@@ -1382,7 +1382,6 @@ input::-webkit-inner-spin-button {
         height: 4px;
         z-index: 1;
         transition: 0.6s ease-in;
-
       }
 
       .circle{
@@ -1392,7 +1391,7 @@ input::-webkit-inner-spin-button {
         @include flex(flex, center, center);
         border-radius: 50%;
         z-index: 1;
-        transition: 0.6s ease;
+        transition: 0.6s ease-in;
       }
 
       .circle.active{
@@ -1404,5 +1403,4 @@ input::-webkit-inner-spin-button {
 
   }
 }
-
 

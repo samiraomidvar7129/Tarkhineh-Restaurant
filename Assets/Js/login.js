@@ -18,7 +18,7 @@ const nextOne=()=>{
     currentActive++;
 
     if(currentActive > circles.length){
-        currentActive=circles.length;
+        currentActive= circles.length;
     }
 
 
@@ -26,7 +26,6 @@ const nextOne=()=>{
 
     update();
 }
-
 
 //* =============================== backOne
 
@@ -37,20 +36,24 @@ const backOne=()=>{
     currentActive--;
 
     if(currentActive < 1){
-        currentActive= 1;
+        currentActive = 1;
     }
 
      //*update progress
 
       update();
+
+      progress.style.width = "0%";
 }
 
+
+//* =============================== update
 
 const update=()=>{
 
     circles.forEach((circle , index)=>{
 
-if(index < currentActive){
+if( index < currentActive){
     circle.classList.add('active')
 }else{
     circle.classList.remove('active')
@@ -69,7 +72,6 @@ progress.style.width= ((actives.length - 1 ) / (circles.length - 1)) * 100 + "%"
 const alertBox=()=>{
     alert('send')
 }
-
 
 //* =============================== sendForm
 
