@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ترخینه - صفحه اصلی </title>
+    <title>عضویت</title>
     
     <link rel="icon" href="Assets/Imgs/Logo/logo.png"/>
 
@@ -15,9 +15,6 @@
 
     <!-- *Import FontAwesome File -->
     <link rel="stylesheet" href="Assets/Libs/fontawesome/css/all.min.css">
-
-      <!-- *Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
     <!-- *Import main.Css File -->
@@ -91,192 +88,80 @@
         </header>
         
 <!-- *END Navbar Wrapper -->
-        
-    <!-- *Start Header-Content -->
-      <section class="container-fluid mt-3  " >
-        <div class="row ">
-           <div class="col  p-0">
-            <section id="header-content">
 
-                <!-- * Start Swiper -->
-                 <div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide ">
-      <img src="Assets/Imgs/Banners/slider-1.jpg"  alt="slider-img">
-      <p>تجربه غذای سالم و گیاهی به سبک ترخینه</p>
-    </div>
-    <div class="swiper-slide">
-      <img src="Assets/Imgs/Banners/slider-2.jpg"  alt="slider-img">
-      <p> ! طعم بی نظیر طبیعت </p>
-    </div>
-    <div class="swiper-slide">
-      <img src="Assets/Imgs/Banners/slider-3.jpg"  alt="slider-img">
-      <p>لذت غذای سالم و گیاهی را با ترخینه تجربه کنید</p>
-    </div>
-  </div>
-  <div class="swiper-pagination"></div>
-                 </div>
+<!--* Start Login-Section -->
 
-                 <!-- *END Swiper -->
-             </section>
-           </div>
-        </div>
-      </section>
-    <!-- *END Header-Content -->
-
-
-    <!-- *Start Suggested-Section -->
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <section  id="Suggested-wrapper">
-                    <section id="Suggested-content">
-                        <div class="Suggested-title">
-                         <h6 > منوی رستوران </h6>
-                        </div>
-                        <section class="Suggested-items" id="main-foods">
-                        </section>
-                   </section>
-                </section>
+<section class="container" id="login">
+    <div class="row">
+       <div class="registration">
+          <form id="form1" class="g-3 needs-validation" novalidate>
+            <h5>عضویت  </h5>
+            <div class="col-md-4 w-100">
+              <label for="validationCustom01" class="form-label"> نام</label>
+              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- *EDN Suggested-Section -->
-
-    <!-- *Start AboutUs-Section -->
-
-    <section class="container-fluid" id="About-Us">
-        <div class="row">
-            <div class="col">
-
-                <section class="container">
-
-                    <div class="row  ">
-                        <div class="col-sm-6 col-md-6 py-3">
-                            <div class="container aboutUs-items">
-                               <div class="row row-cols-2">
-                                
-                                    <div class="col">
-                                        <div class="aboutUs-item">
-                                            <div class="div-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><path fill="currentColor" d="M24 25.5c-6.34 0-11.5-5.16-11.5-11.5S17.66 2.5 24 2.5 35.5 7.66 35.5 14 30.34 25.5 24 25.5Zm0-20c-4.68 0-8.5 3.82-8.5 8.5s3.82 8.5 8.5 8.5 8.5-3.82 8.5-8.5-3.82-8.5-8.5-8.5ZM41.18 45.5c-.82 0-1.5-.68-1.5-1.5 0-6.9-7.04-12.5-15.68-12.5S8.32 37.1 8.32 44c0 .82-.68 1.5-1.5 1.5s-1.5-.68-1.5-1.5c0-8.54 8.38-15.5 18.68-15.5 10.3 0 18.68 6.96 18.68 15.5 0 .82-.68 1.5-1.5 1.5Z"></path></svg>
-                                            </div>
-                                            <h6> پرسنلی مجرب و حرفه ای</h6>
-                                        </div>
-                                    </div>
-                                   <div class="col">
-                                    <div class="aboutUs-item">
-                                        <div class="div-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><path fill="currentColor" d="M44 45.5H10c-4.14 0-7.5-3.36-7.5-7.5V4c0-.82.68-1.5 1.5-1.5s1.5.68 1.5 1.5v34c0 2.48 2.02 4.5 4.5 4.5h34c.82 0 1.5.68 1.5 1.5s-.68 1.5-1.5 1.5Z"></path><path fill="currentColor" d="M10 35.5c-.34 0-.7-.12-.98-.36-.62-.54-.7-1.48-.16-2.12l9.18-10.72c1-1.16 2.44-1.86 3.96-1.92 1.52-.04 3.02.52 4.1 1.6l1.9 1.9c.5.5 1.14.74 1.86.74.7-.02 1.34-.34 1.8-.88l9.18-10.72c.54-.62 1.48-.7 2.12-.16.62.54.7 1.48.16 2.12L33.94 25.7c-1 1.16-2.44 1.86-3.96 1.92-1.54.04-3.02-.52-4.1-1.6L24 24.12c-.5-.5-1.16-.76-1.86-.74-.7.02-1.34.34-1.8.88l-9.18 10.72c-.32.34-.74.52-1.16.52Z"></path></svg>
-                                        </div>
-                                        <h6> کیفیت بالای غذاها</h6>
-                                    </div>
-                                   </div>
-                                   <div class="col"> 
-                                    <div class="aboutUs-item">
-                                    <div class="div-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><path fill="currentColor" d="M35.2 45.12H12.8c-3.64 0-6.96-2.8-7.56-6.4L2.58 22.8c-.42-2.48.78-5.66 2.76-7.24L19.2 4.46c2.68-2.16 6.9-2.14 9.6.02l13.86 11.08c1.96 1.58 3.16 4.76 2.76 7.24l-2.66 15.92c-.6 3.54-3.98 6.4-7.56 6.4ZM23.98 5.88c-1.06 0-2.12.32-2.9.94L7.22 17.92c-1.14.92-1.92 2.96-1.68 4.4L8.2 38.24c.36 2.1 2.46 3.88 4.6 3.88h22.4c2.14 0 4.24-1.78 4.6-3.9l2.66-15.92c.24-1.44-.56-3.5-1.68-4.4L26.92 6.82c-.8-.62-1.86-.94-2.94-.94Z"></path><path fill="currentColor" d="M28.24 30.26c-.38 0-.74-.14-1.04-.42-1.94-1.86-4.46-1.86-6.42 0-.6.58-1.54.56-2.12-.04-.58-.6-.56-1.54.04-2.12 3.1-2.98 7.44-2.98 10.56 0 .6.58.62 1.52.04 2.12-.26.3-.66.46-1.06.46Z"></path><path fill="currentColor" d="M32.48 26.02c-.38 0-.76-.14-1.04-.42-.94-.92-2-1.66-3.12-2.2-2.8-1.34-5.86-1.34-8.64 0-1.12.54-2.16 1.28-3.12 2.2-.58.58-1.54.58-2.12-.02-.58-.6-.56-1.54.02-2.12 1.18-1.16 2.5-2.08 3.92-2.76 3.62-1.74 7.62-1.74 11.22 0 1.42.68 2.74 1.6 3.92 2.76a1.491 1.491 0 0 1-1.04 2.56ZM24 35c-.52 0-1.02-.2-1.42-.58-.78-.78-.78-2.04 0-2.82.78-.78 2.06-.78 2.84 0 .78.78.78 2.04 0 2.82-.4.38-.9.58-1.42.58Z"></path></svg>
-                                    </div>
-                                    <h6> محیطی دلنشین و آرام</h6>
-                                </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="aboutUs-item">
-                                            <div class="div-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none"><path fill="currentColor" d="M32.76 45.5H6.48c-1.9 0-3.66-.88-4.8-2.42a5.955 5.955 0 0 1-.92-5.38l8.42-27.06A5.964 5.964 0 0 1 14.9 6.4h24.6c2.42 0 4.6 1.44 5.52 3.68.5 1.16.6 2.48.3 3.78l-6.74 27.06a5.953 5.953 0 0 1-5.82 4.58ZM14.92 9.42a3 3 0 0 0-2.86 2.12L3.64 38.6c-.28.94-.12 1.92.48 2.72.56.76 1.44 1.2 2.38 1.2h26.28c1.38 0 2.58-.94 2.9-2.28l6.74-27.08c.16-.66.12-1.32-.14-1.9-.48-1.14-1.54-1.86-2.76-1.86h-24.6v.02Z"></path><path fill="currentColor" d="M41.56 45.5H32c-.82 0-1.5-.68-1.5-1.5s.68-1.5 1.5-1.5h9.56c.82 0 1.58-.34 2.14-.94.56-.6.84-1.4.78-2.22L42.5 12.1c-.06-.82.56-1.54 1.38-1.6.82-.04 1.54.56 1.6 1.38l1.98 27.24c.12 1.64-.46 3.28-1.58 4.48a5.815 5.815 0 0 1-4.32 1.9ZM19.36 14.26c-.12 0-.24-.02-.36-.04-.8-.2-1.3-1-1.1-1.82l2.08-8.64c.2-.8 1-1.3 1.82-1.1.8.2 1.3 1 1.1 1.82l-2.08 8.64c-.16.68-.78 1.14-1.46 1.14ZM32.76 14.28c-.1 0-.22 0-.32-.04a1.53 1.53 0 0 1-1.16-1.78l1.88-8.68c.18-.82.98-1.32 1.78-1.16.8.16 1.32.98 1.16 1.78l-1.88 8.68c-.14.72-.76 1.2-1.46 1.2ZM31.4 25.5h-16c-.82 0-1.5-.68-1.5-1.5s.68-1.5 1.5-1.5h16c.82 0 1.5.68 1.5 1.5s-.68 1.5-1.5 1.5ZM29.4 33.5h-16c-.82 0-1.5-.68-1.5-1.5s.68-1.5 1.5-1.5h16c.82 0 1.5.68 1.5 1.5s-.68 1.5-1.5 1.5Z"></path></svg>
-                                            </div>
-                                            <h6> منوی متنوع غذا</h6>
-                                        </div>
-                                    </div>
-                                
-                               </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 py-3 ">
-                            <div id="aboutUs-content">
-                             <div class="aboutUs-title">
-                                <h5>رستوران‌های زنجیره‌ای ترخینه</h5>
-                             </div>
-                             <p class="aboutUs-txt">
-                                مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که بیش از 20 سال است خدمت‌گزار مردم شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که در محیطی اصیل بر پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.
-                             </p>
-                             <div class="more-link">
-                                <a href="#">اطلاعات بیشتر</a>
-                             </div>
-                            </div>
-                        </div>
-                      
-                    </div>
-                </section>
+            <div class="col-md-4 w-100">
+              <label for="validationCustom02" class="form-label">نام خانوادگی </label>
+              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- *END AboutUs-Section -->
+            <div class="col-md-4 w-100">
+              <label for="validationCustom03" class="form-label">رمزعبور</label>
+              <input type="password" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid password.
+              </div>
+            </div>
+            <div class="col-12 btn-box">
+              <button id="next1" class="btn btn-success  shadow-none border-0" type="button">بعدی </button>
+            </div>
+          </form>
+          
+          <form id="form2" class="g-3 needs-validation" novalidate>
+            <h5>ورود به سایت</h5>
+            <div class="col-md-4 w-100">
+              <label for="validationCustom01" class="form-label"> gfghgfgh</label>
+              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 w-100">
+              <label for="validationCustom02" class="form-label"> hjhjghghfhfh </label>
+              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 w-100">
+              <label for="validationCustom03" class="form-label">fdfpoiuy</label>
+              <input type="password" class="form-control " id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid password.
+              </div>
+            </div>
+            <div class="col-12  btn-box">
+              <button id="back" class="btn btn-success  shadow-none border-0" type="button">برگشت </button>
+              <button id="send" class="btn btn-success  shadow-none border-0" type="submit">ارسال </button>
+            </div>
+          </form>
 
-    <!-- *Start Post-Section -->
+          <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+             <!-- <div class="circle">3</div> -->
+          </div>
+    </div>
+    </div>
+</section>
+<!--* END Login-Section -->
 
-    <section class="container-fluid">
-        <h5 class="text-center py-4">ترخینه گردی</h5>
- 
-        <div class="row p-2">
-
-                <div class=" col-sm-6 col-md-3 mt-3">
-                  <div class="post-item">
-                    <div class="post_item_img w-100">
-                        <img src="Assets/Imgs/Post/ekbatan.jpg"  alt="">
-                    </div>
-                    <div class="post-item_title">
-                        <h6>شعبه اکباتان</h6>
-                    </div>
-                    <div class="post-item_txt">
-                        <p>شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-sm-6 col-md-3 mt-3">
-                    <div class="post-item">
-                        <div class="post_item_img w-100">
-                            <img src="Assets/Imgs/Post/ekbatan.jpg"  alt="">
-                        </div>
-                        <div class="post-item_title">
-                            <h6>شعبه اقدسیه</h6>
-                        </div>
-                        <div class="post-item_txt">
-                            <p>خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-sm-6 col-md-3 mt-3">
-                   <div class="post-item">
-                    <div class="post_item_img w-100">
-                        <img src="Assets/Imgs/Post/vanak.jpg" alt="">
-                    </div>
-                    <div class="post-item_title">
-                        <h6>شعبه ونک</h6>
-                    </div>
-                    <div class="post-item_txt">
-                        <p>میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶</p>
-                    </div>
-                   </div>
-                </div>
-                <div class=" col-sm-6 col-md-3 mt-3">
-                 <div class="post-item">
-                    <div class="post_item_img w-100">
-                        <img src="Assets/Imgs/Post/chalos.jpg" alt="">
-                    </div>
-                    <div class="post-item_title">
-                        <h6>شعبه چالوس</h6>
-                    </div>
-                    <div class="post-item_txt">
-                        <p>چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، </p>
-                    </div>
-                 </div>
-                </div>
-           
-        </div>
-    </section>
-
-    <!-- *END Post-Section -->
 
     <!-- *Start Footer-Section -->
     <section class="container-fluid mt-5" id="footer" >
@@ -348,30 +233,9 @@
     <!--* Import FontAwesome JsFile -->
     <script src="Assets/Libs/fontawesome/js/all.min.js"></script>
 
-      <!-- *Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- *Import login.js File -->
 
-  
-    <!-- *Import js Files -->
-    <script src="Assets/Js/foodsFetch.js"></script>
-    <script src="Assets/Js/MyScripts.js"></script>
-
-
-
-    <!-- *Initialize Swiper -->
-    <script>
-
-        var swiper = new Swiper(".mySwiper", {
-            speed: 300,
-            loop:true,
-            autoplay:true,
-            spaceBetween: 200,
-            pagination: {
-            el: ".swiper-pagination",
-            clickable: false,
-          },
-        });
-      </script>
+    <script src="Assets/Js/login.js"></script>
 
 </body>
 </html>
