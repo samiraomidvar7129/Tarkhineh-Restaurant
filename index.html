@@ -68,9 +68,7 @@
                                     <li class="nav-item mx-auto pt-2">
                                       <a class="nav-link" href="foodsMenu.html">منوی غذا</a>
                                     </li>
-                                    <li class="nav-item mx-auto pt-2">
-                                        <a class="nav-link" href="#">نمایندگی</a>
-                                      </li>
+                                 
                                       <li class="nav-item mx-auto pt-2">
                                         <a class="nav-link" href="about.html">درباره ما</a>
                                       </li>
@@ -99,23 +97,24 @@
             <section id="header-content">
 
                 <!-- * Start Swiper -->
-                 <div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide ">
-      <img src="Assets/Imgs/Banners/slider-1.jpg"  alt="slider-img">
-      <p>تجربه غذای سالم و گیاهی به سبک ترخینه</p>
-    </div>
-    <div class="swiper-slide">
-      <img src="Assets/Imgs/Banners/slider-2.jpg"  alt="slider-img">
-      <p> ! طعم بی نظیر طبیعت </p>
-    </div>
-    <div class="swiper-slide">
-      <img src="Assets/Imgs/Banners/slider-3.jpg"  alt="slider-img">
-      <p>لذت غذای سالم و گیاهی را با ترخینه تجربه کنید</p>
-    </div>
-  </div>
-  <div class="swiper-pagination"></div>
-                 </div>
+          
+                 <swiper-container class="swiper mySwiper" init="false">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide ">
+                        <img src="Assets/Imgs/Banners/slider-1.jpg"  alt="slider-img">
+                        <p>تجربه غذای سالم و گیاهی به سبک ترخینه</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="Assets/Imgs/Banners/slider-2.jpg"  alt="slider-img">
+                        <p> ! طعم بی نظیر طبیعت </p>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="Assets/Imgs/Banners/slider-3.jpg"  alt="slider-img">
+                        <p>لذت غذای سالم و گیاهی را با ترخینه تجربه کنید</p>
+                      </div>
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                 </swiper-container>
 
                  <!-- *END Swiper -->
              </section>
@@ -151,8 +150,8 @@
 
                 <section class="container">
 
-                    <div class="row  ">
-                        <div class="col-sm-6 col-md-6 py-3">
+                    <div class="row justify-content-around align-items-center">
+                        <div class="col-sm-12  col-md-6 col-lg-6 col-xl-6  py-3">
                             <div class="container aboutUs-items">
                                <div class="row row-cols-2">
                                 
@@ -192,7 +191,7 @@
                                </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 py-3 ">
+                        <div class="col-sm-12  col-md-6 col-lg-6 col-xl-6 py-3 ">
                             <div id="aboutUs-content">
                              <div class="aboutUs-title">
                                 <h5>رستوران‌های زنجیره‌ای ترخینه</h5>
@@ -362,16 +361,55 @@
     <script>
 
         var swiper = new Swiper(".mySwiper", {
-            speed: 300,
+            speed:700,
             loop:true,
             autoplay:true,
-            spaceBetween: 200,
-            pagination: {
-            el: ".swiper-pagination",
-            clickable: false,
-          },
-        });
+            spaceBetween: 10,
+            breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+      },
+    });
       </script>
+
+
+
+
+<!-- <script>
+    const swiperEl = document.querySelector('swiper-container')
+    Object.assign(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 50,
+        },
+      },
+    });
+    swiperEl.initialize();
+  </script> -->
 
 </body>
 </html>

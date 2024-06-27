@@ -63,18 +63,28 @@ document.addEventListener('DOMContentLoaded',createMenuBox=(myData)=>{
 
  const createProductBox=(product_name,product_imgs,product_content,t1,t2)=>{
 
+
 var li =document.createElement('li')
 
 var product_img_div=document.createElement('div')
 product_img_div.classList.add('product_img_div')
+product_img_div.style.width="30%"
+product_img_div.style.height="100%"
+product_img_div.style.overflow="hidden"
+
 
 var product_img=document.createElement('img')
 product_img.setAttribute("src",product_imgs)
+product_img.style.width="60px"
+product_img.style.height="60px"
 
 product_img_div.appendChild(product_img)
 
+
+
 var food_information=document.createElement('div')
 food_information.classList.add('food_information')
+
 
 
 var infoDivision=document.createElement("div")
@@ -97,13 +107,17 @@ contentDivision.classList.add('food-info_content')
 contentDivision.appendChild(document.createTextNode(product_content));
 
 
+
 li.appendChild(product_img_div)
 food_information.appendChild(infoDivision)
 food_information.appendChild(contentDivision)
 li.appendChild(food_information)
 
 
+
+
 document.getElementById('food-list').appendChild(li);
+
 
 }
 
