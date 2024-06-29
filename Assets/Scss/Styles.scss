@@ -1259,6 +1259,11 @@ input::-webkit-inner-spin-button {
       .form-control {
         border: 2px solid rgba(192, 192, 192, 0.801) !important;
       }
+
+      .error-message{
+        color: red;
+        display: none;
+      }
     }
 
     #form2 {

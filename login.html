@@ -111,30 +111,23 @@
             <div class="col-md-4 w-100">
               <label for="userName" class="form-label">  نام کاربری  </label>
               <input type="text" class="form-control" id="userName" >
-              <div class="valid-feedback">
-                Looks good!
-              </div>
+              <div class="error-message"></div>
             </div>
             <div class="col-md-4 w-100">
               <label for="userEmail" class="form-label"> ایمیل  </label>
               <input type="email" class="form-control" id="userEmail" >
-              <div class="valid-feedback">
-                Looks good!
+              <div class="error-message">
               </div>
             </div>
             <div class="col-md-4 w-100">
               <label for="userNumber" class="form-label"> شماره تماس  </label>
               <input type="number" class="form-control" id="userNumber" >
-              <div class="valid-feedback">
-                Looks good!
-              </div>
+              <div class="">              </div>
             </div>
             <div class="col-md-4 w-100">
               <label for="userPassword" class="form-label">رمزعبور</label>
               <input type="password" class="form-control" id="userPassword" >
-              <div class="invalid-feedback">
-                Please provide a valid password.
-              </div>
+              <div class="">              </div>
             </div>
             <div class="col-12 btn-box">
               <button id="next1" class="btn btn-success  shadow-none border-0" type="button">بعدی </button>
@@ -146,15 +139,13 @@
             <div class="col-md-4 w-100">
               <label for="validationCustom01" class="form-label"> نام کاربری</label>
               <input type="text" class="form-control" id="validationCustom01" >
-              <div class="valid-feedback">
-                Looks good!
+              <div class="">
               </div>
             </div>
             <div class="col-md-4 w-100">
               <label for="validationCustom02" class="form-label"> رمز عبور </label>
               <input type="password" class="form-control" id="validationCustom02" >
-              <div class="valid-feedback">
-                Looks good!
+              <div class="error-message">
               </div>
             </div>
             
@@ -164,12 +155,6 @@
             </div>
           </form>
 
-          <div class="progress-container">
-            <div class="progress" id="progress"></div>
-            <div class="circle active">1</div>
-            <div class="circle">2</div>
-             <!-- <div class="circle">3</div> -->
-          </div>
     </div>
     </div>
 </section>
@@ -258,6 +243,7 @@
     <!-- *Import login.js File -->
 
     <script src="Assets/Js/login.js"></script>
+    <script src="Assets//Js/loginValidate.js"></script>
 
 </body>
 </html>
