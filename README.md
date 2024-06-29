@@ -1,2 +1,5 @@
-# Caban-Restaurant-Javascript
- A Sample Restaurant Project With Javascript
+
+## پروژه جاوااسکریپت
+
+# رستوران ترخینه
+ یک وب سایت رستوران پویا با قابلیت سفارش آنلاین غذا
