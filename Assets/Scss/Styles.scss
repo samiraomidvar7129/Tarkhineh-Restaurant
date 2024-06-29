@@ -1,13 +1,13 @@
 //*TODO: Variables-------------------------------------------->
-$bg-lightGreen:#417F56;
+$bg-lightGreen: #417f56;
 $color-white: #fff;
 $bg-orange: red;
 $bg-black: #010101;
 $dark-blue: #151b20;
 $color-gray: #808080c7;
-$bg-lightGray:lightgray;
+$bg-lightGray: lightgray;
 $color-gold: #f9b572;
-$color-brown:#B99470;
+$color-brown: #b99470;
 $bg-green: rgb(8, 170, 8);
 $font-10: 10px;
 $font-12: 12px;
@@ -17,7 +17,7 @@ $font-family: "yekan";
 $line-height: 32px;
 $text-right: right;
 $text-center: center;
-$zindex-modal:1090;
+$zindex-modal: 1090;
 
 // *TODO:  Mixins---------------------------------------------->
 
@@ -65,22 +65,22 @@ a:visited {
   text-decoration: none;
 }
 
-.active{
-color: $bg-lightGreen;
-text-decoration: underline;
+.active {
+  color: $bg-lightGreen;
+  text-decoration: underline;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-::placeholder{
+::placeholder {
   font-size: $font-10 !important;
   text-align: $text-right;
-  color: $color-gray ;
+  color: $color-gray;
   padding: 5px 5px 0 0;
 }
 
@@ -89,70 +89,63 @@ input::-webkit-inner-spin-button {
 //  * ------------Navbar----------------------------->
 
 .navbar {
-  .navbar-brand{
-
-    button{
-      svg{
-        color:$bg-lightGreen;
+  .navbar-brand {
+    button {
+      svg {
+        color: $bg-lightGreen;
         font-size: $font-16;
       }
-     }
-
-    span {
-
-      .modal {
-      
-        z-index: $zindex-modal;
     }
 
-      a{
+    span {
+      .modal {
+        z-index: $zindex-modal;
+      }
+
+      a {
         font-size: $font-12;
-        svg
-        {
-          color:$bg-lightGreen;
+        svg {
+          color: $bg-lightGreen;
           font-size: $font-16;
         }
-
       }
-      #shopCart-count-1{
+      #shopCart-count-1 {
         width: 10px;
         height: 10px;
-        background-color:$bg-orange;
+        background-color: $bg-orange;
         border-radius: 4px;
         font-size: $font-12;
         color: $color-white;
-       text-align: $text-center;
+        text-align: $text-center;
       }
     }
   }
 
-  .sidebar{
-    .offcanvas-body{
-      .navbar-nav{
-        .nav-item{
+  .sidebar {
+    .offcanvas-body {
+      .navbar-nav {
+        margin-right: 40px;
+        .nav-item {
           .nav-link {
             font-size: $font-14;
           }
         }
       }
     }
-
   }
-
 }
 
 // * ------------header-content------------------------------>
 
 #header-content {
   width: 100%;
-  height: 100%;
+  height: 300px;
 
   .swiper {
     width: 100%;
     height: 100%;
 
-    .swiper-wrapper{
- 
+    .swiper-wrapper {
       .swiper-slide {
         width: 100%;
         height: 100%;
@@ -164,46 +157,30 @@ input::-webkit-inner-spin-button {
         align-items: center;
         position: relative;
 
-
         .swiper-slide img {
           display: block;
           width: 100%;
           height: 100%;
           object-fit: cover;
-          // object-position: center;
-          
         }
-        p{
+        p {
           width: 100%;
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%,-50%);
+          transform: translate(-50%, -50%);
           font-size: 25px;
           color: $color-white;
-          
         }
       }
-
     }
 
-    .swiper-pagination{
-      background-color: $color-white;
-      width: 100px;
-      left: 45%;
-      bottom:0;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
   }
-
- 
 }
 
 // * -----------Suggested-Section---------------------------->
 
 #Suggested-wrapper {
-
   #Suggested-content {
     width: 100%;
     height: 100%;
@@ -223,7 +200,7 @@ input::-webkit-inner-spin-button {
       @include margin-padding(20px, 0, 20px, 0, true);
 
       .Suggested-item {
-        width:30%;
+        width: 30%;
         height: 250px;
         border: 1px solid rgba(171, 161, 161, 0.496);
         @include margin-padding(10px, 0, 0, 0, false);
@@ -268,7 +245,10 @@ input::-webkit-inner-spin-button {
             position: absolute;
 
             a {
+              @include flex(flex, center, center);
+              text-align: $text-center;
               color: $color-white;
+              font-size: 13px;
             }
           }
         }
@@ -277,17 +257,14 @@ input::-webkit-inner-spin-button {
   }
 }
 
-
-
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   #Suggested-wrapper {
-
     #Suggested-content {
       width: 100%;
       height: 100%;
       @include flex(flex, center, center);
       @include column-row(column);
-  
+
       .Suggested-title {
         @include margin-padding(30px, 0, 0, 0, false);
         @include flex(flex, center, center);
@@ -299,371 +276,339 @@ input::-webkit-inner-spin-button {
         @include flex(flex, space-between, center);
         flex-wrap: wrap;
         @include margin-padding(20px, 0, 20px, 0, true);
-  
+
         .Suggested-item {
           width: 45%;
           @include margin-padding(20px, auto, 0, auto, true);
           font-size: $font-10;
           margin: 10px;
 
-
           .caption {
-          
             .caption-title {
               position: absolute;
               @include margin-padding(0, 0, 20px, 0, true);
-              
-  
+
               a {
                 font-size: $font-12;
                 color: $color-white;
-                
               }
             }
           }
-          
         }
       }
     }
   }
 }
 
-@media screen and (max-width:445px) {
+@media screen and (max-width: 445px) {
   #Suggested-wrapper {
-
     #Suggested-content {
       width: 100%;
       height: 100%;
       @include flex(flex, center, center);
       @include column-row(column);
-  
+
       .Suggested-title {
         @include margin-padding(30px, 0, 0, 0, false);
         @include flex(flex, center, center);
         @include column-row(column);
       }
       .Suggested-items {
-        width: 100% ;
+        width: 100%;
         height: auto;
         @include flex(flex, space-between, center);
         flex-wrap: wrap;
         @include margin-padding(20px, 0, 20px, 0, true);
-  
+
         .Suggested-item {
           width: 100%;
           @include margin-padding(20px, auto, 0, auto, true);
           font-size: $font-10;
           .caption {
-          
             .caption-title {
               position: absolute;
               @include margin-padding(0, 0, 20px, 0, true);
-              
-  
+
               a {
                 font-size: $font-12;
                 color: $color-white;
-                
               }
             }
           }
-          
         }
       }
     }
   }
 }
-
 
 // * -----------AboutUs-Section------------------------------>
 
-#About-Us{
+#About-Us {
   width: 100%;
   height: auto;
-  background-image: url("../Imgs/Banners/banner.jpg") no-repeat;
+  background-image: url("../Imgs/Banners/banner.jpg");
   background-size: cover;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-
-  #aboutUs-content{
-    width: 100%;
-    height: 100%;
-    @include flex(flex, space-around, end);
-    flex-direction: column;
-    padding-right: 10px;
-
-
-    .aboutUs-title{
-      color: $color-white;
-    }
-    .aboutUs-txt{
-      color: $color-white;
-      font-size: $font-12;
-      text-align: $text-right;
-    }
-    .more-link{
-      width: 100px;
-      height: 40px;
-      border: 1px solid silver;
-      padding: 6px 6px 6px 10px;
-
-      a{
-        font-size: $font-12;
-        text-align: $text-center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  .aboutUs-inner{
+    #aboutUs-content {
+      width: 100%;
+      height: 100%;
+      @include flex(flex, space-around, end);
+      flex-direction: column;
+      padding-right: 10px;
+      
+  
+      .aboutUs-title {
         color: $color-white;
-
+       
+      }
+      .aboutUs-txt {
+        color: $color-white;
+        font-size: $font-12;
+        text-align: $text-right;
+        line-height: 27px;
+      }
+      .more-link {
+        width: 100px;
+        height: 40px;
+        border: 1px solid silver;
+        padding: 6px 6px 6px 10px;
+  
+        a {
+          font-size: $font-12;
+          text-align: $text-center;
+          color: $color-white;
+        }
       }
     }
-
-  }
-
-  .aboutUs-items{
-    width: 100%;
-    height:auto;
-
-    .aboutUs-item{
+  
+    .aboutUs-items {
       width: 100%;
       height: auto;
-      @include flex(flex, center, center);
-    flex-direction: column;
-    text-align: $text-center;
-
-    .div-icon{
-      padding-top: 10px;
-      svg{
-        color: $color-white;
-        font-size: 14px !important;
+  
+      .aboutUs-item {
+        width: 100%;
+        height: auto;
+        @include flex(flex, center, center);
+        flex-direction: column;
+        text-align: $text-center;
+  
+        .div-icon {
+       
+          padding-top: 10px;
+          svg {
+            color: $color-white;
+            font-size: 14px !important;
+          }
+        }
+        h6 {
+          padding-top: 20px;
+          color: $color-white;
+          font-size: 10px !important;
+          line-height: 20px;
+        }
       }
     }
- h6{
-  padding-top: 20px;
-  color: $color-white;
-  font-size: $font-12;
- }
-
-    
-    }
   }
-  
-}
 
+
+}
 
 // *------------ Post-Section--------------------------------->
 
+.post-item {
+  width: 100%;
+  height: auto;
+  border: 1px solid silver;
+  @include flex(flex, center, center);
+  flex-direction: column;
+  text-align: $text-center;
+  overflow: hidden;
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-.post-item{
-    width: 100%;
-    height: auto;
-    border: 1px solid silver;
-    @include flex(flex, center, center);
-    flex-direction: column;
-    text-align: $text-center;
-    overflow: hidden;
-    border-radius: 6px;
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select:none;
+  .post_item_img {
+    padding: 0;
 
-    .post_item_img{
-      padding: 0;
-
-
-      .post_item_img img{
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        }
-    }
-
-    .post-item_title{
-      @include margin-padding(10px, 0, 10px, 0, false);
-      font-size: $font-14;
-
-    }
-
-    .post-item_txt{
-      font-size: $font-12;
+    .post_item_img img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
+  .post-item_title {
+    @include margin-padding(10px, 0, 10px, 0, false);
+    font-size: $font-14;
+  }
+
+  .post-item_txt {
+    font-size: $font-12;
+  }
+}
 
 // * --------------Footer-Section---------------------------->
 
-
-#footer{
+#footer {
   width: 100%;
   height: auto;
   background-image: url("../Imgs/Banners/footer-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 15px;
+  padding: 15px;
 
- .row{
-
-  .footer-content-item{
-    @include flex(flex,center, center);
-    flex-direction:column;
-
-    .easy-success_item{
-      width: 100%;
+  .row {
+    .footer-content-item {
       @include flex(flex, center, center);
-      flex-direction:column;
+      flex-direction: column;
 
-    .easy-success_title{
-    width: 100%;
-    font-size: $font-14;
-    color: $color-white;
-    background-color: $bg-lightGreen;
-    text-align: $text-center
-  }
-      .easy-success_ul{
-        @include margin-padding(15px, 0, 0, 0, true);
-        @include flex(flex, flex-start, end);
-        flex-direction:column; 
-        padding-right: 0;
-  
-        li{
-          display: block;
-          width: 100%;
-          text-align: $text-center;
-  
-          a{
-  font-size: $font-10;
-  color: $color-white;
-          }
-        }
-  
-      }
-  
-    }
-    .branches_item{
-      width: 100%;
-      @include flex(flex,center, center);
-      flex-direction:column;
-  
-      .branches_title{
+      .easy-success_item {
         width: 100%;
-        text-align: $text-center;
-        font-size: $font-14;
-        color: $color-white;
-        background-color: $bg-lightGreen
-      }
-  
-      .branches_ul{
-        @include margin-padding(15px, 0, 0, 0, true);
-        @include flex(flex, flex-start, end);
-        flex-direction:column;
-        padding-right: 0; 
-  
-        li{
-          display: block;
-          width: 100%;
-          text-align: $text-center;
-
-          a{
-            font-size: $font-10;
-            color: $color-white;
-          }
-        }
-      }
-    }
-  
-  .contact-us{
-    width: 100%;
-    @include flex(flex, center, center);
-    flex-direction:column;
-  
-    .contact-us_title{
-      color: $color-white
-    }
-  
-    .contact-us_form{
-      width: 100%;
-      @include margin-padding(15px, 0, 0, 0, false);
-      
-    form{
-      width: 100%;
-      height: 100%;
-      @include flex(flex, center, end);
-       flex-direction: row-reverse;
-       
-      .form-inputs{
         @include flex(flex, center, center);
-        flex-direction:column;
-  
-        input{
-          width: 100% ;
-          height: 32px;
-          background-color: transparent;
-          border: none;
-          outline: none;
-          border: 1px solid rgba(192, 192, 192, 0.594);
-          @include margin-padding(0, 0, 10px, 0, true);
-          text-align: $text-right;
+        flex-direction: column;
+
+        .easy-success_title {
+          width: 100%;
+          font-size: $font-14;
           color: $color-white;
-  
-  
-          #userName{
-            padding-top: 0;
+          background-color: $bg-lightGreen;
+          text-align: $text-center;
+        }
+        .easy-success_ul {
+          @include margin-padding(15px, 0, 0, 0, true);
+          @include flex(flex, flex-start, end);
+          flex-direction: column;
+          padding-right: 0;
+
+          li {
+            display: block;
+            width: 100%;
+            text-align: $text-center;
+
+            a {
+              font-size: $font-10;
+              color: $color-white;
+            }
           }
         }
       }
-  
-      .form-textArea{
-        textarea{
+      .branches_item {
         width: 100%;
-        resize: none;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        border: 1px solid rgba(192, 192, 192, 0.594);
-        text-align: $text-right;
-        color: $color-white;
-        padding: 5px 5px 0 0 ;
+        @include flex(flex, center, center);
+        flex-direction: column;
+
+        .branches_title {
+          width: 100%;
+          text-align: $text-center;
+          font-size: $font-14;
+          color: $color-white;
+          background-color: $bg-lightGreen;
+        }
+
+        .branches_ul {
+          @include margin-padding(15px, 0, 0, 0, true);
+          @include flex(flex, flex-start, end);
+          flex-direction: column;
+          padding-right: 0;
+
+          li {
+            display: block;
+            width: 100%;
+            text-align: $text-center;
+
+            a {
+              font-size: $font-10;
+              color: $color-white;
+            }
+          }
+        }
+      }
+
+      .contact-us {
+        width: 100%;
+        @include flex(flex, center, center);
+        flex-direction: column;
+
+        .contact-us_title {
+          color: $color-white;
+        }
+
+        .contact-us_form {
+          width: 100%;
+          @include margin-padding(15px, 0, 0, 0, false);
+
+          form {
+            width: 100%;
+            height: 100%;
+            @include flex(flex, center, end);
+            flex-direction: row-reverse;
+
+            .form-inputs {
+              @include flex(flex, center, center);
+              flex-direction: column;
+
+              input {
+                width: 100%;
+                height: 32px;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border: 1px solid rgba(192, 192, 192, 0.594);
+                @include margin-padding(0, 0, 10px, 0, true);
+                text-align: $text-right;
+                color: $color-white;
+                margin: 6px 0;
+
+                #userName {
+                  padding-top: 0;
+                }
+              }
+            }
+
+            .form-textArea {
+              textarea {
+               
+                resize: none;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                border: 1px solid rgba(192, 192, 192, 0.594);
+                text-align: $text-right;
+                color: $color-white;
+                padding: 5px 5px 0 0;
+              }
+            }
+          }
         }
       }
     }
-  
-    }
-  
   }
-  
-  }
-  
- .row{
-  .subFooter-content{
-    @include flex(flex, center, center);
-    @include margin-padding(20px, 0, 0, 0, false);
-  
-    h6{
-      font-size: $font-10;
-      color: $color-white;
-  
-      a{
-        display: inline-block;
-        @include margin-padding(0, 5px, 0, 5px, false);
-        padding: 10px;
-        font-size: $font-10;
-        color: $color-white;
-        border: 1px solid $bg-lightGreen;
-        background-color: $bg-lightGreen;
-  
-      }
-    }
-  
-  }
- }
- }
 }
 
+#subFooter-content{
+  padding: 10px 0;
 
+  
+  h6{
+    font-size: 11px;
+
+    a{
+      padding: 0 10px;
+      color: $bg-lightGreen;
+    }
+  }
+}
 
 // ! ---------------------FoodsMenu.html Styles----------------------------------------------------------------------------------------->
-
 
 //* ------------------foods-breadCrumb-box--------------------------->
 
@@ -673,67 +618,62 @@ input::-webkit-inner-spin-button {
   border: 1px solid silver;
   @include flex(flex, space-between, center);
   flex-direction: row-reverse;
-      @include margin-padding(0, 10px, 0,10px, true);
-      @include margin-padding(10px, 0, 0,0, false);
+  @include margin-padding(0, 10px, 0, 10px, true);
+  @include margin-padding(10px, 0, 0, 0, false);
   border-radius: 5px;
 
-
-  .breadCrumb-box_items{
-     @include flex(flex, flex-start, center);
-  flex-direction: row-reverse;
-    h6{
-      @include margin-padding(0, 6px, 0,0, true);
+  .breadCrumb-box_items {
+    @include flex(flex, flex-start, center);
+    flex-direction: row-reverse;
+    h6 {
+      @include margin-padding(0, 6px, 0, 0, true);
       font-size: $font-14;
       color: $bg-lightGreen;
     }
-    
-      .breadCrumbs {
-        @include flex(flex, center, center);
-        flex-direction: row-reverse;
-        @include margin-padding(0, 10px, 0,0, false);
-        font-size: $font-12;
-      }
+
+    .breadCrumbs {
+      @include flex(flex, center, center);
+      flex-direction: row-reverse;
+      @include margin-padding(0, 10px, 0, 0, false);
+      font-size: $font-12;
+    }
   }
 
   .foods-search {
-    width:40%;
+    width: 40%;
     height: 100%;
-   
-    .foods-search_form{
-      @include margin-padding(0, 0, 0,6px, false);
+
+    .foods-search_form {
+      @include margin-padding(0, 0, 0, 6px, false);
       width: 100%;
       height: 100%;
       padding: 3px 0;
-     
-      form{
-        @include flex(flex,center, center);
+
+      form {
+        @include flex(flex, center, center);
         flex-direction: row-reverse;
         width: 100%;
         height: 100%;
 
-      input{
-      width: 100%;
-      height: 100%;
-      border: none;
-      outline: none;
-      border: 1px solid silver;
-      border-radius: 5px;
-      color:$color-gray;
-      text-align: $text-right;
-      padding-right: 6px;
-      
-    }
-
+        input {
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+          border: 1px solid silver;
+          border-radius: 5px;
+          color: $color-gray;
+          text-align: $text-right;
+          padding-right: 6px;
+        }
       }
-     
 
-      .search-form_icon{
-        @include margin-padding(0, 6px, 0,0, false);
-      }
+      .search-form_icon {
+        @include margin-padding(0, 6px, 0, 0, false);
       }
     }
   }
-
+}
 
 // *--------------------FoodsInfo-Section------------------------------>
 
@@ -741,9 +681,8 @@ input::-webkit-inner-spin-button {
   width: 100%;
   height: auto;
   @include margin-padding(20px, auto, 20px, auto, true);
-  
-  #menu-info {
 
+  #menu-info {
     #food-list {
       width: 100%;
       height: auto;
@@ -751,8 +690,7 @@ input::-webkit-inner-spin-button {
       @include flex(flex, center, center);
       flex-wrap: wrap;
 
-
-       li {
+      li {
         display: inline-block;
         width: 48%;
         height: auto;
@@ -763,16 +701,13 @@ input::-webkit-inner-spin-button {
         @include flex(flex, space-around, center);
         flex-direction: row-reverse;
         @include margin-padding(10px, auto, 10px, auto, true);
-       
 
-
-        .food_information{
-          width:100%;
+        .food_information {
+          width: 100%;
           height: 100%;
           @include flex(flex, center, center);
           flex-direction: column;
           @include margin-padding(10px, auto, 10px, auto, false);
-        
 
           .food-info {
             width: 100%;
@@ -781,32 +716,28 @@ input::-webkit-inner-spin-button {
             flex-direction: row-reverse;
             transition: 400ms ease-in;
             text-align: $text-center;
-  
+
             a {
               display: inline-block;
               width: 50%;
               background-color: $bg-lightGreen;
-              color:$color-white;
+              color: $color-white;
               font-size: $font-14;
-              padding:6px  3px;
+              padding: 6px 3px;
               transition: 400ms ease-in;
 
-              &:hover{
-                color:$bg-black;
+              &:hover {
+                color: $bg-black;
               }
-
             }
           }
-
         }
 
-        
-
-        .product_img_div{
+        .product_img_div {
           @include flex(flex, center, center);
           border-left: 1px solid rgba(192, 192, 192, 0.759);
-        
-          img{
+
+          img {
             display: block;
             width: 100%;
             height: 100%;
@@ -815,41 +746,38 @@ input::-webkit-inner-spin-button {
       }
     }
   }
-  
 }
-.searchBox_food{
+.searchBox_food {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
 
-  .searchBox_img-title{
+  .searchBox_img-title {
     width: 100%;
     height: 100%;
     @include flex(flex, space-around, center);
     flex-direction: row-reverse;
     @include margin-padding(25px, 0, 0, 0, false);
-    
 
-    .searchBox-img{
+    .searchBox-img {
       width: 60px;
       height: 60px;
       border-radius: 100%;
     }
 
-    h3{
+    h3 {
       font-size: $font-16;
     }
-  .price-strong{
-    width: 200px;
-    color: $bg-lightGreen;
-    @include flex(flex, center, center);
-   }
-    
+    .price-strong {
+      width: 200px;
+      color: $bg-lightGreen;
+      @include flex(flex, center, center);
+    }
   }
 }
-.searchBox-title{
+.searchBox-title {
   padding: 10px;
   color: $color-white;
   font-size: $font-14;
@@ -857,12 +785,11 @@ input::-webkit-inner-spin-button {
   background-color: $bg-lightGreen;
 }
 
-
 //! -----------------------foodDetails.html Styles-------------------------------------------------------------------------------------->
 
 // *--------------------foodBox-detail--------------------------------->
 
-.banner-info_box{
+.banner-info_box {
   background-color: $bg-lightGreen;
   @include flex(flex, center, center);
   color: $color-white;
@@ -873,7 +800,6 @@ input::-webkit-inner-spin-button {
   height: auto;
   @include flex(flex, center, center);
   @include margin-padding(20px, 0, 20px, 0, false);
-
 
   .foodBox_content {
     @include flex(flex, center, center);
@@ -907,36 +833,34 @@ input::-webkit-inner-spin-button {
           @include flex(flex, center, center);
           flex-direction: row-reverse;
 
-
           .price {
             display: inline-block;
-            width: 40px;
+            width: 70%;
             height: 30px;
             @include flex(flex, center, center);
             flex-direction: row-reverse;
             color: $bg-lightGreen;
             font-size: $font-14;
 
-            del{
-        @include margin-padding(0,0 , 0, 20px, false);
-        color: $bg-orange;
-        font-size: $font-14;
-
-
+            del {
+              @include margin-padding(0, 0, 0, 20px, false);
+              color: $bg-orange;
+              font-size: $font-14;
             }
           }
 
-          .size{
-            display:inline-block;
-            width: 70px;
+          .size {
+            @include flex(flex, center, center);
+            text-align: center;
+            width: 30%;
             height: 40px;
             background-color: $bg-lightGreen;
             font-size: $font-12;
             border-radius: 2px;
             color: $color-white;
-            
-        @include margin-padding(20px,100px, 12px, 0, true);
-        @include flex(flex, center, center);
+
+            // @include margin-padding(20px,100px, 12px, 0, true);
+            @include flex(flex, center, center);
           }
         }
       }
@@ -965,7 +889,6 @@ input::-webkit-inner-spin-button {
             border: 1px solid silver;
             transition: 1s;
 
-
             .progress-value {
               width: 100%;
               height: 17px;
@@ -978,31 +901,27 @@ input::-webkit-inner-spin-button {
         }
       }
 
-      .add-shopCart{
+      .add-shopCart {
         width: 100%;
         height: 100px;
-      @include margin-padding(20px, 0, 0, 0, true);
-      @include flex(flex, space-between, center);
+        @include margin-padding(20px, 0, 0, 0, true);
+        @include flex(flex, space-between, center);
         flex-direction: row-reverse;
 
-    
-
-      .addToCart{
-        background-color: $bg-lightGreen;
-        width: 120px;
-        height: 40px;
-        cursor: pointer;
-        border-radius: 2px;
-        a{
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          color: $color-white;
-          @include flex(flex, center, center);
+        .addToCart {
+          background-color: $bg-lightGreen;
+          width: 120px;
+          height: 40px;
+          cursor: pointer;
+          border-radius: 2px;
+          a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            color: $color-white;
+            @include flex(flex, center, center);
+          }
         }
-      }
-
-
       }
     }
   }
@@ -1017,7 +936,7 @@ input::-webkit-inner-spin-button {
       position: relative;
       border: 1px solid rgba(168, 163, 163, 0.73);
       border-radius: 3px;
-    
+
       img {
         display: block;
         width: 100%;
@@ -1036,199 +955,190 @@ input::-webkit-inner-spin-button {
       overflow: hidden;
 
       img {
-        max-width:80px;
+        max-width: 80px;
         height: 80px;
         border: 1px solid rgba(168, 163, 163, 0.73);
-      @include margin-padding(0, 10px, 0, 10px, false);
-      object-fit: cover;
-
+        @include margin-padding(0, 10px, 0, 10px, false);
+        object-fit: cover;
       }
     }
   }
 }
 
-
 // !------------------------ShopCart.html Styles---------------------------------------------------------------------------------------->
 
-
-#shopCart-section{
+#shopCart-section {
   width: 100%;
-  height:auto;
+  height: auto;
   @include margin-padding(100px, auto, 20px, auto, false);
 
-  .shopCartTable_wrapper{
+  .shopCartTable_wrapper {
     width: 100%;
     height: 100%;
-    background-color:lightgray;
 
-    #shopCartTable{
+    #shopCartTable {
       width: 100%;
       height: 100%;
-    
 
-      tr{
+      tr {
         @include flex(flex, center, center);
-          flex-direction: row-reverse;
-          @include margin-padding(20px, 0, 0, 20px, false);
+        flex-direction: row-reverse;
+        @include margin-padding(20px, 0, 0, 20px, false);
 
-
-        td{
+        td {
+          width: 100%;
+          height: 100%;
           font-size: $font-12;
-          @include margin-padding(0, 0, 0, 20px, false);
+          @include margin-padding(3px, 3px, 3px, 3px, false);
 
-          img{
-            width: 60px;
-            height: 60px;
+          img {
+            width: 40px;
+            height: 40px;
             border-radius: 100%;
           }
-
-         
         }
       }
-      .td1{
-        .number{
-          width: 100%;
+      .td1 {
+        .number {
+          width: 20px;
+          height: 70px;
           @include flex(flex, center, center);
+          flex-direction: column;
           position: relative;
 
-          input{
-            width: 70%;
+          input {
+            width: 100%;
             height: 100%;
+            @include flex(flex, center, center);
+            flex-direction: column;
             border: none;
             outline: none;
-            padding: 10px;
+            padding-top: 5px;
             border-radius: 20px;
             border: 1px solid silver;
             margin: 0 auto;
             text-align: $text-center;
             font-size: $font-14;
+            color: #010101 !important;
           }
 
-
-          .plus{
+          .plus {
             position: absolute !important;
-            top: 20%;
-            left: 25%;
+            top: 0;
+            right: 30%;
             font-size: $font-16;
           }
-          .minus{
+          .minus {
             position: absolute !important;
-            top: 20%;
-            right: 25%;
+            bottom: 0;
+            right: 30%;
             font-size: $font-16;
           }
         }
       }
-      .td4{
-       color: $bg-lightGreen;
+      .td4 {
+        color: $bg-lightGreen;
       }
-      .td7{
+      .td7 {
         color: $bg-orange;
       }
     }
   }
 
-.shopCart-count-2{
-  font-size: $font-12;
-  text-align: $text-right;
-}
-.shopCart-trash{
-  font-size: $font-12;
-  color: $bg-orange;
-}
-  .product-count{
+  .shopCart-count-2 {
+    font-size: $font-12;
+    text-align: $text-right;
+  }
+  .shopCart-trash {
+    font-size: $font-12;
+    color: $bg-orange;
+  }
+  .product-count {
     width: 100%;
     font-size: $font-12;
     text-align: $text-right;
   }
-  .shoping-cost{
+  .shoping-cost {
     font-size: $font-12;
     text-align: $text-right;
   }
-  .shoping-cost_txt{
+  .shoping-cost_txt {
     width: 100%;
     font-size: $font-10;
     text-align: $text-right;
     color: $color-brown;
   }
-  .total-price{
-   
+  .total-price {
     font-size: $font-12;
-    color: $bg-lightGreen;
-    @include flex(flex,space-between, center);
+    @include flex(flex, space-between, center);
     flex-direction: row-reverse;
 
-    .span2{
+    .span2 {
       display: block;
       width: 50%;
       @include flex(flex, center, color);
       flex-direction: row;
 
-      #total-price{
+      #total-price {
         @include margin-padding(0, 0, 0, 5px, false);
       }
     }
-
   }
-  .shopping-cost{
+  .shopping-cost {
     font-size: $font-10;
   }
-  .buy-div{
+  .buy-div {
     width: 100%;
     background-color: $bg-lightGreen;
-  @include flex(flex, center, center);
-  padding: 10px;
-  text-align: $text-center;
-  font-size: $font-16;
+    @include flex(flex, center, center);
+    padding: 10px;
+    text-align: $text-center;
+    font-size: $font-16;
 
-  a{
-    color: $color-white;
-  }
+    a {
+      color: $color-white;
+    }
   }
 }
-  
-
 
 // !------------------------About.html  Styles------------------------------------------------------------------------------------------>
 
-#AboutUsBanner{
+#AboutUsBanner {
   @include margin-padding(100px, 0, 0, 0, false);
 
-
-  .AboutUs-Banner{
+  .AboutUs-Banner {
     width: 100%;
-    height:300px;
+    height: 300px;
     position: relative;
 
-    .AboutUs-Banner-img{
+    .AboutUs-Banner-img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .AboutUs-Banner-text{
+    .AboutUs-Banner-text {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       @include flex(flex, center, center);
       text-align: $text-center;
       z-index: 1;
       color: $color-white;
     }
-
   }
 }
 
-#aboutUs{
+#aboutUs {
   margin-top: 100px;
 
-  .aboutUs-img-Box{
+  .aboutUs-img-Box {
     width: 100%;
     height: 100%;
 
-    .aboutUs-img{
+    .aboutUs-img {
       display: block;
       width: 100%;
       height: 100%;
@@ -1236,16 +1146,15 @@ input::-webkit-inner-spin-button {
     }
   }
 
-  .aboutUs-content{
-    .aboutUs-title{
+  .aboutUs-content {
+    .aboutUs-title {
       color: $bg-lightGreen;
     }
 
-    .aboutUs-text{
-      p{
-        
+    .aboutUs-text {
+      p {
         font-size: $font-14;
-        text-align: $text-right
+        text-align: justify;
       }
     }
   }
@@ -1253,58 +1162,53 @@ input::-webkit-inner-spin-button {
 
 // !------------------------ContactUs.html  Styles------------------------------------------------------------------------------------------>
 
-
-#ContactUsBanner{
-
+#ContactUsBanner {
   @include margin-padding(100px, 0, 0, 0, false);
 
-
-  .ContactUs-Banner{
+  .ContactUs-Banner {
     width: 100%;
-    height:300px;
+    height: 300px;
     position: relative;
 
-    .ContactUs-Banner-img{
+    .ContactUs-Banner-img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .ContactUs-Banner-text{
+    .ContactUs-Banner-text {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       @include flex(flex, center, center);
       text-align: $text-center;
       z-index: 1;
       color: $color-white;
     }
-
   }
 }
 
-#contactUs{
+#contactUs {
   font-size: $font-12;
 
   .vanak-box,
   .chalos-box,
   .aghdasiye-box,
-  .ekbatan-box{
+  .ekbatan-box {
     border: 1px solid $bg-lightGreen;
     border-radius: 6px;
     padding-bottom: 15px;
   }
 }
 
-
 // !------------------------Login.html Styles----------------------------------------------------------------------------------------------->
 
-#login{
+#login {
   margin: 100px auto 50px auto;
-  
-  .registration{
+
+  .registration {
     width: 400px;
     height: 500px;
     margin: 2rem auto;
@@ -1315,13 +1219,27 @@ input::-webkit-inner-spin-button {
     padding: 10px;
     position: relative;
 
-    h5{
+  #form1{
+    background-color: red;
+    @include flex(flex, flex-end, start);
+    flex-direction: column;
+
+
+    h5 {
       text-align: $text-center;
       margin-bottom: 1rem;
       color: $bg-lightGreen;
     }
 
-    form{
+    .form-label{
+      font-size: 11px;
+    }
+    
+  
+  }
+
+
+    form {
       width: 340px;
       position: absolute;
       top: 100px;
@@ -1329,54 +1247,52 @@ input::-webkit-inner-spin-button {
       font-family: inherit;
       transition: 0.6s ease-in;
 
-      .form-control{
+      .form-control {
         padding: 10px 5px;
-        margin: 5px 0 ;
+        margin: 5px 0;
         background-color: transparent;
       }
 
-      .btn-box{
+      .btn-box {
         width: 100%;
         margin: 30px auto;
         text-align: $text-center;
 
-        button{
+        button {
           width: 110px;
           height: 35px;
           margin: 0 10px;
-  
-          &:active{
+
+          &:active {
             transform: scale(0.98);
           }
-  
         }
       }
-    
     }
 
-    #form2{
+    #form2 {
       left: 450px;
     }
 
-    .progress-container{
+    .progress-container {
       width: 300px;
       @include flex(flex, space-between, center);
       margin: 2rem auto;
       position: relative;
       overflow: hidden;
 
-      &::before{
+      &::before {
         content: "";
-        background-color:$bg-lightGray;
+        background-color: $bg-lightGray;
         position: absolute;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        width:100%;
+        width: 100%;
         height: 4px;
         z-index: 1;
       }
-      .progress{
+      .progress {
         background-color: green;
         position: absolute;
         top: 50%;
@@ -1388,7 +1304,7 @@ input::-webkit-inner-spin-button {
         transition: 0.6s ease-in;
       }
 
-      .circle{
+      .circle {
         background-color: $bg-lightGray;
         width: 30px;
         height: 30px;
@@ -1398,39 +1314,30 @@ input::-webkit-inner-spin-button {
         transition: 0.6s ease-in;
       }
 
-      .circle.active{
+      .circle.active {
         color: $color-white;
         background-color: $bg-lightGreen;
         text-decoration: none;
       }
     }
-
   }
 }
 
+// !----------------------------- Media Queries--------------------------------------------------------------------------------------------->
 
-
-
-
-// Media Queries
-
-@media screen  and (max-width:769px) {
-  
+@media screen and (max-width: 769px) {
   #mainBox-foods_info {
     #menu-info {
-  
       #food-list {
         width: 100%;
         height: auto;
         @include margin-padding(auto, auto, auto, auto, false);
         @include flex(flex, center, center);
         flex-wrap: wrap;
-        
-  
-  
-         li {
+
+        li {
           display: inline-block;
-          width:100%;
+          width: 100%;
           height: auto;
           font-size: $font-12;
           border-radius: 5px;
@@ -1439,17 +1346,14 @@ input::-webkit-inner-spin-button {
           @include flex(flex, space-around, center);
           flex-direction: row-reverse;
           @include margin-padding(10px, auto, 10px, auto, true);
-         
-  
-  
-          .food_information{
-            width:100%;
+
+          .food_information {
+            width: 100%;
             height: 100%;
             @include flex(flex, center, center);
             flex-direction: column;
             @include margin-padding(10px, auto, 10px, auto, false);
-          
-  
+
             .food-info {
               width: 100%;
               height: 70px;
@@ -1457,31 +1361,28 @@ input::-webkit-inner-spin-button {
               flex-direction: row-reverse;
               transition: 400ms ease-in;
               text-align: $text-center;
-    
+
               a {
                 display: inline-block;
                 width: 50%;
                 background-color: $bg-lightGreen;
-                color:$color-white;
+                color: $color-white;
                 font-size: $font-14;
-                padding:6px  3px;
+                padding: 6px 3px;
                 transition: 400ms ease-in;
-  
-                &:hover{
-                  color:$bg-black;
+
+                &:hover {
+                  color: $bg-black;
                 }
-  
               }
             }
-  
           }
-  
-  
-          .product_img_div{
+
+          .product_img_div {
             @include flex(flex, center, center);
             border-left: 1px solid rgba(192, 192, 192, 0.759);
-          
-            img{
+
+            img {
               display: block;
               width: 100%;
               height: 100%;
@@ -1490,80 +1391,131 @@ input::-webkit-inner-spin-button {
         }
       }
     }
-    
   }
 
   #mainBox-foods_info {
     width: 100%;
     height: auto;
     margin: 20px auto 20px auto;
-}
-#foods-breadCrumb-box {
-  height: 40px;
-  
+  }
+  #foods-breadCrumb-box {
+    height: 40px;
+
     .foods-search {
       height: 100%;
-
-    }
-  
-}
-
-#header-content {
-  width: 100%;
-  height: 100%;
-
-  .swiper {
-    width: 100%;
-    height: 100%;
-
-    .swiper-wrapper{
- 
-      .swiper-slide {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-
-        .swiper-slide img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          
-        }
-        p{
-          width: 100%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%,-50%);
-          font-size:16px;
-          text-align: center;
-          color: $color-white;
-          
-        }
-      }
-
-    }
-
-    .swiper-pagination{
-      background-color: $color-white;
-      width: 100px;
-      left: 45%;
-      bottom:0;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
     }
   }
 
+  #header-content {
+    width: 100%;
+    height: 200px;
 
+    .swiper {
+      width: 100%;
+      height: 100%;
 
-}
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+          p {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            text-align: center;
+            color: $color-white;
+          }
+        }
+      }
+
+      .swiper-pagination {
+        background-color: $color-white;
+        width: 100px;
+        left: 45%;
+        bottom: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+      }
+    }
+  }
+
+  #foodBox-detail {
+    width: 100%;
+    height: auto;
+    @include flex(flex, center, center);
+    @include margin-padding(20px, 0, 20px, 0, false);
+
+    .foodBox_content {
+      .foodBox_content_detail {
+        #price-list {
+          width: 100%;
+          height: auto;
+          padding: 20px;
+          @include margin-padding(10px, 0, 10px, 0, true);
+          @include flex(flex, center, center);
+          @include column-row(column);
+          border: 1px solid silver;
+
+          li {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            @include flex(flex, center, center);
+            flex-direction: row-reverse;
+
+            .price {
+              display: inline-block;
+              width: 70%;
+              height: 30px;
+              @include flex(flex, center, center);
+              flex-direction: row-reverse;
+              color: $bg-lightGreen;
+              font-size: $font-14;
+
+              del {
+                @include margin-padding(0, 0, 0, 20px, false);
+                color: $bg-orange;
+                font-size: $font-14;
+              }
+            }
+
+            .size {
+              @include flex(flex, center, center);
+              text-align: center;
+              width: 30%;
+              height: 40px;
+              background-color: $bg-lightGreen;
+              font-size: $font-12;
+              border-radius: 2px;
+              color: $color-white;
+              @include flex(flex, center, center);
+            }
+          }
+        }
+      }
+    }
+  }
+  .aboutUs-inner{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 20px;
+  }
 }

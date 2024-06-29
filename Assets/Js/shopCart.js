@@ -1,8 +1,3 @@
-// * Back btn---------------------------------------->
-
-// document.getElementById('back').addEventListener('click',()=>{
-//     history.back();
-// })
 
 
 // * LoadData----------------------------------------->
@@ -197,6 +192,7 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
     input1.setAttribute('id', 'number_' + rowIndex)
     input1.setAttribute('readonly', '')
     input1.setAttribute('value', qty)
+    
 
 
 
@@ -241,7 +237,7 @@ create_ShopCart_row=(rowIndex,id, name, image, type, price, qty )=>{
 
     var td5=document.createElement('td')
     td5.classList.add('td5')
-    td5.appendChild(document.createTextNode("عدد"+ qty));
+    td5.appendChild(document.createTextNode(qty +  "عدد"));
     tr.appendChild(td5);
 
     var td6=document.createElement('td')

@@ -8,7 +8,7 @@
         {
           "product_id":"1",
           "product_name":"  چنجه",
-          "product_type":["معمولی"],
+          "product_type":["دونفره"],
           "product_price":[3000],
           "product_imgs":[
             "Assets/Imgs/Barbecue/Kabab02.png",
@@ -28,7 +28,7 @@
         {
           "product_id":"2",
           "product_name":"  کوبیده",
-          "product_type":["معمولی"],
+          "product_type":["۶نفره"],
           "product_price":[80000],
           "product_imgs":[
             "Assets/Imgs/Barbecue/Kabab01.png",
@@ -48,7 +48,7 @@
         {
           "product_id":"3",
           "product_name":"  سلطانی",
-          "product_type":["معمولی"],
+          "product_type":["تکنفره"],
           "product_price":[100000],
           "product_imgs":[
             "Assets/Imgs/Barbecue/Kabab04.jfif",
@@ -67,7 +67,7 @@
         {
           "product_id":"4",
           "product_name":"  بختیاری",
-          "product_type":["معمولی"],
+          "product_type":["تک نفره"],
           "product_price":[50000],
           "product_imgs":[
             "Assets/Imgs/Barbecue/Kabab03.jfif",
@@ -86,7 +86,7 @@
         {
           "product_id":"5",
           "product_name":"  برگ",
-          "product_type":["معمولی"],
+          "product_type":["۴نفره"],
           "product_price":[70000],
           "product_imgs":[
             "Assets/Imgs/Barbecue/Kabab04.jfif",
@@ -105,7 +105,7 @@
         {
           "product_id":"6",
           "product_name":"  شیشلیک",
-          "product_type":["معمولی"],
+          "product_type":["خانواده"],
           "product_price":[90000],
           "product_imgs":[
             "Assets/Imgs/Barbecue/Kabab01.png",
@@ -170,8 +170,8 @@
         {
           "product_id":"9",
           "product_name":"  همبرگر مرغ",
-          "product_type":["ساده","دویل"],
-          "product_price":[60000,40000],
+          "product_type":["دویل"],
+          "product_price":[60000],
             "product_imgs":[
               "Assets/Imgs/Sandwich/Sandwich01.jpg",
             "Assets/Imgs/Sandwich/Sandwich03.jfif",
@@ -208,8 +208,8 @@
         {
           "product_id":"11",
           "product_name":"  چیز برگر",
-          "product_type":["ساده","دوبل"],
-          "product_price":[70000,52000],
+          "product_type":["دوبل"],
+          "product_price":[70000],
             "product_imgs":[
          "Assets/Imgs/Sandwich/Sandwich04.jfif",
             "Assets/Imgs/Sandwich/Sandwich03.jfif",
@@ -435,7 +435,7 @@
         {
           "product_id":"22",
           "product_name":"  تماکی ",
-          "product_type":["normal"],
+          "product_type":["ساده"],
           "product_price":[740000],
                 "product_imgs":[
                   "Assets/Imgs/Sushi/Sushi04.jfif",
@@ -498,8 +498,8 @@
         {
           "product_id":"25",
           "product_name":"  پای میوه",
-          "product_type":["اناناس","سیب","انبه","نارگیل"],
-          "product_price":[15000,12000,5000,16000],
+          "product_type":["اناناس","سیب"],
+          "product_price":[15000,12000],
                   "product_imgs":[
                     "Assets/Imgs/Appetizer/Appetizer05.jpg",
                     "Assets/Imgs/Appetizer/Appetizer02.jpg",
@@ -517,8 +517,8 @@
         {
           "product_id":"26",
           "product_name":" مافین",
-          "product_type":["شکلات","خامه","آناناس","کیک"],
-          "product_price":[43000,6000,10000,42000],
+          "product_type":["شکلات","آناناس"],
+          "product_price":[43000,6000],
                   "product_imgs":[
                     "Assets/Imgs/Appetizer/Appetizer01.jpg",
                     "Assets/Imgs/Appetizer/Appetizer02.jpg",
@@ -536,8 +536,8 @@
         {
           "product_id":"27",
           "product_name":"  تارت گلابی",
-          "product_type":["سالاد الویه","سالاد فصل","سالاد شیرازی"],
-          "product_price":[40000,30000,15000],
+          "product_type":[" تارت انبه","تارت خامه "],
+          "product_price":[40000,30000],
                   "product_imgs":[
                     "Assets/Imgs/Appetizer/Appetizer03.jfif",
                     "Assets/Imgs/Appetizer/Appetizer02.jpg",
@@ -573,8 +573,8 @@
         },
         {
           "product_id":"29",
-          "product_name":"  بوانی ",
-          "product_type":["لیوانی"],
+          "product_name":"  بورانی ",
+          "product_type":["اسفناج"],
           "product_price":[30000],
                   "product_imgs":[
                     "Assets/Imgs/Appetizer/Appetizer03.jfif",
@@ -593,7 +593,7 @@
         {
           "product_id":"30",
           "product_name":"   چیکن",
-          "product_type":["لیوانی"],
+          "product_type":["دوبل"],
           "product_price":[610000],
                   "product_imgs":[
                     "Assets/Imgs/Appetizer/Appetizer04.jfif",
@@ -619,7 +619,7 @@
         {
           "product_id":"31",
           "product_name":"  تارت پرتقال ",
-          "product_type":["normal"],
+          "product_type":["ساده"],
           "product_price":[30000],
                     "product_imgs":[
               "Assets/Imgs/Dessert/Dessert02.jfif",
@@ -637,7 +637,7 @@
         {
           "product_id":"32",
           "product_name":"  کیک موزی",
-          "product_type":["normal"],
+          "product_type":["خامه ای"],
           "product_price":[60000],
                     "product_imgs":[
                       "Assets/Imgs/Dessert/Dessert04.jfif",
@@ -655,7 +655,7 @@
         {
           "product_id":"33",
           "product_name":"  پای سیب ",
-          "product_type":["normal"],
+          "product_type":["شکلاتی"],
           "product_price":[230000],
                     "product_imgs":[
                       "Assets/Imgs/Dessert/Dessert05.jfif",
@@ -674,8 +674,8 @@
         {
           "product_id":"34",
           "product_name":" کاپ کیک ",
-          "product_type":["normal","duble"],
-          "product_price":[39000,40000],
+          "product_type":["وانیلی"],
+          "product_price":[39000],
                     "product_imgs":[
                       "Assets/Imgs/Dessert/Dessert07.jfif",
                       "Assets/Imgs/Dessert/Dessert08.jfif",
@@ -693,7 +693,7 @@
         {
           "product_id":"35",
           "product_name":"  تارت کیوی ",
-          "product_type":["normal"],
+          "product_type":["زعفرانی"],
           "product_price":[80000],
                     "product_imgs":[
                      "Assets/Imgs/Dessert/Dessert08.jfif",
@@ -710,7 +710,7 @@
         {
           "product_id":"36",
           "product_name":"  کیک شکلاتی",
-          "product_type":["normal"],
+          "product_type":["شکلاتی"],
           "product_price":[54000],
                     "product_imgs":[
                    "Assets/Imgs/Dessert/Dessert04.jfif",
