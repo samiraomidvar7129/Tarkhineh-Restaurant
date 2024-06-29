@@ -174,7 +174,6 @@ input::-webkit-inner-spin-button {
         }
       }
     }
-
   }
 }
 
@@ -353,19 +352,17 @@ input::-webkit-inner-spin-button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
-  .aboutUs-inner{
+
+  .aboutUs-inner {
     #aboutUs-content {
       width: 100%;
       height: 100%;
       @include flex(flex, space-around, end);
       flex-direction: column;
       padding-right: 10px;
-      
-  
+
       .aboutUs-title {
         color: $color-white;
-       
       }
       .aboutUs-txt {
         color: $color-white;
@@ -378,7 +375,7 @@ input::-webkit-inner-spin-button {
         height: 40px;
         border: 1px solid silver;
         padding: 6px 6px 6px 10px;
-  
+
         a {
           font-size: $font-12;
           text-align: $text-center;
@@ -386,20 +383,19 @@ input::-webkit-inner-spin-button {
         }
       }
     }
-  
+
     .aboutUs-items {
       width: 100%;
       height: auto;
-  
+
       .aboutUs-item {
         width: 100%;
         height: auto;
         @include flex(flex, center, center);
         flex-direction: column;
         text-align: $text-center;
-  
+
         .div-icon {
-       
           padding-top: 10px;
           svg {
             color: $color-white;
@@ -415,8 +411,6 @@ input::-webkit-inner-spin-button {
       }
     }
   }
-
-
 }
 
 // *------------ Post-Section--------------------------------->
@@ -576,7 +570,6 @@ input::-webkit-inner-spin-button {
 
             .form-textArea {
               textarea {
-               
                 resize: none;
                 background-color: transparent;
                 border: none;
@@ -594,14 +587,13 @@ input::-webkit-inner-spin-button {
   }
 }
 
-#subFooter-content{
+#subFooter-content {
   padding: 10px 0;
 
-  
-  h6{
+  h6 {
     font-size: 11px;
 
-    a{
+    a {
       padding: 0 10px;
       color: $bg-lightGreen;
     }
@@ -1206,11 +1198,12 @@ input::-webkit-inner-spin-button {
 // !------------------------Login.html Styles----------------------------------------------------------------------------------------------->
 
 #login {
+
   margin: 100px auto 50px auto;
 
   .registration {
     width: 400px;
-    height: 500px;
+    height: 600px;
     margin: 2rem auto;
     overflow: hidden;
     background-color: $color-white;
@@ -1218,26 +1211,6 @@ input::-webkit-inner-spin-button {
     border-radius: 5px;
     padding: 10px;
     position: relative;
-
-  #form1{
-    background-color: red;
-    @include flex(flex, flex-end, start);
-    flex-direction: column;
-
-
-    h5 {
-      text-align: $text-center;
-      margin-bottom: 1rem;
-      color: $bg-lightGreen;
-    }
-
-    .form-label{
-      font-size: 11px;
-    }
-    
-  
-  }
-
 
     form {
       width: 340px;
@@ -1267,6 +1240,24 @@ input::-webkit-inner-spin-button {
             transform: scale(0.98);
           }
         }
+      }
+    }
+
+    #form1, #form2 {
+      text-align: $text-right;
+
+      h5 {
+        text-align: $text-center;
+        margin-bottom: 1rem;
+        color: $bg-lightGreen;
+      }
+
+      .form-label {
+        font-size: 11px;
+      }
+
+      .form-control {
+        border: 2px solid rgba(192, 192, 192, 0.801) !important;
       }
     }
 
@@ -1513,7 +1504,7 @@ input::-webkit-inner-spin-button {
       }
     }
   }
-  .aboutUs-inner{
+  .aboutUs-inner {
     display: flex;
     flex-direction: column-reverse;
     padding-top: 20px;
