@@ -1,131 +1,106 @@
-"use scrict";
-
-const form1=document.getElementById('form1');
-const form2=document.getElementById('form2');
-// const userName=document.getElementById('userName');
-// const userEmail=document.getElementById('userEmail');
-// const userNumbar=document.getElementById('userNumbar');
-// const userPassword=document.getElementById('userPassword');
-
-const progress=document.getElementById('progress');
-const circles=document.querySelectorAll('.circle');
-
-let currentActive=1;
-
-//* ===============================nextOne
-
-const nextOne=()=>{
-    form1.style.left="-450px";
-    form2.style.left="25px";
 
 
-    currentActive++;
 
-    if(currentActive > circles.length){
-        currentActive= circles.length;
+const form1 = document.getElementById("form1");
+
+const sendForm = (e) => {
+  e.preventDefault();
+  validation();
+
+};
+
+
+form1.addEventListener("submit", sendForm);
+
+
+
+
+const validation = (e) => {
+  userNameValidate();
+  userEmailValidate();
+  userNumberValidate();
+  userPasswordValidate(); 
+
+};
+
+const userNameValidate = () => {
+
+    let userNameElem = document.getElementById("Name"); 
+
+  if (
+    userNameElem.value == "" ||
+    userNameElem.value.length < 5 ||
+    userNameElem.value.length > 15
+  ) {
+    userNameElem.style.backgroundColor="red"
+    userNameElem.nextElementSibling.style.display = "block";
+    userNameElem.nextElementSibling.innerHTML = " لطفا فیلد را پر کنید ";
+    
+
+    return false;
+
+  } else {
+
+        userNameElem.nextElementSibling.style.display = "none";
+
+  }
+};
+const userEmailValidate=()=>{
+
+    const userEmailElem = document.getElementById("Email");
+    const userEmail=userEmailElem.value
+
+    const userEmailRegex=/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/g
+
+    const isValidEmail=userEmailRegex.test(userEmail)
+
+    if(!isValidEmail){
+
+        userEmailElem.style.backgroundColor="red";
+        userEmailElem.nextElementSibling.style.display = "block"; 
+        userEmailElem.nextElementSibling.innerHTML = " Omidvar123@gmail.com :  قالب معتبر";
+        return false;
     }
+    else{
+        userEmailElem.nextElementSibling.style.display = "none"; 
+        userEmailElem.style.backgroundColor="green";
 
-
-    //*update progress
-
-    update();
-}
-
-//* =============================== backOne
-
-const backOne=()=>{
-    form1.style.left="25px";
-    form2.style.left="450px";
-
-    currentActive--;
-
-    if(currentActive < 1){
-        currentActive = 1;
     }
-
-     //*update progress
-
-      update();
-
-      progress.style.width = "0%";
 }
+const userNumberValidate=()=>{
+    let userNumber = document.getElementById("Number");
+    const userNumberRegex=/^09\d{9}$/
 
+    if( userNumberRegex.test(userNumber) || userNumber.value.length > 11 || userNumber.value.length < 11){
+        userNumber.style.backgroundColor = "red";
+        userNumber.nextElementSibling.style.display = "block";
+        userNumber.nextElementSibling.style.fontSize = "11px";
+        userNumber.nextElementSibling.innerHTML = " لطفا فیلد را پر کنید: شماره ۱۱ رقمی باشد";
 
-//* =============================== update
+    return false; 
 
-const update=()=>{
+    }
+    else{
+        userNumber.nextElementSibling.style.display = "none";
+        userNumber.style.backgroundColor="green"
 
-    circles.forEach((circle , index)=>{
-
-if( index < currentActive){
-    circle.classList.add('active')
-}else{
-    circle.classList.remove('active')
-} 
-
-//* get all of active classes
-
-const actives=document.querySelectorAll('.active');
-
-progress.style.width= ((actives.length - 1 ) / (circles.length - 1)) * 100 + "%";
-
-});
-
+    }
 }
+const userPasswordValidate=()=>{
+    const userPasswordElem=document.getElementById('Password')
 
-
-const userName=document.getElementById('userName');
-const userEmail=document.getElementById('userEmail');
-const userNumber=document.getElementById('userNumber');
-const userPassword=document.getElementById('userPassword');
-
-
-const validation=()=>{
-
-const userNameValidate=userName.value.trim()
-const userEmailValidate=userEmail.value.trim()
-const userNumberValidate=userNumber.value.trim()
-const userPasswordValidate=userPassword.value.trim()
-
-    if(userName.value =="" || userName.value.length < 3 ){
-        let validFeedback=document.querySelector('.error-message');
-        validFeedback.style.display="block";
-        validFeedback.innerHTML="لطفا فیلدهای خالی را پر کنید"
-        // alert('فیلدها را پر کنید')
-
-        return false
+    if( userPasswordElem.value == "" ||
+        userPasswordElem.value.length < 6 ||
+        userPasswordElem.value.length > 16){
+        userPasswordElem.style.backgroundColor="red";
+        userPasswordElem.nextElementSibling.style.display = "block"; 
+        userPasswordElem.nextElementSibling.innerHTML = "رمز عبور حداقل ۶ و حداکثر ۱۶ کاراکتر داشته باشد";
+        return false;
     }else{
-        location.href="https://www.google.com/search?q=%D8%A2%D9%86%D9%84%D8%A7%DB%8C%D9%86+%DA%A9%D8%B1%D8%AF%D9%86+%D9%BE%D8%B1%D9%88%DA%98%D9%87+%D8%AF%D8%B1+netlify&rlz=1C1GCEA_enIR1044IR1044&oq=&gs_lcrp=EgZjaHJvbWUqCQgBEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgPSAQs2OTY1MDQ2ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8"
+        userPasswordElem.nextElementSibling.style.display = "none"; 
+        userPasswordElem.style.backgroundColor="green";
     }
-
-    console.log(userNameValidate)
-    console.log(userEmailValidate)
-    console.log(userNumberValidate)
-    console.log(userPasswordValidate)
-  
-}
-//* =============================== sendForm
-
-const sendForm=(e)=>{
-e.preventDefault();
-
-validation();
 }
 
 
-// * ============================= btn events
 
-const btnEvents=()=>{
-    const next1=document.getElementById('next1')
-    const send=document.getElementById('send')
-    const back=document.getElementById('back')
-
-    // *  next1 btn
-
-    next1.addEventListener('click',nextOne)
-    back.addEventListener('click',backOne)
-    send.addEventListener('click',sendForm)
-
-}
-
-document.addEventListener('DOMContentLoaded',btnEvents)

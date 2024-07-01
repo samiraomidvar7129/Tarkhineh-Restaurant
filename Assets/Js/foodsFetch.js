@@ -44,6 +44,8 @@ const createGroupBox=(id,name,ImageUrl)=>{
     
     var food_img=document.createElement('img')
     food_img.setAttribute("src",ImageUrl)
+    food_img.setAttribute("alt",name)
+    food_img.setAttribute("title",name)
 
     food_img_box.appendChild(food_img)
     
