@@ -12,9 +12,6 @@ const sendForm = (e) => {
 
 form1.addEventListener("submit", sendForm);
 
-
-
-
 const validation = (e) => {
   userNameValidate();
   userEmailValidate();
