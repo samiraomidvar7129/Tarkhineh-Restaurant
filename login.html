@@ -104,33 +104,33 @@
 
 <!--* Start Login-Section -->
 
-<section class="container" id="login">
-    <div class="row">
-       <div class="login-form">
-  
-          
-          <form id="form2" class="g-3 needs-validation" action="index.html" method="POST" novalidate>
-            <h5>ورود به سایت</h5>
-            <!-- <div class="col-md-4 w-100">
-              <label for="validationCustom01" class="form-label"> نام کاربری</label>
-              <input type="text" class="form-control" id="validationCustom01" >
-              <div class="">
-              </div>
-            </div>
-            <div class="col-md-4 w-100">
-              <label for="validationCustom02" class="form-label"> رمز عبور </label>
-              <input type="password" class="form-control" id="validationCustom02" >
-              <div class="error-message">
-              </div>
-            </div> -->
-            <div class="col-12  btn-box">
-              <button id="logIn" class="btn btn-success  shadow-none border-0" type="submit"> ورود </button>
-            </div>
-        
-          </form>
 
-    </div>
-    </div>
+<section class="container mt-5">
+  <div class="row ">
+      <form id="login-form" class="w-75 bg-danger  m-auto mt-5" action="index.html" method="POST" novalidate>
+        
+        <div class="login-form_item w-100 d-flex mt-5 justify-content-center align-items-center">
+          <div class="login-form_item--inner mx-2 w-50 d-flex flex-column justify-content-start align-items-end">
+            <label for="FullName">  نام کاربری  </label>
+            <input type="text" class="form-control mt-3 py-2"  name="FullName" id="FullName" />
+            <div class="FullName-error"></div>
+          </div>
+         
+        </div>
+       <div class="login-form_item w-100 d-flex mt-4 justify-content-center align-items-center ">
+      
+        <div class=" login-form_item--inner mx-2 w-50 d-flex flex-column justify-content-start align-items-end">
+          <label for="Password">رمزعبور</label>
+          <input type="text" class="form-control mt-3 py-2" autocomplete="off"  name="Password" id="Password" />
+          <div class="password-error"> </div>
+        </div>
+       </div>
+    
+        <div class="login-form_item--submit w-100 mt-4 btn-box">
+          <button id="sendBtn" class="btn  d-block w-100 h-100 py-2 shadow-none border-0" type="submit"> ورود به سایت</button>
+        </div>
+      </form>
+  </div>
 </section>
 <!--* END Login-Section -->
 

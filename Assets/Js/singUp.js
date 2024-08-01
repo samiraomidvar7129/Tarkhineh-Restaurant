@@ -88,7 +88,7 @@ const validation = () => {
       title: "(: موفق باشید",
       text: "کاربرگرامی ! ثبت نام شما با موفقیت انجام شد  ",
       icon: "success",
-      button:"ممنون"
+      button:"ورود"
     }).then(()=>{
       window.location.href="login.html"
       document.getElementById("register-form").reset();//Empty Form
