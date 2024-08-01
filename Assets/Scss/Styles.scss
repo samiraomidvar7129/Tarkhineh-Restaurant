@@ -52,6 +52,7 @@ $zindex-modal: 1090;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-weight: bold;
 }
 
 ol,
@@ -1199,128 +1200,70 @@ input::-webkit-inner-spin-button {
 
 // !------------------------Login.html Styles----------------------------------------------------------------------------------------------->
 
-#singUp,#login {
-
-  margin: 100px auto 50px auto;
-
-  .singUp-form,#login-form {
-    width: 400px;
-    height: 600px;
-    margin: 2rem auto;
-    overflow: hidden;
-    background-color: $color-white;
-    border: 1px solid $bg-lightGreen;
-    border-radius: 5px;
-    padding: 10px;
-    position: relative;
-
-    form {
-      width: 340px;
-      position: absolute;
-      top: 100px;
-      left: 30px;
-      font-family: inherit;
-      transition: 0.6s ease-in;
-
-      .form-control {
-        padding: 10px 5px;
-        margin: 5px 0;
-        background-color: transparent;
+    #register-form {
+      .register-form_title {
+        font-size: 16px;
+        color: $bg-lightGreen; 
       }
 
-      .btn-box {
-        width: 100%;
-        margin: 30px auto;
-        text-align: $text-center;
+      .register-form_item{
+        .register-form_item--inner{
+          label{
+            font-size: 11px;
+          }
+          input{
+            text-align: $text-right;
+            font-size: 11px;
+            border: 1px solid $bg-lightGreen;
+            
+          }
 
-        button {
-          width: 110px;
-          height: 35px;
-          margin: 0 10px;
+          .FullName-error,.number-error,.Address-error,.password-error{
+            color: red;
+            font-size: 10px;
+            text-align: $text-right;
+            margin-top: 10px;
 
-          &:active {
-            transform: scale(0.98);
           }
         }
       }
+      .register-form_item--Subscription{
+             #Subscription-btn{
+              font-size: 11px ;
+              width: 100px;
+              height: 35px;
+              margin-left: 10px;
+              border-radius: 5px;
+              color: $color-white;
+              
+              border: none;
+              background-color:  $bg-lightGreen;
+             }
+
+             input{
+              text-align: $text-right;
+              font-size: 11px;
+              border: 1px solid $bg-lightGreen;
+              
+            } 
+            .subscription-error{
+              color: red;
+            font-size: 10px;
+            text-align: $text-right;
+            margin-top: 10px;
+            }
+      }
+      .register-form_item--submit{
+        button{
+          background-color: $bg-lightGreen;
+          color: #ffff;
+        }
+      }
+     
     }
 
-    #form1, #form2 {
-      text-align: $text-right;
+  
 
-      h5 {
-        text-align: $text-center;
-        margin-bottom: 1rem;
-        color: $bg-lightGreen;
-      }
-
-      .form-label {
-        font-size: 11px;
-      }
-
-      .form-control {
-        border: 2px solid rgba(192, 192, 192, 0.801) !important;
-      }
-
-      .error-message{
-        color: red;
-        display: none;
-        font-size: 11px;
-      }
-    }
-
-    #form2 {
-      left: 450px;
-    }
-
-    .progress-container {
-      width: 300px;
-      @include flex(flex, space-between, center);
-      margin: 2rem auto;
-      position: relative;
-      overflow: hidden;
-
-      &::before {
-        content: "";
-        background-color: $bg-lightGray;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 100%;
-        height: 4px;
-        z-index: 1;
-      }
-      .progress {
-        background-color: green;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 0%;
-        height: 4px;
-        z-index: 1;
-        transition: 0.6s ease-in;
-      }
-
-      .circle {
-        background-color: $bg-lightGray;
-        width: 30px;
-        height: 30px;
-        @include flex(flex, center, center);
-        border-radius: 50%;
-        z-index: 1;
-        transition: 0.6s ease-in;
-      }
-
-      .circle.active {
-        color: $color-white;
-        background-color: $bg-lightGreen;
-        text-decoration: none;
-      }
-    }
-  }
-}
 
 // !----------------------------- Media Queries--------------------------------------------------------------------------------------------->
 

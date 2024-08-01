@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -106,38 +106,48 @@
 <!--* Start Login-Section -->
 
 <section class="container" id="singUp">
-    <div class="row">
-       <div class="singUp-form">
+    <div class="row m-auto">
 
-        <form id="form1" class="g-3 needs-validation" action="index.html" method="POST" novalidate>
-          <h5>عضویت  </h5>
-          <div class="col-md-4 w-100">
-            <label for="Name" class="form-label">  نام کاربری  </label>
-            <input type="text" class="form-control" id="Name" />
-            <div class="error-message"></div>
-          </div>
-          <div class="col-md-4 w-100">
-            <label for="Email" class="form-label"> ایمیل  </label>
-            <input type="email" class="form-control" id="Email" />
-            <div class="error-message">
+
+        <form id="register-form" class="w-75  m-auto mt-5" action="index.html" method="POST" novalidate>
+          <p class=" register-form_title text-success text-center float-left mt-5 " >برای ثبت سفارش لطفا ثبت نام کنید  </p>
+          <div class="register-form_item d-flex mt-5 justify-content-between align-items-center">
+            <div class="register-form_item--inner mx-2 w-50 d-flex flex-column justify-content-start align-items-end">
+              <label for="FullName">  نام کاربری  </label>
+              <input type="text" class="form-control mt-3 py-2"  name="FullName" id="FullName" />
+              <div class="FullName-error"></div>
+            </div>
+            <div class="register-form_item--inner mx-2 w-50  d-flex flex-column justify-content-start align-items-end">
+              <label for="Number"> شماره تماس  </label>
+              <input type="number" class="form-control mt-3 py-2" name="Number"  id="Number" />
+              <div class="number-error"></div>
             </div>
           </div>
-          <div class="col-md-4 w-100">
-            <label for="Number" class="form-label"> شماره تماس  </label>
-            <input type="number" class="form-control" id="Number" />
-            <div class="error-message"></div>
+         <div class="register-form_item d-flex mt-4 justify-content-between align-items-center ">
+          <div class=" register-form_item--inner mx-2 w-50 d-flex flex-column justify-content-start align-items-end">
+            <label for="Address" > آدرس  </label>
+            <input type="text" class="form-control mt-3 py-2" name="Address"  id="Address" />
+            <div class="Address-error">
+            </div>
           </div>
-          <div class="col-md-4 w-100">
-            <label for="Password" class="form-label">رمزعبور</label>
-            <input type="password" class="form-control" id="Password" />
-            <div class="error-message"> </div>
+          <div class=" register-form_item--inner mx-2 w-50 d-flex flex-column justify-content-start align-items-end">
+            <label for="Password">رمزعبور</label>
+            <input type="text" class="form-control mt-3 py-2" autocomplete="off"  name="Password" id="Password" />
+            <div class="password-error"> </div>
           </div>
-          <div class="col-12  btn-box">
-            <button id="sendBtn" class="btn btn-success  shadow-none border-0" type="submit">ثبت نام </button>
+         </div>
+          <div class="register-form_item--Subscription  mt-3 d-flex flex-column justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center w-100">
+            <button id="Subscription-btn" type="button">  اشتراک </button>
+            <input type="text" class="form-control  w-75 py-2" name="Subscription" id="Subscription" />
+          </div>
+            <div class="subscription-error"> </div>
+          </div>
+          <div class="register-form_item--submit w-100 mt-4 btn-box">
+            <button id="sendBtn" class="btn  d-block w-100 h-100 py-2 shadow-none border-0" type="submit">ثبت نام </button>
           </div>
         </form>
 
-    </div>
     </div>
 </section>
 <!--* END Login-Section -->
