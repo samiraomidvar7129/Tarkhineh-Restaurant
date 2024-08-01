@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 if(registerForm){
   registerForm.addEventListener('submit',(e)=>{
     e.preventDefault();
-    validation();
+    validateRegisterForm();
   })
 }
 })
 
 
  
-const validation = () => {
+export const validateRegisterForm = () => {
 
   const userNameElem = document.getElementById("FullName").value.trim();
   const userAddressElem = document.getElementById("Address").value.trim();
@@ -91,7 +91,7 @@ const validation = () => {
       button:"ورود"
     }).then(()=>{
       window.location.href="login.html"
-      document.getElementById("register-form").reset();//Empty Form
+      document.getElementById("register-form").reset();//Reset RegisterForm
     
     });
   }
