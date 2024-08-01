@@ -1198,7 +1198,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-// !------------------------Login.html Styles----------------------------------------------------------------------------------------------->
+// !------------------------singUp.html Styles----------------------------------------------------------------------------------------------->
 
     #register-form {
       .register-form_title {
@@ -1263,8 +1263,21 @@ input::-webkit-inner-spin-button {
     }
 
   
-
-
+// !------------------------Login.html Styles----------------------------------------------------------------------------------------------->
+#login-form {
+  .login-form_item--inner{
+    input{
+      border: 1px solid $bg-lightGreen;
+    }
+  }
+  .login-form_item--submit{
+    button{
+      background-color: $bg-lightGreen;
+      color: #ffff;
+    }
+  }
+ 
+}
 // !----------------------------- Media Queries--------------------------------------------------------------------------------------------->
 
 @media screen and (max-width: 769px) {
