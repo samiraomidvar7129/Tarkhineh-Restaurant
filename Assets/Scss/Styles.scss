@@ -52,7 +52,7 @@ $zindex-modal: 1090;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 ol,
@@ -1103,7 +1103,7 @@ input::-webkit-inner-spin-button {
 
   .AboutUs-Banner {
     width: 100%;
-    height: 300px;
+    height: 150px;
     position: relative;
 
     .AboutUs-Banner-img {
@@ -1122,16 +1122,17 @@ input::-webkit-inner-spin-button {
       text-align: $text-center;
       z-index: 1;
       color: $color-white;
+      font-size: 20px;
     }
   }
 }
 
 #aboutUs {
-  margin-top: 100px;
 
   .aboutUs-img-Box {
     width: 100%;
     height: 100%;
+    padding: 10px;
 
     .aboutUs-img {
       display: block;
@@ -1144,12 +1145,16 @@ input::-webkit-inner-spin-button {
   .aboutUs-content {
     .aboutUs-title {
       color: $bg-lightGreen;
+      padding-right: 10px;
+
     }
 
     .aboutUs-text {
+      padding-right: 10px;
       p {
-        font-size: $font-14;
+        font-size: 11px;
         text-align: justify;
+        line-height: 32px 
       }
     }
   }
@@ -1162,7 +1167,7 @@ input::-webkit-inner-spin-button {
 
   .ContactUs-Banner {
     width: 100%;
-    height: 300px;
+    height: 150px;
     position: relative;
 
     .ContactUs-Banner-img {
@@ -1181,6 +1186,7 @@ input::-webkit-inner-spin-button {
       text-align: $text-center;
       z-index: 1;
       color: $color-white;
+      font-size: 20px;
     }
   }
 }
