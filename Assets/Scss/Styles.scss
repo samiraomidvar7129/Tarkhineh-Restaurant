@@ -1230,7 +1230,7 @@ input::-webkit-inner-spin-button {
       .register-form_item--Subscription{
              #Subscription-btn{
               font-size: 11px ;
-              width: 100px;
+              width: 80px;
               height: 35px;
               margin-left: 10px;
               border-radius: 5px;
@@ -1241,6 +1241,7 @@ input::-webkit-inner-spin-button {
              }
 
              input{
+              margin-right: 8px;
               text-align: $text-right;
               font-size: 11px;
               border: 1px solid $bg-lightGreen;
@@ -1278,6 +1279,23 @@ input::-webkit-inner-spin-button {
   }
  
 }
+
+
+// !-----------------------myAccont.html Styles--------------------------------------------------------------------------------------------->
+
+#myAccont-wrapper{
+  height: 400px ;
+  margin-top: 100px;
+  border: 1px solid $bg-lightGreen;
+  border-radius: 4px;
+
+  .myAccont-wrapper_items{
+    border-left: 1px solid $bg-lightGreen;
+
+  }
+}
+
+
 // !----------------------------- Media Queries--------------------------------------------------------------------------------------------->
 
 @media screen and (max-width: 769px) {
