@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": " کباب",
-      "ImageUrl":"Assets/Imgs/Barbecue/Kabab01.png",
+      "ImageUrl":"Assets/Imgs/Barbecue/Kabab01.jpg",
       "group_products":[
         {
           "product_id":"1",
@@ -11,9 +11,9 @@
           "product_type":["دونفره"],
           "product_price":[3000],
           "product_imgs":[
-            "Assets/Imgs/Barbecue/Kabab02.png",
-            "Assets/Imgs/Barbecue/Kabab03.jfif",
-            "Assets/Imgs/Barbecue/Kabab04.jfif"
+            "Assets/Imgs/Barbecue/Kabab02.jpg",
+            "Assets/Imgs/Barbecue/Kabab03.jpg",
+            "Assets/Imgs/Barbecue/Kabab04.jpg"
           ],
           "product_content":[
             " گوشت",
@@ -125,7 +125,7 @@
     {
       "id": "2",
       "name": " ساندویچ",
-      "ImageUrl":"Assets/Imgs/Sandwich/Sandwich01.jpg",
+      "ImageUrl":"Assets/Imgs/Sandwich/Sandwich04.avif",
       "group_products":[
         {
           "product_id":"7",
@@ -133,9 +133,9 @@
           "product_type":["ساده"],
           "product_price":[550000],
             "product_imgs":[
-            "Assets/Imgs/Sandwich/Sandwich02.jfif",
-            "Assets/Imgs/Sandwich/Sandwich03.jfif",
-            "Assets/Imgs/Sandwich/Sandwich04.jfif"
+            "Assets/Imgs/Sandwich/Sandwich02.avif",
+            "Assets/Imgs/Sandwich/Sandwich03.avif",
+            "Assets/Imgs/Sandwich/Sandwich05.avif"
           ],
           "product_content":[
             " گوشت چرخکرده",
@@ -248,7 +248,7 @@
     {
       "id": "3",
       "name": " پیتزا",
-      "ImageUrl":"Assets/Imgs/Pizza/Pizza01.png",
+      "ImageUrl":"Assets/Imgs/Pizza/Pizza01.avif",
       "group_products":[
         {
           "product_id":"13",
@@ -256,9 +256,9 @@
           "product_type":["متوسط","بزرگ"],
           "product_price":[30000,70000],
              "product_imgs":[
-              "Assets/Imgs/Pizza/Pizza02.jfif",
-              "Assets/Imgs/Pizza/Pizza03.jfif",
-              "Assets/Imgs/Pizza/Pizza04.jfif"
+              "Assets/Imgs/Pizza/Pizza02.avif",
+              "Assets/Imgs/Pizza/Pizza03.avif",
+              "Assets/Imgs/Pizza/Pizza04.avif"
           ],
           "product_content":[
             " فیله مرغ",
@@ -371,7 +371,7 @@
     {
       "id": "4",
       "name": " سوشی",
-      "ImageUrl":"Assets/Imgs/Sushi/Sushi01.jfif",
+      "ImageUrl":"Assets/Imgs/Sushi/Sushi01.jpg",
       "group_products":[
         {
           "product_id":"19",
@@ -379,9 +379,9 @@
           "product_type":["متوسط"],
           "product_price":[30000],
                 "product_imgs":[
-              "Assets/Imgs/Sushi/Sushi01.jfif",
-              "Assets/Imgs/Sushi/Sushi04.jfif",
-              "Assets/Imgs/Sushi/Sushi05.jfif"
+              "Assets/Imgs/Sushi/Sushi01.jpg",
+              "Assets/Imgs/Sushi/Sushi04.avif",
+              "Assets/Imgs/Sushi/Sushi05.jpg"
           ],
           "product_content":[
             " گوشت",
@@ -493,7 +493,7 @@
     {
       "id": "5",
       "name": " پیش غذا",
-      "ImageUrl":"Assets/Imgs/Appetizer/Appetizer04.jfif",
+      "ImageUrl":"Assets/Imgs/Appetizer/Appetizer01.jpg",
       "group_products":[
         {
           "product_id":"25",
@@ -503,7 +503,7 @@
                   "product_imgs":[
                     "Assets/Imgs/Appetizer/Appetizer05.jpg",
                     "Assets/Imgs/Appetizer/Appetizer02.jpg",
-                    "Assets/Imgs/Appetizer/Appetizer03.jfif"
+                    "Assets/Imgs/Appetizer/Appetizer03.jpg"
                 
           ],
           "product_content":[
