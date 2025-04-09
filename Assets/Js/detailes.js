@@ -4,7 +4,7 @@ var myData;
 
 loadData=()=>{
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/assets/Json/products.json", true);
+    xhttp.open("GET", "Assets/Json/products.json", true);
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
        let jsObject=JSON.parse(this.responseText)
@@ -126,7 +126,6 @@ document.getElementById('food-list').appendChild(li);
 
 
 let search=document.getElementById('search');
-
 search.addEventListener('keypress', (event)=>{
     if(event.key === 'Enter'){
         var searchValue=event.target.value;

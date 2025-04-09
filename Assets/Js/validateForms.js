@@ -1,8 +1,5 @@
 // import { saveUserToLocalStorage } from "./storage.js";
 
-
-
-
 document.addEventListener('DOMContentLoaded',()=>{
   const registerForm = document.getElementById("register-form");
   const loginForm=document.getElementById('login-form');

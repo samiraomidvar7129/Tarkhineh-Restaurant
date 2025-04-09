@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "/assets/Json/products.json", true);
+  xhttp.open("GET", "Assets/Json/products.json", true);
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
      let result=this.responseText;
@@ -136,7 +136,7 @@ food.createProductDetails.call(product)
 
 // * ShopCart ----------------------------------->
 
-document.getElementById("plus").addEventListener('click', ()=>{
+document.querySelector(".plus").addEventListener('click', ()=>{
   var number=Number(document.getElementById('number').value)
     number++;
     document.getElementById('number').value=number
